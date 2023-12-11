@@ -3,4 +3,45 @@ body {
     background-size: initial;
     background-repeat: no-repeat;
     background-position: right;
+    /* color:#58ffdb; */
+}
+
+#main-section {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.grass {
+    background-color:#00ffc8;
+}
+
+.fire {
+    background-color:#ff6047;
+}
+
+.water {
+    background-color:#47d7ff;
+}
+
+.normal{
+    background-color:#ffffff;
+}
+
+.flying {
+    background-color:#d3f9ff;
+}
+
+.electric {
+    background-color:#fcfa94;
+}
+
+.psychic{
+    background-color:#cc00ff;
+}
+
+.dark {
+    background-color:#527076;
+}
+
+.ghost {
+    background-color:#72578a;
 }
