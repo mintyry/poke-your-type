@@ -25,7 +25,7 @@ function fetchPokemon() {
                 fetchCount++;
 
                 if (fetchCount === 18) {
-                    console.log(pokemonByType[2])
+                    console.log(pokemonByType[1].join(','))
                 }
 
             })//ends .thendata
