@@ -24,8 +24,11 @@ function fetchPokemon() {
                 pokemonByType[id] = typeArray;
                 fetchCount++;
 
-                if (fetchCount === 18) {
-                    console.log(pokemonByType[1].join(','))
+                for (i = 1; i <= 18; i++) {
+                    if (fetchCount === 18) {
+                        console.log(pokemonByType[i].join(','))
+                        //logs all names by type
+                    }
                 }
 
             })//ends .thendata
