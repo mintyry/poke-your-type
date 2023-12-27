@@ -1,0 +1,7 @@
+<!-- dropdown select grass -->
+                <form class = 'bg-body-secondary'>
+                    <!-- list attrb connects to datalist with same id; will render dropdown list of recommended names to search -->
+                    <input list="grass-list" type="text" placeholder="Favorite Grass-type">
+                    <!-- for dropdown recs/autocomplete -->
+                    <datalist id="grass-list"></datalist>
+                </form>

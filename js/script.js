@@ -30,11 +30,19 @@ function fetchPokemon() {
                         //logs all names by type
                     }
                 }
-
             })//ends .thendata
-
     }//ends id for loop
 }//ends fetchPokemon fn
 
-
 fetchPokemon();
+
+// function grassDropdown() {
+//     const grass = document.querySelector('#grass-list');
+//     for (let i = 0; i < grassPokemon.length; i++) {
+//         let option = document.createElement('option');
+//         option.setAttribute('value', grassPokemon[i].charAt(0).toUpperCase() + grassPokemon[i].slice(1));
+//         grass.appendChild(option);
+//     }
+// };
+
+// grassDropdown();
