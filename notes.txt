@@ -1,0 +1,21 @@
+
+NEXT TO DO:
+
+add array to dropdown in js
+add icon in input box
+
+
+
+
+
+
+
+
+COOL IDEAS TO ADD AT END:
+
+
+pokemon cries when you choose that pokemon
+
+pokeball cursor for hovering over pokemon names in dropdown
+
+change background color of dropdown li hover to type color

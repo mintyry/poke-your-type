@@ -46,3 +46,37 @@ fetchPokemon();
 // };
 
 // grassDropdown();
+const dropdownInput = document.querySelector('.dropdown-input');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownOptions = document.querySelectorAll('.dropdown-option');
+
+dropdownInput.addEventListener('click', function() {
+  dropdownMenu.style.display = 'block';
+});
+
+dropdownInput.addEventListener('input', function() {
+    
+  const whatUserTyped = dropdownInput.value.toLowerCase();
+
+  dropdownOptions.forEach(function(option) {
+    const choice = option.textContent.toLowerCase();
+    if (choice.includes(whatUserTyped)) {
+      option.style.display = 'block';
+    } else {
+      option.style.display = 'none';
+    }
+  });
+});
+
+dropdownOptions.forEach(function(option) {
+  option.addEventListener('click', function() {
+    dropdownInput.value = option.textContent;
+    dropdownMenu.style.display = 'none';
+  });
+});
+
+document.addEventListener('click', function(event) {
+    if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
+     dropdownMenu.style.display = 'none';
+    }
+  });

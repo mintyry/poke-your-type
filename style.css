@@ -4,12 +4,12 @@ body {
     background-size: initial;
     background-repeat: no-repeat;
     background-position: right;
-    font-family:'Bungee Hairline', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight:700;
+    font-family: 'Bungee Hairline', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
 }
 
 header {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 /* ids */
@@ -20,73 +20,115 @@ header {
 
 /* classes */
 .grass {
-    background-color:#00ffc8;
+    background-color: #00ffc8;
 }
 
 .fire {
-    background-color:#ff0099;
+    background-color: #ff0099;
 }
 
 .water {
-    background-color:#87ffe5;
+    background-color: #87ffe5;
 }
 
-.normal{
-    background-color:#dbf9f3;
+.normal {
+    background-color: #dbf9f3;
 }
 
 .flying {
-    background-color:#b9fff0;
+    background-color: #b9fff0;
 }
 
 .electric {
-    background-color:#62ff9c;
+    background-color: #62ff9c;
 }
 
 .psychic {
-    background-color:#ffc5f4;
+    background-color: #ffc5f4;
 }
 
 .dark {
-    background-color:#6b8781;
+    background-color: #6b8781;
 }
 
 .ghost {
-    background-color:#3d5953;
+    background-color: #3d5953;
 }
 
 .poison {
-    background-color:#d04b9b;
+    background-color: #d04b9b;
 }
 
 .bug {
-    background-color:#a1ffc3;
+    background-color: #a1ffc3;
 }
 
 .fighting {
-    background-color:#e483bd;
+    background-color: #e483bd;
 }
 
 .rock {
-    background-color:#936f85;
+    background-color: #936f85;
 }
 
 .ground {
-    background-color:#6b5161;
+    background-color: #6b5161;
 }
 
 .steel {
-    background-color:#8ab5ab;
+    background-color: #8ab5ab;
 }
 
 .ice {
-    background-color:#a3ffeb;
+    background-color: #a3ffeb;
 }
 
 .dragon {
-    background-color:#3bdebb;
+    background-color: #3bdebb;
 }
 
 .fairy {
-    background-color:#ff9ad7;
+    background-color: #ff9ad7;
+}
+
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-input {
+    width: 200px;
+    padding: 2px;
+    text-align: center;
+    
+}
+.dropdown-input::placeholder {
+    color: black;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
 }
