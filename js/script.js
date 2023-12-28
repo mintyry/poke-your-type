@@ -40,7 +40,7 @@ function fetchPokemon() {
 
 
 // SEARCH BAR WITH DROPDOWN AND FILTER
-
+//made it a function to dynamically work with any type's div and array, will be called in callDropdowns() instead of calling it 18 times.
 function pokemonDropdown(typeId, array) {
   //access the input element, the dropdown menu (ul), and all options (li)
   const dropdownInput = typeId.querySelector('.dropdown-input');
@@ -102,16 +102,15 @@ function pokemonDropdown(typeId, array) {
 
 // To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
 function callDropdowns() {
-  let allTypes = ['grass', 'fire'];
-  let allArrays = [ grassPokemon, firePokemon ]
+  let allTypes = ['bug', 'grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
+  let allArrays = [ bugPokemon, grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon ]
   console.log(allArrays)
 
   for (i = 0; i < allTypes.length; i++) {
     let type = allTypes[i];
     let typeSection = document.querySelector(`#${type}`);
-    
-   let typeArray = allArrays[i];
-  
+
+    let typeArray = allArrays[i];
 
     pokemonDropdown(typeSection, typeArray);
   }

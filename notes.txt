@@ -1,7 +1,7 @@
 
 NEXT TO DO:
 
-dropdown function is dynamic now; make dropdown for each type
+dropdowns made; look into more efficient way of calling array files (bundle?); responsiveness, at ~760px, rows are split ito 2 and 1, we want it either all three or column of 1.
 add icon in input box
 
 
@@ -27,3 +27,6 @@ change background color of dropdown li hover to type color
 WHAT DID I LEARN
 you can use queryselectors on elements
 you can access globally established variables in functions using bracket notation on window, ie: window[variable]
+I thought making the dropdown would be as easy as making a select element and modifying something minor to make a search/filter bar.
+that wasnt the case. Looked up how to do it, found semanticUI, but i didn't want to install a whole package just to achieve this.
+I noticed the way it worked though was they had predefined classes that appeared to be triggering javascript. So I asked XpertAI about what approach I could do to achieve the same.
