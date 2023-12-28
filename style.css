@@ -12,6 +12,12 @@ header {
     color: rgb(0, 0, 0);
 }
 
+/* overrides bootstrap's 1rem */
+p {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
 /* ids */
 #main-section {
     background-color: rgba(255, 255, 255, 0.5);
@@ -89,6 +95,10 @@ header {
 
 .fairy {
     background-color: #ff9ad7;
+}
+
+.lightbg {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 

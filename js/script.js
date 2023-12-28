@@ -36,45 +36,43 @@ function fetchPokemon() {
 
 fetchPokemon();
 
-// function grassDropdown() {
-//     const grass = document.querySelector('#grass-list');
-//     for (let i = 0; i < grassPokemon.length; i++) {
-//         let option = document.createElement('option');
-//         option.setAttribute('value', grassPokemon[i].charAt(0).toUpperCase() + grassPokemon[i].slice(1));
-//         grass.appendChild(option);
-//     }
-// };
-
-// grassDropdown();
+// searchbar with dropdown & filter
+//access the input element, the dropdown menu (ul), and all options (li)
 const dropdownInput = document.querySelector('.dropdown-input');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 const dropdownOptions = document.querySelectorAll('.dropdown-option');
 
+//when click into input element, dropdown menu shows, originally hidden
 dropdownInput.addEventListener('click', function() {
   dropdownMenu.style.display = 'block';
 });
 
+//when anything is input in the element, event triggers the following
 dropdownInput.addEventListener('input', function() {
-    
+   
+  // literally whatever the user is typed, the value of that is put into this const
   const whatUserTyped = dropdownInput.value.toLowerCase();
-
+// for each option that is in the ul...
   dropdownOptions.forEach(function(option) {
+    // option's text content is lowercased and called "choice"
     const choice = option.textContent.toLowerCase();
+    // if the choice includes any letter of what the user typed, show all choices that have the value of what has been typed
     if (choice.includes(whatUserTyped)) {
       option.style.display = 'block';
     } else {
+      // hide the other choices
       option.style.display = 'none';
     }
   });
 });
-
+// when user clicks an option, input element's value is that option and menu hides
 dropdownOptions.forEach(function(option) {
   option.addEventListener('click', function() {
     dropdownInput.value = option.textContent;
     dropdownMenu.style.display = 'none';
   });
 });
-
+// if user clicks outside of dropdown, dropdown hides too
 document.addEventListener('click', function(event) {
     if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
      dropdownMenu.style.display = 'none';
