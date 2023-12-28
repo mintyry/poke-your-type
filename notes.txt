@@ -1,7 +1,7 @@
 
 NEXT TO DO:
 
-make dropdown code dynamic for each type
+dropdown function is dynamic now; make dropdown for each type
 add icon in input box
 
 
@@ -19,3 +19,11 @@ pokemon cries when you choose that pokemon
 pokeball cursor for hovering over pokemon names in dropdown
 
 change background color of dropdown li hover to type color
+
+
+
+
+
+WHAT DID I LEARN
+you can use queryselectors on elements
+you can access globally established variables in functions using bracket notation on window, ie: window[variable]

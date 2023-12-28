@@ -1,3 +1,4 @@
+//GET NAMES AND SORT THEM BY TYPES
 function fetchPokemon() {
 
   let pokemonByType = {}
@@ -36,60 +37,84 @@ function fetchPokemon() {
 
 // fetchPokemon();
 
-// searchbar with dropdown & filter
-//access the input element, the dropdown menu (ul), and all options (li)
-const dropdownInput = document.querySelector('.dropdown-input');
-const dropdownMenu = document.querySelector('.dropdown-menu');
 
 
-for (let i = 0; i < grassPokemon.length; i++) {
-  let grassChoice = document.createElement('li');
-  grassChoice.setAttribute('class', 'dropdown-option');
-  grassChoice.textContent = grassPokemon[i].charAt(0).toUpperCase() + grassPokemon[i].slice(1);
-  dropdownMenu.appendChild(grassChoice);
-};
+// SEARCH BAR WITH DROPDOWN AND FILTER
 
-const dropdownOptions = document.querySelectorAll('.dropdown-option');
-
-//when click into input element, dropdown menu shows, originally hidden
-dropdownInput.addEventListener('click', function () {
-  dropdownMenu.style.display = 'block';
-});
+function pokemonDropdown(typeId, array) {
+  //access the input element, the dropdown menu (ul), and all options (li)
+  const dropdownInput = typeId.querySelector('.dropdown-input');
+  const dropdownMenu = typeId.querySelector('.dropdown-menu');
 
 
+  for (let i = 0; i < array.length; i++) {
+    let grassChoice = document.createElement('li');
+    grassChoice.setAttribute('class', 'dropdown-option');
+    grassChoice.textContent = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+    dropdownMenu.appendChild(grassChoice);
+  };
 
-//when anything is input in the element, event triggers the following
-dropdownInput.addEventListener('input', function () {
+  const dropdownOptions = document.querySelectorAll('.dropdown-option');
 
-  // literally whatever the user is typed, the value of that is put into this const
-  const whatUserTyped = dropdownInput.value.toLowerCase();
+  //when click into input element, dropdown menu shows, originally hidden
+  dropdownInput.addEventListener('click', function () {
+    dropdownMenu.style.display = 'block';
+  });
 
-  // for each option that is in the ul...
+
+
+  //when anything is input in the element, event triggers the following
+  dropdownInput.addEventListener('input', function () {
+
+    // literally whatever the user is typed, the value of that is put into this const
+    const whatUserTyped = dropdownInput.value.toLowerCase();
+
+    // for each option that is in the ul...
+    dropdownOptions.forEach(function (option) {
+      // option's text content is lowercased and called "choice"
+      console.log(option.textContent);
+      const choice = option.textContent.toLowerCase();
+      // if the choice includes any letter of what the user typed, show all choices that have the value of what has been typed
+      if (choice.includes(whatUserTyped)) {
+        option.style.display = 'block';
+      } else {
+        // hide the other choices
+        option.style.display = 'none';
+      }
+    });
+  });
+
+
+  // when user clicks an option, input element's value is that option and menu hides
   dropdownOptions.forEach(function (option) {
-    // option's text content is lowercased and called "choice"
-    console.log(option.textContent);
-    const choice = option.textContent.toLowerCase();
-    // if the choice includes any letter of what the user typed, show all choices that have the value of what has been typed
-    if (choice.includes(whatUserTyped)) {
-      option.style.display = 'block';
-    } else {
-      // hide the other choices
-      option.style.display = 'none';
+    option.addEventListener('click', function () {
+      dropdownInput.value = option.textContent;
+      dropdownMenu.style.display = 'none';
+    });
+  });
+  // if user clicks outside of dropdown, dropdown hides too
+  document.addEventListener('click', function (event) {
+    if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
+      dropdownMenu.style.display = 'none';
     }
   });
-});
+};
 
+// To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
+function callDropdowns() {
+  let allTypes = ['grass', 'fire'];
+  let allArrays = [ grassPokemon, firePokemon ]
+  console.log(allArrays)
 
-// when user clicks an option, input element's value is that option and menu hides
-dropdownOptions.forEach(function (option) {
-  option.addEventListener('click', function () {
-    dropdownInput.value = option.textContent;
-    dropdownMenu.style.display = 'none';
-  });
-});
-// if user clicks outside of dropdown, dropdown hides too
-document.addEventListener('click', function (event) {
-  if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
-    dropdownMenu.style.display = 'none';
+  for (i = 0; i < allTypes.length; i++) {
+    let type = allTypes[i];
+    let typeSection = document.querySelector(`#${type}`);
+    
+   let typeArray = allArrays[i];
+  
+
+    pokemonDropdown(typeSection, typeArray);
   }
-});
+};
+
+callDropdowns();

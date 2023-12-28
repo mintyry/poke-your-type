@@ -1,4 +1,4 @@
-groundPokemon =
+let groundPokemon =
     [
         'sandshrew',
         'sandslash',

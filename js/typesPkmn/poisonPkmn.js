@@ -1,4 +1,4 @@
-poisonPokemon =
+let poisonPokemon =
     [
         'bulbasaur',
         'ivysaur',

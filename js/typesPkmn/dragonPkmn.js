@@ -1,4 +1,4 @@
-dragonPokemon =
+let dragonPokemon =
     [
         'dratini',
         'dragonair',

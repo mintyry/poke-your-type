@@ -1,4 +1,4 @@
-normalPokemon =
+let normalPokemon =
     [
         'Pidgey',
         'Pidgeotto',

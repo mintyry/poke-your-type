@@ -1,4 +1,4 @@
-electricPokemon = [
+let electricPokemon = [
     'pikachu',
     'raichu',
     'magnemite',

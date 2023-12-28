@@ -1,4 +1,4 @@
-fairyPokemon =
+let fairyPokemon =
     [
         'clefairy',
         'clefable',

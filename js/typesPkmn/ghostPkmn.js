@@ -1,4 +1,4 @@
-ghostPokemon =
+let ghostPokemon =
     [
         'gastly',
         'haunter',

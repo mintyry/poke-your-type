@@ -1,4 +1,4 @@
-steelPokemon =
+let steelPokemon =
     [
         'magnemite',
         'magneton',

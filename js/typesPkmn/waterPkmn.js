@@ -1,4 +1,4 @@
-waterPokemon =
+let waterPokemon =
     [
         'squirtle',
         'wartortle',

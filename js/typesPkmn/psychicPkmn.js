@@ -1,4 +1,4 @@
-psychicPokemon = [
+let psychicPokemon = [
     'abra',
     'kadabra',
     'alakazam',

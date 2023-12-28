@@ -1,4 +1,4 @@
-darkPokemon =
+let darkPokemon =
     [
         'umbreon',
         'murkrow',

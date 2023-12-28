@@ -1,4 +1,4 @@
-flyingPokemon =
+let flyingPokemon =
     [
         'charizard',
         'butterfree',

@@ -1,4 +1,4 @@
-icePokemon =
+let icePokemon =
     [
         'dewgong',
         'cloyster',

@@ -1,4 +1,4 @@
-rockPokemon =
+let rockPokemon =
     [
         'geodude',
         'graveler',

@@ -1,4 +1,4 @@
-firePokemon =
+let firePokemon =
     [
         'charmander',
         'charmeleon',

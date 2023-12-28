@@ -1,4 +1,4 @@
-fightingPokemon =
+let fightingPokemon =
     [
         'mankey',
         'primeape',

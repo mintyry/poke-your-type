@@ -1,4 +1,4 @@
-bugPokemon =
+let bugPokemon =
     [
         'caterpie',
         'metapod',
