@@ -1,60 +1,73 @@
 function fetchPokemon() {
 
-    let pokemonByType = {}
-    let fetchCount = 0
-    //https://pokeapi.co/api/v2/type/: array[0-17] are the types; photo in images folder
-    for (let id = 1; id <= 18; id++) {
-        let url = `https://pokeapi.co/api/v2/type/${id}`;
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                //we fetch each type's url id, each url id contains type name and all the pokemon in that type.
-                //type/id produces data. data.name shows type. data.pokemon show all pokemon
-                // console.log(data.pokemon[1])
-                let typeArray = []
-                for (let i = 0; i < data.pokemon.length; i++) {
-                    typeArray.push(data.pokemon[i].pokemon.name)
+  let pokemonByType = {}
+  let fetchCount = 0
+  //https://pokeapi.co/api/v2/type/: array[0-17] are the types; photo in images folder
+  for (let id = 1; id <= 18; id++) {
+    let url = `https://pokeapi.co/api/v2/type/${id}`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        //we fetch each type's url id, each url id contains type name and all the pokemon in that type.
+        //type/id produces data. data.name shows type. data.pokemon show all pokemon
+        // console.log(data.pokemon[1])
+        let typeArray = []
+        for (let i = 0; i < data.pokemon.length; i++) {
+          typeArray.push(data.pokemon[i].pokemon.name)
 
-                }//ends for loop
+        }//ends for loop
 
-                //by each url id, i log an array of all pokemon in that url id/type.
-                //So this inner loop makes one array, but the outer for loop repeats the process fot each url, so when we log it, we will see each array from each url (stored in typeArray).
-                // Then we store all of these arrays in one object
+        //by each url id, i log an array of all pokemon in that url id/type.
+        //So this inner loop makes one array, but the outer for loop repeats the process fot each url, so when we log it, we will see each array from each url (stored in typeArray).
+        // Then we store all of these arrays in one object
 
-                pokemonByType[id] = typeArray;
-                fetchCount++;
+        pokemonByType[id] = typeArray;
+        fetchCount++;
 
-                for (i = 1; i <= 18; i++) {
-                    if (fetchCount === 18) {
-                        console.log(pokemonByType[i].join(','))
-                        //logs all names by type
-                    }
-                }
-            })//ends .thendata
-    }//ends id for loop
+        for (i = 1; i <= 18; i++) {
+          if (fetchCount === 18) {
+            console.log(pokemonByType[i].join(','))
+            //logs all names by type
+          }
+        }
+      })//ends .thendata
+  }//ends id for loop
 }//ends fetchPokemon fn
 
-fetchPokemon();
+// fetchPokemon();
 
 // searchbar with dropdown & filter
 //access the input element, the dropdown menu (ul), and all options (li)
 const dropdownInput = document.querySelector('.dropdown-input');
 const dropdownMenu = document.querySelector('.dropdown-menu');
+
+
+for (let i = 0; i < grassPokemon.length; i++) {
+  let grassChoice = document.createElement('li');
+  grassChoice.setAttribute('class', 'dropdown-option');
+  grassChoice.textContent = grassPokemon[i].charAt(0).toUpperCase() + grassPokemon[i].slice(1);
+  dropdownMenu.appendChild(grassChoice);
+};
+
 const dropdownOptions = document.querySelectorAll('.dropdown-option');
 
 //when click into input element, dropdown menu shows, originally hidden
-dropdownInput.addEventListener('click', function() {
+dropdownInput.addEventListener('click', function () {
   dropdownMenu.style.display = 'block';
 });
 
+
+
 //when anything is input in the element, event triggers the following
-dropdownInput.addEventListener('input', function() {
-   
+dropdownInput.addEventListener('input', function () {
+
   // literally whatever the user is typed, the value of that is put into this const
   const whatUserTyped = dropdownInput.value.toLowerCase();
-// for each option that is in the ul...
-  dropdownOptions.forEach(function(option) {
+
+  // for each option that is in the ul...
+  dropdownOptions.forEach(function (option) {
     // option's text content is lowercased and called "choice"
+    console.log(option.textContent);
     const choice = option.textContent.toLowerCase();
     // if the choice includes any letter of what the user typed, show all choices that have the value of what has been typed
     if (choice.includes(whatUserTyped)) {
@@ -65,16 +78,18 @@ dropdownInput.addEventListener('input', function() {
     }
   });
 });
+
+
 // when user clicks an option, input element's value is that option and menu hides
-dropdownOptions.forEach(function(option) {
-  option.addEventListener('click', function() {
+dropdownOptions.forEach(function (option) {
+  option.addEventListener('click', function () {
     dropdownInput.value = option.textContent;
     dropdownMenu.style.display = 'none';
   });
 });
 // if user clicks outside of dropdown, dropdown hides too
-document.addEventListener('click', function(event) {
-    if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
-     dropdownMenu.style.display = 'none';
-    }
-  });
+document.addEventListener('click', function (event) {
+  if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
+    dropdownMenu.style.display = 'none';
+  }
+});

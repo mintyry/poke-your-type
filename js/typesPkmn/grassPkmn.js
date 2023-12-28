@@ -1,4 +1,4 @@
-grassPokemon =
+let grassPokemon =
     [
         'bulbasaur',
         'ivysaur',
@@ -151,4 +151,4 @@ grassPokemon =
         'ogerpon-wellspring-mask',
         'ogerpon-hearthflame-mask',
         'ogerpon-cornerstone-mask'
-    ]
+    ];
