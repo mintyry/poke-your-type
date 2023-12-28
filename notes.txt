@@ -1,7 +1,7 @@
 
 NEXT TO DO:
 
-add array to dropdown in js
+make dropdown code dynamic for each type
 add icon in input box
 
 
