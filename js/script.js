@@ -54,7 +54,7 @@ function pokemonDropdown(typeId, array) {
     dropdownMenu.appendChild(grassChoice);
   };
 
-  const dropdownOptions = document.querySelectorAll('.dropdown-option');
+  const dropdownOptions = dropdownMenu.querySelectorAll('.dropdown-option');
 
   //when click into input element, dropdown menu shows, originally hidden
   dropdownInput.addEventListener('click', function () {
@@ -102,11 +102,11 @@ function pokemonDropdown(typeId, array) {
 
 // To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
 function callDropdowns() {
-  let allTypes = ['bug', 'grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [ bugPokemon, grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon ]
+  let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
+  let allArrays = [ grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon ]
   console.log(allArrays)
 
-  for (i = 0; i < allTypes.length; i++) {
+  for (let i = 0; i < allTypes.length; i++) {
     let type = allTypes[i];
     let typeSection = document.querySelector(`#${type}`);
 
