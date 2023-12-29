@@ -112,8 +112,9 @@ p {
     width: 200px;
     padding: 2px;
     text-align: center;
-    
+
 }
+
 .dropdown-input::placeholder {
     color: black;
 }
@@ -143,3 +144,17 @@ p {
 .dropdown-option:hover {
     background-color: #f0f0f0;
 }
+
+/* @media (max-width: 769px) {
+
+    .dropdown-input, .dropdown-menu {
+        width: 150px;
+    }
+
+    .row>* {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+} */
