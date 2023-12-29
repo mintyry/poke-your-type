@@ -14,7 +14,8 @@ function fetchPokemon() {
         // console.log(data.pokemon[1])
         let typeArray = []
         for (let i = 0; i < data.pokemon.length; i++) {
-          typeArray.push(data.pokemon[i].pokemon.name)
+          // typeArray.push(data.pokemon[i].pokemon.name)
+          typeArray.push(data.pokemon[i].pokemon)
 
         }//ends for loop
 
@@ -22,20 +23,22 @@ function fetchPokemon() {
         //So this inner loop makes one array, but the outer for loop repeats the process fot each url, so when we log it, we will see each array from each url (stored in typeArray).
         // Then we store all of these arrays in one object
 
-        pokemonByType[id] = typeArray;
-        fetchCount++;
+        // pokemonByType[id] = typeArray;
+        // fetchCount++;
+        // for (i = 1; i <= 18; i++) {
+        //   if (fetchCount === 18) {
+        //     console.log(pokemonByType[i].join(','))
+        //     logs all names by type
+        //   }
+        // }
 
-        for (i = 1; i <= 18; i++) {
-          if (fetchCount === 18) {
-            console.log(pokemonByType[i].join(','))
-            //logs all names by type
-          }
-        }
+        console.log(typeArray);
+
       })//ends .thendata
   }//ends id for loop
 }//ends fetchPokemon fn
 
-// fetchPokemon();
+fetchPokemon();
 
 
 
