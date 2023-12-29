@@ -1,8 +1,9 @@
 
 NEXT TO DO:
 
-dropdowns made; look into more efficient way of calling array files (bundle?); responsiveness, at ~760px, rows are split ito 2 and 1, we want it either all three or column of 1.
-add icon in input box
+-  retrieve pokemon images from pokeapi original art
+- look into more efficient way of calling array files (bundle?);
+- add icon in input box
 
 
 
