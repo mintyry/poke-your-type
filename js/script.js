@@ -1,16 +1,16 @@
 //GET NAMES AND SORT THEM BY TYPES
 function fetchPokemon(name) {
 
-    let url = `https://pokeapi.co/api/v2/pokemon/{name}/`;
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-      console.log(data.sprites.other['official-artwork'].front_default);
-        //must call whatever function uses the data within here
-      })//ends .thendata
+  let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      let pokemonImg = data.sprites.other['official-artwork'].front_default;
+      console.log(pokemonImg);
+      //must call whatever function uses the data within here
+    })//ends .thendata
 }//ends fetchPokemon fn
 
-// fetchPokemon();
 
 
 
@@ -40,10 +40,8 @@ function pokemonDropdown(typeId, array) {
 
   //when anything is input in the element, event triggers the following
   dropdownInput.addEventListener('input', function () {
-
     // literally whatever the user is typed, the value of that is put into this const
     const whatUserTyped = dropdownInput.value.toLowerCase();
-
     // for each option that is in the ul...
     dropdownOptions.forEach(function (option) {
       // option's text content is lowercased and called "choice"
@@ -55,18 +53,23 @@ function pokemonDropdown(typeId, array) {
       } else {
         // hide the other choices
         option.style.display = 'none';
-      }
-    });
+      }//ends if
+    });//ends foreach
   });
 
 
   // when user clicks an option, input element's value is that option and menu hides
   dropdownOptions.forEach(function (option) {
     option.addEventListener('click', function () {
-      dropdownInput.value = option.textContent;
+      dropdownInput.value = option.textContent.toLowerCase();
       dropdownMenu.style.display = 'none';
+      console.log(dropdownInput.value)
+
+      fetchPokemon(dropdownInput.value);
     });
   });
+
+
   // if user clicks outside of dropdown, dropdown hides too
   document.addEventListener('click', function (event) {
     if (!dropdownMenu.contains(event.target) && !dropdownInput.contains(event.target)) {
@@ -75,10 +78,11 @@ function pokemonDropdown(typeId, array) {
   });
 };
 
+
 // To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
 function callDropdowns() {
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [ grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon ]
+  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
   console.log(allArrays)
 
   for (let i = 0; i < allTypes.length; i++) {
