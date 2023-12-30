@@ -1,7 +1,8 @@
 
 NEXT TO DO:
 
--  retrieve pokemon images from pokeapi original art
+-  design final user card
+- organize where pictures will render after user selects choice
 - look into more efficient way of calling array files (bundle?);
 - add icon in input box
 
