@@ -23,6 +23,13 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+#user-card {
+    background-image: url("./images/mintbgpyt.avif");
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 /* classes */
 .grass {
@@ -101,6 +108,14 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.pokemon-image {
+    width:12rem; 
+    /* height: 10rem;  */
+    border: solid 1px rgb(218, 255, 202); 
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
+   
+}
+
 
 /* dropdown */
 .dropdown {
@@ -144,17 +159,3 @@ p {
 .dropdown-option:hover {
     background-color: #f0f0f0;
 }
-
-/* @media (max-width: 769px) {
-
-    .dropdown-input, .dropdown-menu {
-        width: 150px;
-    }
-
-    .row>* {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-} */
