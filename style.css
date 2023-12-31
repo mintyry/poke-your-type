@@ -24,11 +24,17 @@ p {
 }
 
 #user-card {
-    background-image: url("./images/mintbgpyt.avif");
-    background-size: initial;
+    background-image: url("./images/aurora.png");
+    background-size:inherit;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom 82% left 55%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
+
 
 
 /* classes */
@@ -114,6 +120,12 @@ p {
     border: solid 1px rgb(218, 255, 202); 
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
    
+}
+
+.type-icon {
+    width: 1.5rem;
+    float: right;
+    margin-right: 3px;
 }
 
 

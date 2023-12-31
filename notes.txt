@@ -32,3 +32,7 @@ you can access globally established variables in functions using bracket notatio
 I thought making the dropdown would be as easy as making a select element and modifying something minor to make a search/filter bar.
 that wasnt the case. Looked up how to do it, found semanticUI, but i didn't want to install a whole package just to achieve this.
 I noticed the way it worked though was they had predefined classes that appeared to be triggering javascript. So I asked XpertAI about what approach I could do to achieve the same.
+
+credits:
+xpert ai dropdown css code
+https://github.com/duiker101 for type icons
