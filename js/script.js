@@ -1,5 +1,5 @@
-//GET NAMES AND SORT THEM BY TYPES
-function fetchPokemon(name) {
+//GET NAMES & IMAGES
+function fetchPokemon(name, type) {
 
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
@@ -7,6 +7,15 @@ function fetchPokemon(name) {
     .then(data => {
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
       console.log(pokemonImg);
+      console.log(type)
+      
+      let imgDiv = document.querySelector(`#${type}-img`)
+      console.log(imgDiv)
+
+      imgDiv.src = pokemonImg;
+      //put image in corresponding spot
+
+
       //must call whatever function uses the data within here
     })//ends .thendata
 }//ends fetchPokemon fn
@@ -16,22 +25,23 @@ function fetchPokemon(name) {
 
 // SEARCH BAR WITH DROPDOWN AND FILTER
 //made it a function to dynamically work with any type's div and array, will be called in callDropdowns() instead of calling it 18 times.
-function pokemonDropdown(typeId, array) {
+function pokemonDropdown(typeSection, array, type) {
   //access the input element, the dropdown menu (ul), and all options (li)
-  const dropdownInput = typeId.querySelector('.dropdown-input');
-  const dropdownMenu = typeId.querySelector('.dropdown-menu');
+  const dropdownInput = typeSection.querySelector('.dropdown-input');
+  const dropdownMenu = typeSection.querySelector('.dropdown-menu');
 
 
   for (let i = 0; i < array.length; i++) {
-    let grassChoice = document.createElement('li');
-    grassChoice.setAttribute('class', 'dropdown-option');
-    grassChoice.textContent = array[i].charAt(0).toUpperCase() + array[i].slice(1);
-    dropdownMenu.appendChild(grassChoice);
+    let listChoice = document.createElement('li');
+    listChoice.setAttribute('class', 'dropdown-option');
+    listChoice.textContent = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+    dropdownMenu.appendChild(listChoice);
   };
 
   const dropdownOptions = dropdownMenu.querySelectorAll('.dropdown-option');
 
   //when click into input element, dropdown menu shows, originally hidden
+  //event listener is added to each dropdownInput, and this reacts to the one that is clicked on.
   dropdownInput.addEventListener('click', function () {
     dropdownMenu.style.display = 'block';
   });
@@ -64,8 +74,10 @@ function pokemonDropdown(typeId, array) {
       dropdownInput.value = option.textContent.toLowerCase();
       dropdownMenu.style.display = 'none';
       console.log(dropdownInput.value)
+      // console.log('this will be the id you are looking for:' + typeId)
 
-      fetchPokemon(dropdownInput.value);
+      //call fetchPokemon using user's selection and including type as template literal to target that img element with corresponding id
+      fetchPokemon(dropdownInput.value, type);
     });
   });
 
@@ -91,7 +103,7 @@ function callDropdowns() {
 
     let typeArray = allArrays[i];
 
-    pokemonDropdown(typeSection, typeArray);
+    pokemonDropdown(typeSection, typeArray, type);
   }
 };
 
