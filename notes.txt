@@ -1,7 +1,7 @@
 
 NEXT TO DO:
 
--  design final user card
+- make user card have pokemon images based on selection
 - organize where pictures will render after user selects choice
 - look into more efficient way of calling array files (bundle?);
 - add icon in input box
