@@ -8,17 +8,15 @@ function fetchPokemon(name, type) {
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
       console.log(pokemonImg);
       console.log(type)
-      
+      //select specific div by dynamic id
       let imgDiv = document.querySelector(`#${type}-img`)
       console.log(imgDiv)
-
       imgDiv.src = pokemonImg;
-      //put image in corresponding spot
-
-
-      //must call whatever function uses the data within here
+     
+      //set name of pokemon in card
+      document.querySelector(`#${type}-name`).textContent = name;
     })//ends .thendata
-}//ends fetchPokemon fn
+};//ends fetchPokemon fn
 
 
 

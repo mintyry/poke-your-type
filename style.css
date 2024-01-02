@@ -115,7 +115,7 @@ p {
 }
 
 .pokemon-image {
-    width:12rem; 
+    width:10rem; 
     /* height: 10rem;  */
     border: solid 1px rgb(218, 255, 202); 
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
@@ -127,6 +127,10 @@ p {
     float: right;
     margin-right: 3px;
 }
+
+/* .no-margin {
+    margin-bottom: 0;
+} */
 
 
 /* dropdown */
