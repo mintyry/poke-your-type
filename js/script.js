@@ -1,6 +1,22 @@
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
-
+  if (name === 'shellos-west') {
+    name = 'shellos'
+  } else if (name === 'gastrodon-west') {
+    name = 'gastrodon'
+  } else if (name === 'shellos-east') {
+    let pokemonImg = './images/shellos-east.png';
+    let imgDiv = document.querySelector(`#${type}-img`)
+    imgDiv.src = pokemonImg;
+    document.querySelector(`#${type}-name`).textContent = 'Shellos';
+    return
+  } else if (name === 'gastrodon-east') {
+    let pokemonImg = './images/gastrodon-east.png';
+    let imgDiv = document.querySelector(`#${type}-img`)
+    imgDiv.src = pokemonImg;
+    document.querySelector(`#${type}-name`).textContent = 'Gastrodon';
+    return
+  };
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
     .then(response => response.json())
@@ -12,7 +28,7 @@ function fetchPokemon(name, type) {
       let imgDiv = document.querySelector(`#${type}-img`)
       console.log(imgDiv)
       imgDiv.src = pokemonImg;
-     
+
       //set name of pokemon in card
       document.querySelector(`#${type}-name`).textContent = name;
     })//ends .thendata
