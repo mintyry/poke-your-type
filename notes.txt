@@ -1,8 +1,7 @@
 
 NEXT TO DO:
 
-- make user card have pokemon images based on selection
-- organize where pictures will render after user selects choice
+- read up and use canvas to take image of card and download
 - look into more efficient way of calling array files (bundle?);
 - add icon in input box
 
