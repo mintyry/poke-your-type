@@ -23,6 +23,7 @@ pokeball cursor for hovering over pokemon names in dropdown
 change background color of dropdown li hover to type color
 
 no east shellos or gastrodon image
+delete extra form names that have no image
 
 
 
