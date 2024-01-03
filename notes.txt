@@ -2,6 +2,7 @@
 NEXT TO DO:
 
 - read up and use canvas to take image of card and download
+- need images of ogerpon variants; look through and delete or add photos for other variants of other pokemon
 - look into more efficient way of calling array files (bundle?);
 - add icon in input box
 
