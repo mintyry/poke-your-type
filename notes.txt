@@ -3,6 +3,8 @@ NEXT TO DO:
 
 - read up and use canvas to take image of card and download
 - need images of ogerpon variants; look through and delete or add photos for other variants of other pokemon
+- same for new pokemon (eg: hdrapple has no images in pokeapi)
+    - Archaludon, Hydrapple, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos,
 - look into more efficient way of calling array files (bundle?);
 - add icon in input box
 
