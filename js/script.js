@@ -122,3 +122,60 @@ function callDropdowns() {
 };
 
 callDropdowns();
+
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+
+
+  // Wait for the DOM to be fully loaded
+
+  // Get the element you want to capture (e.g., the whole body)
+  const elementToCapture = document.body;
+
+  // // Get the canvas element
+  // const canvas = document.getElementById('screenshotCanvas');
+  // const context = canvas.getContext('2d');
+
+  // const video = document.createElement('video');
+
+  const capture = async () => {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const video = document.createElement("video");
+
+    try {
+      const captureStream = await navigator.mediaDevices.getDisplayMedia();
+      video.srcObject = captureStream;
+      context.drawImage(video, 0, 0, window.width, window.height);
+      const frame = canvas.toDataURL("image/png");
+      captureStream.getTracks().forEach(track => track.stop());
+      window.location.href = frame;
+    } catch (err) {
+      console.error("Error: " + err);
+    }
+  };
+
+  capture();
+
+  // Set the canvas size to match the element's size
+  // canvas.width = elementToCapture.clientWidth;
+  // canvas.height = elementToCapture.clientHeight;
+
+  // Draw the content of the element onto the canvas
+  // context.drawWindow(window, 0, 0, elementToCapture.clientWidth, elementToCapture.clientHeight, 'rgb(255,255,255)');
+
+  // Open a new window with the canvas image
+  // const newWindow = window.open();
+  // newWindow.document.body.appendChild(canvas);
+
+  // Alternatively, you can convert the canvas to an image and set it as the window's location
+  // const image = canvas.toDataURL("image/png")
+  // // .replace("image/png", "image/octet-stream");
+  // console.log(image);
+  // const imgElement = document.createElement("img");
+  // imgElement.src = image;
+  // document.body.appendChild(imgElement);
+});
+
+// });

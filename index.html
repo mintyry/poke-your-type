@@ -252,226 +252,215 @@
         </div>
     </main>
 
+    <button>Generate your Pokécard!</button>
 
     <!-- GENERATED CARD -->
-    <div id="user-card" class="text-center rounded flex-nowrap p-3 mb-5">
-        <div class="row">
-            <p style="color:darkmagenta;">My favorite Pokémon by type::</p>
-        </div>
-        <!-- row one of pokemon types -->
-        <div class="row flex-nowrap">
-            <!-- type's section -->
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="grass rounded-top mb-0">Grass <img class="type-icon" src="./images/icons/grass.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="grass-img">
-                    <p class="grass rounded-bottom" id="grass-name">Pokémon</p>
-                </div>
-
+    <canvas id="screenshotCanvas">
+        <div id="user-card" class="text-center rounded flex-nowrap p-3 mb-5">
+            <div class="row">
+                <p style="color:darkmagenta;">My favorite Pokémon by type::</p>
             </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="fire rounded-top text-light mb-0">Fire <img class="type-icon" src="./images/icons/fire.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="fire-img">
-                    <p class="fire rounded-bottom text-light" id="fire-name">Pokémon</p>
-                </div>
+            <!-- row one of pokemon types -->
+            <div class="row flex-nowrap">
+                <!-- type's section -->
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="grass rounded-top mb-0">Grass <img class="type-icon" src="./images/icons/grass.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="grass-img">
+                        <p class="grass rounded-bottom" id="grass-name">Pokémon</p>
+                    </div>
 
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="water rounded-top mb-0">Water <img class="type-icon" src="./images/icons/water.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="water-img">
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="fire rounded-top text-light mb-0">Fire <img class="type-icon"
+                                src="./images/icons/fire.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="fire-img">
+                        <p class="fire rounded-bottom text-light" id="fire-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="water rounded-top mb-0">Water <img class="type-icon" src="./images/icons/water.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="water-img">
                         <p class="water rounded-bottom" id="water-name">Pokémon</p>
-                </div>
+                    </div>
 
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="normal rounded-top mb-0">Normal <img class="type-icon" src="./images/icons/normal.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="normal-img">
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="normal rounded-top mb-0">Normal <img class="type-icon"
+                                src="./images/icons/normal.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="normal-img">
                         <p class="normal rounded-bottom" id="normal-name">Pokémon</p>
-                </div>
+                    </div>
 
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="flying rounded-top mb-0">Flying <img class="type-icon" src="./images/icons/flying.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="flying-img">
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="flying rounded-top mb-0">Flying <img class="type-icon"
+                                src="./images/icons/flying.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="flying-img">
                         <p class="flying rounded-bottom" id="flying-name">Pokémon</p>
-                </div>
+                    </div>
 
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="electric rounded-top mb-0">Electric <img class="type-icon" src="./images/icons/electric.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                        class="pokemon-image"
-                        id="electric-img">
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="electric rounded-top mb-0">Electric <img class="type-icon"
+                                src="./images/icons/electric.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="electric-img">
                         <p class="electric rounded-bottom" id="electric-name">Pokémon</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- row two of pokemon types -->
+            <div class="row flex-nowrap">
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="psychic rounded-top mb-0">Psychic <img class="type-icon"
+                                src="./images/icons/psychic.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="psychic-img">
+                        <p class="psychic rounded-bottom" id="psychic-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="dark rounded-top text-light mb-0">Dark <img class="type-icon"
+                                src="./images/icons/dark.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="dark-img">
+                        <p class="dark text-light rounded-bottom" id="dark-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="ghost rounded-top text-light mb-0">Ghost <img class="type-icon"
+                                src="./images/icons/ghost.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="ghost-img">
+                        <p class="ghost text-light rounded-bottom" id="ghost-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="poison rounded-top text-light mb-0">Poison <img class="type-icon"
+                                src="./images/icons/poison.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="poison-img">
+                        <p class="poison text-light rounded-bottom" id="poison-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="bug rounded-top mb-0">Bug <img class="type-icon" src="./images/icons/bug.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="bug-img">
+                        <p class="bug rounded-bottom" id="bug-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="fighting rounded-top text-light mb-0">Fighting <img class="type-icon"
+                                src="./images/icons/fighting.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="fighting-img">
+                        <p class="fighting text-light rounded-bottom" id="fighting-name">Pokémon</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- row three of pokemon types -->
+            <div class="row flex-nowrap">
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="rock rounded-top text-light mb-0">Rock <img class="type-icon"
+                                src="./images/icons/rock.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="rock-img">
+                        <p class="rock text-light rounded-bottom" id="rock-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="ground rounded-top text-light mb-0">Ground <img class="type-icon"
+                                src="./images/icons/ground.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="ground-img">
+                        <p class="ground text-light rounded-bottom" id="ground-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="steel rounded-top mb-0">Steel <img class="type-icon" src="./images/icons/steel.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="steel-img">
+                        <p class="steel rounded-bottom" id="steel-name">Pokémon</p>
+                    </div>
+
                 </div>
 
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="ice rounded-top mb-0">Ice <img class="type-icon" src="./images/icons/ice.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="ice-img">
+                        <p class="ice rounded-bottom" id="ice-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="dragon rounded-top mb-0">Dragon <img class="type-icon"
+                                src="./images/icons/dragon.svg">
+                        </p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="dragon-img">
+                        <p class="dragon rounded-bottom" id="dragon-name">Pokémon</p>
+                    </div>
+
+                </div>
+                <div class="col rounded mb-3">
+                    <!-- transparent bg for content in section -->
+                    <div class="rounded">
+                        <p class="fairy rounded-top text-light mb-0">Fairy <img class="type-icon"
+                                src="./images/icons/fairy.svg"></p>
+                        <img src="./images/nullpokeball.png" class="pokemon-image" id="fairy-img">
+                        <p class="fairy text-light rounded-bottom" id="fairy-name">Pokémon</p>
+                    </div>
+
+                </div>
             </div>
         </div>
-
-        <!-- row two of pokemon types -->
-        <div class="row flex-nowrap">
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="psychic rounded-top mb-0">Psychic <img class="type-icon" src="./images/icons/psychic.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="psychic-img">
-                    <p class="psychic rounded-bottom" id="psychic-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="dark rounded-top text-light mb-0">Dark <img class="type-icon" src="./images/icons/dark.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="dark-img">
-                    <p class="dark text-light rounded-bottom" id="dark-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="ghost rounded-top text-light mb-0">Ghost <img class="type-icon" src="./images/icons/ghost.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="ghost-img">
-                    <p class="ghost text-light rounded-bottom" id="ghost-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="poison rounded-top text-light mb-0">Poison <img class="type-icon" src="./images/icons/poison.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="poison-img">
-                    <p class="poison text-light rounded-bottom" id="poison-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="bug rounded-top mb-0">Bug <img class="type-icon" src="./images/icons/bug.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="bug-img">
-                    <p class="bug rounded-bottom" id="bug-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="fighting rounded-top text-light mb-0">Fighting <img class="type-icon" src="./images/icons/fighting.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="fighting-img">
-                    <p class="fighting text-light rounded-bottom" id="fighting-name">Pokémon</p>
-                </div>
-
-            </div>
-        </div>
-        <!-- row three of pokemon types -->
-        <div class="row flex-nowrap">
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="rock rounded-top text-light mb-0">Rock <img class="type-icon" src="./images/icons/rock.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="rock-img">
-                    <p class="rock text-light rounded-bottom" id="rock-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="ground rounded-top text-light mb-0">Ground <img class="type-icon" src="./images/icons/ground.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="ground-img">
-                    <p class="ground text-light rounded-bottom" id="ground-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="steel rounded-top mb-0">Steel <img class="type-icon" src="./images/icons/steel.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="steel-img">
-                    <p class="steel rounded-bottom" id="steel-name">Pokémon</p>
-                </div>
-
-            </div>
-
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="ice rounded-top mb-0">Ice <img class="type-icon" src="./images/icons/ice.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="ice-img">
-                    <p class="ice rounded-bottom" id="ice-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="dragon rounded-top mb-0">Dragon <img class="type-icon" src="./images/icons/dragon.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="dragon-img">
-                    <p class="dragon rounded-bottom" id="dragon-name">Pokémon</p>
-                </div>
-
-            </div>
-            <div class="col rounded mb-3">
-                <!-- transparent bg for content in section -->
-                <div class="rounded">
-                    <p class="fairy rounded-top text-light mb-0">Fairy <img class="type-icon" src="./images/icons/fairy.svg"></p>
-                    <img src="./images/nullpokeball.png"
-                    class="pokemon-image"
-                    id="fairy-img">
-                    <p class="fairy text-light rounded-bottom" id="fairy-name">Pokémon</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    </canvas>
 
 
 
+    <!-- html2canvas cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <!-- bootstrap js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
