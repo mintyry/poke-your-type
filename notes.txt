@@ -1,7 +1,9 @@
 
 NEXT TO DO:
+- think about making the card automatically download at click instead of appearing underneath
+- style in case of responsiveness on mobile, per diarmuid
+- add make-your-own and url to bottom of user-card div
 
-- read up and use canvas to take image of card and download
 - need images of ogerpon variants; look through and delete or add photos for other variants of other pokemon
 - same for new pokemon (eg: hdrapple has no images in pokeapi)
     - Archaludon, Hydrapple, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos,
