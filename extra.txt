@@ -46,3 +46,60 @@ function fetchPokemon() {
 }//ends fetchPokemon fn
 
 // fetchPokemon();
+
+
+//open new window with final card html
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  
+  const userCard = document.getElementById('user-card');
+  const width = userCard.offsetWidth;
+  const height = userCard.offsetHeight;
+  const fileName = 'card.png';
+
+  const printWindow = window.open('', '_blank');
+  const printDocument = printWindow.document;
+
+  // Copy necessary styles and dependencies to the new document
+  const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+  stylesheets.forEach((stylesheet) => {
+    const newStylesheet = printDocument.createElement('link');
+    newStylesheet.rel = 'stylesheet';
+    newStylesheet.href = stylesheet.href;
+    printDocument.head.appendChild(newStylesheet);
+  });
+
+  // Create a new div element and append the userCard element
+  const newDiv = printDocument.createElement('div');
+  newDiv.innerHTML = userCard.outerHTML;
+  printDocument.body.appendChild(newDiv);
+
+  // Wait for the content to be loaded in the new window
+  printWindow.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      // Set the print styles for the new window
+      const printStyles = printDocument.createElement('style');
+      printStyles.innerHTML = `
+        @media print {
+          body {
+            margin: 0;
+          }
+          #user-card {
+            width: ${width}px;
+            height: ${height}px;
+          }
+        }
+      `;
+      printDocument.head.appendChild(printStyles);
+
+      // Trigger the print dialog in the new window
+      printWindow.print();
+
+      // Close the new window after the print dialog is closed
+      printWindow.addEventListener('afterprint', () => {
+        printWindow.close();
+      });
+    }, 100);
+  });
+});
