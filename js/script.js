@@ -128,7 +128,8 @@ callDropdowns();
 const button = document.querySelector('button');
 button.addEventListener('click', (event)=>{
   event.preventDefault();
-  html2canvas(document.querySelector("#user-card"), {backgroundColor: "transparent"}).then(canvas => {
+  html2canvas(document.querySelector("#user-card"), {backgroundColor: "transparent",  allowTaint : true,
+  useCors : true }).then(canvas => {
     document.body.appendChild(canvas)
   });
 })
