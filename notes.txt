@@ -1,5 +1,7 @@
 
 NEXT TO DO:
+-adjust font-size in card because it stretches p class out when too much words
+- find more pokemon we need to manually add images for
 - think about making the card automatically download at click instead of appearing underneath
 - style in case of responsiveness on mobile, per diarmuid
 - add make-your-own and url to bottom of user-card div
@@ -13,7 +15,20 @@ NEXT TO DO:
 
 
 
+list of pokemon with no images:
 
+pumpkaboo
+gourgeist
+ogrepon masks
+sinistcha
+
+need to add new pokemon:
+Hydrapple
+iron Crown
+iron Boulder
+raging Bolt
+gouging Fire
+archaludon
 
 
 
