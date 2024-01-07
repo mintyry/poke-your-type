@@ -1,5 +1,8 @@
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
+
+  // maybe new function ina  new file to handle manual images
+
   if (name === 'shellos-west') {
     name = 'shellos'
   } else if (name === 'gastrodon-west') {
@@ -17,6 +20,7 @@ function fetchPokemon(name, type) {
     document.querySelector(`#${type}-name`).textContent = 'Gastrodon';
     return
   };
+  
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
     .then(response => response.json())
