@@ -186,12 +186,19 @@ p {
         width: 4.25rem;
     }
     .head-text {
-        font-size: 0.3rem;
+        font-size: 0.4rem;
    
     }
     
     .type-icon {
         width: 0.5rem;
 
+    }
+    .row {
+        --bs-gutter-x: 0.5rem;
+    }
+
+    .mb-3 {
+        margin-bottom: 0 !important;
     }
 }
