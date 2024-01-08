@@ -195,3 +195,37 @@ span {
 .dropdown-option:hover {
     background-color: #f0f0f0;
 }
+
+@layer base {
+    img {
+      @apply inline-block;
+    }
+  }
+
+/* @media (max-width: 768px) {
+    .type-section {
+        width: 4.25rem;
+    }
+    .head-text {
+        font-size: 0.3rem;
+   
+    }
+    
+    .type-icon {
+        width: 0.5rem;
+
+    }
+} */
+
+/* .type-section {
+    width: 7rem;
+}
+.head-text {
+    font-size: 0.7rem;
+
+}
+
+.type-icon {
+    width: 1rem;
+
+} */
