@@ -2,23 +2,9 @@
 function fetchPokemon(name, type) {
 
   // maybe new function ina  new file to handle manual images
-
-  if (name === 'shellos-west') {
-    name = 'shellos'
-  } else if (name === 'gastrodon-west') {
-    name = 'gastrodon'
-  } else if (name === 'shellos-east') {
-    let pokemonImg = './images/shellos-east.png';
-    let imgDiv = document.querySelector(`#${type}-img`)
-    imgDiv.src = pokemonImg;
-    document.querySelector(`#${type}-name`).textContent = 'Shellos';
-    return
-  } else if (name === 'gastrodon-east') {
-    let pokemonImg = './images/gastrodon-east.png';
-    let imgDiv = document.querySelector(`#${type}-img`)
-    imgDiv.src = pokemonImg;
-    document.querySelector(`#${type}-name`).textContent = 'Gastrodon';
-    return
+  name = manualImg(name, type);
+  if (!name) {
+    return;
   };
   
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
@@ -73,7 +59,6 @@ function pokemonDropdown(typeSection, array, type) {
     // for each option that is in the ul...
     dropdownOptions.forEach(function (option) {
       // option's text content is lowercased and called "choice"
-      console.log(option.textContent);
       const choice = option.textContent.toLowerCase();
       // if the choice includes any letter of what the user typed, show all choices that have the value of what has been typed
       if (choice.includes(whatUserTyped)) {
@@ -91,7 +76,6 @@ function pokemonDropdown(typeSection, array, type) {
     option.addEventListener('click', function () {
       dropdownInput.value = option.textContent.toLowerCase();
       dropdownMenu.style.display = 'none';
-      console.log(dropdownInput.value)
       // console.log('this will be the id you are looking for:' + typeId)
 
       //call fetchPokemon using user's selection and including type as template literal to target that img element with corresponding id
@@ -113,7 +97,7 @@ function pokemonDropdown(typeSection, array, type) {
 function callDropdowns() {
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
   let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
-  console.log(allArrays)
+  
 
   for (let i = 0; i < allTypes.length; i++) {
     let type = allTypes[i];
