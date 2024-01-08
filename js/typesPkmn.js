@@ -717,7 +717,7 @@ let firePokemon =
         'arcanine-hisui',
         'typhlosion-hisui',
         'tauros-paldea-blaze-breed',
-        'ogerpon-hearthflame-mask'
+        'ogerpon-hearthflame'
     ];
 
 let flyingPokemon =
@@ -908,7 +908,7 @@ let ghostPokemon =
         'phantump',
         'trevenant',
         'pumpkaboo',
-        'gourgeist-average',
+        'gourgeist',
         'hoopa',
         'decidueye',
         'sandygast',
@@ -941,9 +941,6 @@ let ghostPokemon =
         'sinistcha',
         'giratina-origin',
         'aegislash-blade',
-        'gourgeist-small',
-        'gourgeist-large',
-        'gourgeist-super',
         'gengar-mega',
         'banette-mega',
         'sableye-mega',
@@ -1050,7 +1047,7 @@ let grassPokemon =
         'phantump',
         'trevenant',
         'pumpkaboo',
-        'gourgeist-average',
+        'gourgeist',
         'rowlet',
         'dartrix',
         'decidueye',
@@ -1095,9 +1092,6 @@ let grassPokemon =
         'ogerpon',
         'shaymin-sky',
         'rotom-mow',
-        'gourgeist-small',
-        'gourgeist-large',
-        'gourgeist-super',
         'venusaur-mega',
         'abomasnow-mega',
         'sceptile-mega',
@@ -1112,9 +1106,9 @@ let grassPokemon =
         'electrode-hisui',
         'lilligant-hisui',
         'decidueye-hisui',
-        'ogerpon-wellspring-mask',
-        'ogerpon-hearthflame-mask',
-        'ogerpon-cornerstone-mask'
+        'ogerpon-wellspring',
+        'ogerpon-hearthflame',
+        'ogerpon-cornerstone'
     ];
 
 let groundPokemon =
@@ -1788,7 +1782,7 @@ let rockPokemon =
         'growlithe-hisui',
         'arcanine-hisui',
         'avalugg-hisui',
-        'ogerpon-cornerstone-mask'
+        'ogerpon-cornerstone'
     ];
 
 let steelPokemon =
@@ -2073,5 +2067,5 @@ let waterPokemon =
         'palafin-hero',
         'tatsugiri-droopy',
         'tatsugiri-stretchy',
-        'ogerpon-wellspring-mask'
+        'ogerpon-wellspring'
     ];

@@ -17,8 +17,6 @@ NEXT TO DO:
 
 list of pokemon with no images:
 
-pumpkaboo
-gourgeist
 ogrepon masks
 sinistcha
 
