@@ -1,5 +1,6 @@
 
 NEXT TO DO:
+- when choose a pokemon, if change pokemon, name doesnt change in card
 -adjust font-size in card because it stretches p class out when too much words
 - find more pokemon we need to manually add images for
 - think about making the card automatically download at click instead of appearing underneath
@@ -17,7 +18,6 @@ NEXT TO DO:
 
 list of pokemon with no images:
 
-ogrepon masks
 sinistcha
 
 need to add new pokemon:

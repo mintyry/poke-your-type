@@ -3,6 +3,7 @@ function fetchPokemon(name, type) {
 
   // maybe new function ina  new file to handle manual images
   name = manualImg(name, type);
+
   //if manual photo from my files, doesnt fetch
   if (!name) {
     return;
@@ -24,9 +25,9 @@ function fetchPokemon(name, type) {
       //if name is textcontent's name is set in manualImg(), then this will not occur
       //this is done because otherwise, whatever name i set in manualImg gets overwritten here.
       //so i check if textContent has been changed yet by checking if it still says "Pokemon"
-      if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
+      // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
         document.querySelector(`#${type}-name`).textContent = name;
-    }
+    // }
       
     })//ends .thendata
 };//ends fetchPokemon fn
