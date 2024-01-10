@@ -56,3 +56,5 @@ I noticed the way it worked though was they had predefined classes that appeared
 credits:
 xpert ai dropdown css code
 https://github.com/duiker101 for type icons
+
+opengraph meta data
