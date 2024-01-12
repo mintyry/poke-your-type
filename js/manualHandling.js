@@ -1,5 +1,5 @@
 // manually setting photos
-function manualImg(name, type) {
+function manualHandle(name, type) {
     switch (name) {
         case 'shellos-west': {
             return 'shellos'
