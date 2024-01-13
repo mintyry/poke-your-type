@@ -8,7 +8,7 @@ function fetchPokemon(name, type) {
   if (!name) {
     return;
   };
-  
+
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
     .then(response => response.json())
@@ -26,15 +26,19 @@ function fetchPokemon(name, type) {
       //this is done because otherwise, whatever name i set in manual gets overwritten here.
       //so i check if textContent has been changed yet by checking if it still says "Pokemon"
       // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
+      let dashedNames = [
+        'wo-chien',
+        'chien-pao',
+        'ting-lu',
+        'chi-yu',
+      ]
 
-      
-      if (name.includes('-')) {
+      if (name.includes('-') && !dashedNames.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
       } else {
         document.querySelector(`#${type}-name`).textContent = name;
       }
-    // }
-      
+
     })//ends .thendata
 };//ends fetchPokemon fn
 
@@ -111,7 +115,7 @@ function pokemonDropdown(typeSection, array, type) {
 function callDropdowns() {
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
   let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
-  
+
 
   for (let i = 0; i < allTypes.length; i++) {
     let type = allTypes[i];
@@ -128,10 +132,12 @@ callDropdowns();
 //button to take screenshot via canvas
 
 const button = document.querySelector('button');
-button.addEventListener('click', (event)=>{
+button.addEventListener('click', (event) => {
   event.preventDefault();
-  html2canvas(document.querySelector("#user-card"), {backgroundColor: "transparent",  allowTaint : true,
-  useCors : true }).then(canvas => {
+  html2canvas(document.querySelector("#user-card"), {
+    backgroundColor: "transparent", allowTaint: true,
+    useCors: true
+  }).then(canvas => {
     document.body.appendChild(canvas)
   });
 });
