@@ -7,6 +7,9 @@ function manualHandle(name, type) {
         case 'gastrodon-west': {
             return 'gastrodon'
         }
+        case 'morpeko': {
+            return 'morpeko-full-belly'
+        }
         case 'pumpkaboo': {
             document.querySelector(`#${type}-name`).textContent = 'Pumpkaboo';
             return 'pumpkaboo-average';

@@ -1,16 +1,14 @@
 
 NEXT TO DO:
-- when choose a pokemon, if change pokemon, name doesnt change in card
--adjust font-size in card because it stretches p class out when too much words
+
+
 - find more pokemon we need to manually add images for
 - think about making the card automatically download at click instead of appearing underneath
 - style in case of responsiveness on mobile, per diarmuid
 - add make-your-own and url to bottom of user-card div
-
 - need images of ogerpon variants; look through and delete or add photos for other variants of other pokemon
 - same for new pokemon (eg: hdrapple has no images in pokeapi)
-    - Archaludon, Hydrapple, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos,
-- look into more efficient way of calling array files (bundle?);
+
 - add icon in input box
 
 
@@ -27,6 +25,8 @@ iron Boulder
 raging Bolt
 gouging Fire
 archaludon
+pecharunt
+terapagos
 
 
 
