@@ -1,23 +1,18 @@
 // manually setting photos
 function manualHandle(name, type) {
     switch (name) {
+        // there is no west in api, made it here
         case 'shellos-west': {
             return 'shellos'
         }
         case 'gastrodon-west': {
             return 'gastrodon'
         }
+        // it's morpeko-full-belly in api; unnecessary
         case 'morpeko': {
             return 'morpeko-full-belly'
         }
-        case 'pumpkaboo': {
-            document.querySelector(`#${type}-name`).textContent = 'Pumpkaboo';
-            return 'pumpkaboo-average';
-        }
-        case 'gourgeist': {
-            document.querySelector(`#${type}-name`).textContent = 'Gourgeist';
-            return 'gourgeist-average';
-        }
+        // no photos in api for following pokemon
         case 'sinistcha': {
             let pokemonImg = './images/sinistcha.png';
             let imgDiv = document.querySelector(`#${type}-img`)
