@@ -34,6 +34,8 @@ function fetchPokemon(name, type) {
         'jangmo-o',
         'hakamo-o',
         'kommo-o',
+        'mr-mime',
+        'mr-rime',
       ];
 
       let spaceOverHyphen = [
@@ -60,7 +62,7 @@ function fetchPokemon(name, type) {
         'tapu-lele',
         'tapu-bulu',
         'tapu-fini',
-      ]
+      ];
 
       if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
