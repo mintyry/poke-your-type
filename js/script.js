@@ -26,11 +26,14 @@ function fetchPokemon(name, type) {
       //this is done because otherwise, whatever name i set in manual gets overwritten here.
       //so i check if textContent has been changed yet by checking if it still says "Pokemon"
       // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
-      let ruinFour = [
+      let keepHyphen= [
         'wo-chien',
         'chien-pao',
         'ting-lu',
         'chi-yu',
+        'jangmo-o',
+        'hakamo-o',
+        'kommo-o',
       ];
 
       let paradoxPkmn = [
@@ -55,7 +58,7 @@ function fetchPokemon(name, type) {
         'iron-crown'
       ]
 
-      if (name.includes('-') && !ruinFour.includes(name) && !paradoxPkmn.includes(name)) {
+      if (name.includes('-') && !keepHyphen.includes(name) && !paradoxPkmn.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
       } else if (paradoxPkmn.includes(name)){
         document.querySelector(`#${type}-name`).textContent = name.replace('-', ' ');
