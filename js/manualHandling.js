@@ -12,6 +12,9 @@ function manualHandle(name, type) {
         case 'morpeko': {
             return 'morpeko-full-belly'
         }
+        case 'mimikyu': {
+            return 'mimikyu-disguised'
+        }
         // no photos in api for following pokemon
         case 'sinistcha': {
             let pokemonImg = './images/sinistcha.png';

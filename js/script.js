@@ -62,6 +62,7 @@ function fetchPokemon(name, type) {
         'tapu-lele',
         'tapu-bulu',
         'tapu-fini',
+        'mime-jr'
       ];
 
       if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
