@@ -296,14 +296,6 @@ let dragonPokemon =
         'palkia-origin',
         'tatsugiri-droopy',
         'tatsugiri-stretchy',
-        'koraidon-limited-build',
-        'koraidon-sprinting-build',
-        'koraidon-swimming-build',
-        'koraidon-gliding-build',
-        'miraidon-low-power-mode',
-        'miraidon-drive-mode',
-        'miraidon-aquatic-mode',
-        'miraidon-glide-mode'
     ];
 
 let electricPokemon = [
@@ -410,10 +402,6 @@ let electricPokemon = [
     'toxtricity-low-key-gmax',
     'voltorb-hisui',
     'electrode-hisui',
-    'miraidon-low-power-mode',
-    'miraidon-drive-mode',
-    'miraidon-aquatic-mode',
-    'miraidon-glide-mode'
 ];
 
 let fairyPokemon =
@@ -596,10 +584,6 @@ let fightingPokemon =
         'tauros-paldea-combat-breed',
         'tauros-paldea-blaze-breed',
         'tauros-paldea-aqua-breed',
-        'koraidon-limited-build',
-        'koraidon-sprinting-build',
-        'koraidon-swimming-build',
-        'koraidon-gliding-build'
     ];
 
 let firePokemon =
