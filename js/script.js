@@ -26,15 +26,39 @@ function fetchPokemon(name, type) {
       //this is done because otherwise, whatever name i set in manual gets overwritten here.
       //so i check if textContent has been changed yet by checking if it still says "Pokemon"
       // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
-      let dashedNames = [
+      let ruinFour = [
         'wo-chien',
         'chien-pao',
         'ting-lu',
         'chi-yu',
+      ];
+
+      let paradoxPkmn = [
+        'great-tusk',
+        'scream-tail',
+        'brute-bonnet',
+        'flutter-mane',
+        'slither-wing',
+        'sandy-shocks',
+        'roaring-moon',
+        'walking-wake',
+        'gouging-fire',
+        'raging-bolt',
+        'iron-treads',
+        'iron-bundle',
+        'iron-hands',
+        'iron-jugulus',
+        'iron-moth',
+        'iron-thorns',
+        'iron-valiant',
+        'iron-leaves',
+        'iron-crown'
       ]
 
-      if (name.includes('-') && !dashedNames.includes(name)) {
+      if (name.includes('-') && !ruinFour.includes(name) && !paradoxPkmn.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
+      } else if (paradoxPkmn.includes(name)){
+        document.querySelector(`#${type}-name`).textContent = name.replace('-', ' ');
       } else {
         document.querySelector(`#${type}-name`).textContent = name;
       }
