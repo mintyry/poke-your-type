@@ -36,7 +36,7 @@ function fetchPokemon(name, type) {
         'kommo-o',
       ];
 
-      let paradoxPkmn = [
+      let spaceOverHyphen = [
         'great-tusk',
         'scream-tail',
         'brute-bonnet',
@@ -55,12 +55,16 @@ function fetchPokemon(name, type) {
         'iron-thorns',
         'iron-valiant',
         'iron-leaves',
-        'iron-crown'
+        'iron-crown',
+        'tapu-koko',
+        'tapu-lele',
+        'tapu-bulu',
+        'tapu-fini',
       ]
 
-      if (name.includes('-') && !keepHyphen.includes(name) && !paradoxPkmn.includes(name)) {
+      if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
-      } else if (paradoxPkmn.includes(name)){
+      } else if (spaceOverHyphen.includes(name)){
         document.querySelector(`#${type}-name`).textContent = name.replace('-', ' ');
       } else {
         document.querySelector(`#${type}-name`).textContent = name;
