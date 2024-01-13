@@ -47,7 +47,7 @@ function fetchPokemon(name, type) {
         'iron-treads',
         'iron-bundle',
         'iron-hands',
-        'iron-jugulus',
+        'iron-jugulis',
         'iron-moth',
         'iron-thorns',
         'iron-valiant',
