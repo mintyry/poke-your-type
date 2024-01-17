@@ -201,4 +201,7 @@ p {
     .mb-3 {
         margin-bottom: 0 !important;
     }
+    #user-card {
+        width: 100%;
+    }
 }
