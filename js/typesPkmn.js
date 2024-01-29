@@ -294,6 +294,10 @@ let dragonPokemon =
         'palkia-origin',
         'tatsugiri-droopy',
         'tatsugiri-stretchy',
+        'hydrapple',
+        'archaludon',
+        'gouging-fire',
+        'raging-bolt',
     ];
 
 let electricPokemon = [
@@ -400,6 +404,7 @@ let electricPokemon = [
     'toxtricity-low-key-gmax',
     'voltorb-hisui',
     'electrode-hisui',
+    'raging-bolt',
 ];
 
 let fairyPokemon =
@@ -685,7 +690,8 @@ let firePokemon =
         'arcanine-hisui',
         'typhlosion-hisui',
         'tauros-paldea-blaze-breed',
-        'ogerpon-hearthflame'
+        'ogerpon-hearthflame',
+        'gouging-fire',
     ];
 
 let flyingPokemon =
@@ -923,7 +929,8 @@ let ghostPokemon =
         'zorua-hisui',
         'zoroark-hisui',
         'basculegion-female',
-        'gimmighoul-roaming'
+        'gimmighoul-roaming',
+        'pecharunt',
     ];
 
 let grassPokemon =
@@ -1071,7 +1078,8 @@ let grassPokemon =
         'decidueye-hisui',
         'ogerpon-wellspring',
         'ogerpon-hearthflame',
-        'ogerpon-cornerstone'
+        'ogerpon-cornerstone',
+        'hydrapple',
     ];
 
 let groundPokemon =
@@ -1394,7 +1402,8 @@ let normalPokemon =
         'Squawkabilly-Blue-Plumage',
         'Squawkabilly-Yellow-Plumage',
         'Squawkabilly-White-Plumage',
-        'Ursaluna-Bloodmoon'
+        'Ursaluna-Bloodmoon',
+        'Terapagos'
     ];
 
 let poisonPokemon =
@@ -1498,7 +1507,8 @@ let poisonPokemon =
         'toxtricity-low-key-gmax',
         'qwilfish-hisui',
         'sneasel-hisui',
-        'wooper-paldea'
+        'wooper-paldea',
+        'pecharunt',
     ];
 
 let psychicPokemon = [
@@ -1635,7 +1645,9 @@ let psychicPokemon = [
     'calyrex-shadow',
     'orbeetle-gmax',
     'hatterene-gmax',
-    'braviary-hisui'
+    'braviary-hisui',
+    'iron-crown',
+    'iron-boulder',
 ];
 
 let rockPokemon =
@@ -1740,7 +1752,8 @@ let rockPokemon =
         'growlithe-hisui',
         'arcanine-hisui',
         'avalugg-hisui',
-        'ogerpon-cornerstone'
+        'ogerpon-cornerstone',
+        'iron-boulder',
     ];
 
 let steelPokemon =
@@ -1832,7 +1845,9 @@ let steelPokemon =
         'duraludon-gmax',
         'sliggoo-hisui',
         'goodra-hisui',
-        'dialga-origin'
+        'dialga-origin',
+        'archaludon',
+        'iron-crown',
     ];
 
 let waterPokemon =

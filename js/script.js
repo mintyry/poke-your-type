@@ -36,6 +36,8 @@ function fetchPokemon(name, type) {
         'kommo-o',
         'mr-mime',
         'mr-rime',
+        'ho-oh',
+        'Porygon-Z',
       ];
 
       let spaceOverHyphen = [
@@ -58,11 +60,13 @@ function fetchPokemon(name, type) {
         'iron-valiant',
         'iron-leaves',
         'iron-crown',
+        'iron-boulder',
         'tapu-koko',
         'tapu-lele',
         'tapu-bulu',
         'tapu-fini',
-        'mime-jr'
+        'mime-jr',
+        'Type-Null'
       ];
 
       if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {

@@ -1,7 +1,6 @@
 
 NEXT TO DO:
 
-- looking through hyphens; progress: finished fairy, on fighting
 - find more pokemon we need to manually add images for
 - think about making the card automatically download at click instead of appearing underneath
 - style in case of responsiveness on mobile, per diarmuid
@@ -18,7 +17,7 @@ list of pokemon with no images:
 
 
 
-need to add new pokemon:
+need to add new pokemons' pictures
 Hydrapple
 iron Crown
 iron Boulder
