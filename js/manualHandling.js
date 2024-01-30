@@ -15,6 +15,21 @@ function manualHandle(name, type) {
         case 'mimikyu': {
             return 'mimikyu-disguised'
         }
+        case 'hydrapple': {
+            let pokemonImg = './images/ogartwork/hydrapple.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = name;
+            break
+        }
+        case 'iron-crown': {
+            let pokemonImg = './images/ogartwork/ironcrown.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Iron Crown';
+            break
+
+        }
         // no photos in api for following pokemon
         case 'sinistcha': {
             let pokemonImg = './images/ogartwork/sinistcha.png';

@@ -1,7 +1,6 @@
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
 
-  // maybe new function ina  new file to handle manual images
   name = manualHandle(name, type);
 
   //if manual photo from my files, doesnt fetch
@@ -14,6 +13,9 @@ function fetchPokemon(name, type) {
     .then(response => response.json())
     .then(data => {
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
+      // if (pokemonImg === null) {
+      //    manualHandle(name, type);
+      // }
       console.log(pokemonImg);
       console.log(type)
       //select specific div by dynamic id

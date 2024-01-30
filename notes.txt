@@ -2,6 +2,7 @@
 NEXT TO DO:
 
 - find more pokemon we need to manually add images for
+    *completed hydrapple and iron crown; look for more efficient way to include pics without having to also enter name
 - think about making the card automatically download at click instead of appearing underneath
 - style in case of responsiveness on mobile, per diarmuid
 - add make-your-own and url to bottom of user-card div
@@ -18,8 +19,7 @@ list of pokemon with no images:
 
 
 need to add new pokemons' pictures
-Hydrapple
-iron Crown
+
 iron Boulder
 raging Bolt
 gouging Fire
