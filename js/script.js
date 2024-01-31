@@ -180,10 +180,13 @@ callDropdowns();
 const button = document.querySelector('button');
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  html2canvas(document.querySelector("#user-card"), {
+  const userCard = document.querySelector("#user-card")
+  html2canvas(userCard, {
     backgroundColor: "transparent", allowTaint: true,
     useCors: true
   }).then(canvas => {
-    document.body.appendChild(canvas)
+    userCard.style.display = 'none';
+    const generated = document.querySelector("#generated-space")
+    generated.appendChild(canvas)
   });
 });
