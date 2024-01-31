@@ -182,7 +182,8 @@ button.addEventListener('click', (event) => {
   event.preventDefault();
   const userCard = document.querySelector("#user-card")
   html2canvas(userCard, {
-    backgroundColor: "transparent", allowTaint: true,
+    backgroundColor: "transparent", 
+    allowTaint: false,
     useCors: true
   }).then(canvas => {
     userCard.style.display = 'none';
