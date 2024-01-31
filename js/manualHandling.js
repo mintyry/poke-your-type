@@ -1,4 +1,5 @@
-// manually setting photos
+// manually setting photos/names
+// can remove whenever pokeapi adds original artwork for pokemon
 function manualHandle(name, type) {
     switch (name) {
         // there is no west in api, made it here
@@ -15,11 +16,12 @@ function manualHandle(name, type) {
         case 'mimikyu': {
             return 'mimikyu-disguised'
         }
+         // no photos in api for following pokemon
         case 'hydrapple': {
             let pokemonImg = './images/ogartwork/hydrapple.png';
             let imgDiv = document.querySelector(`#${type}-img`)
             imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = name;
+            document.querySelector(`#${type}-name`).textContent = 'Hydrapple';
             break
         }
         case 'iron-crown': {
@@ -28,9 +30,21 @@ function manualHandle(name, type) {
             imgDiv.src = pokemonImg;
             document.querySelector(`#${type}-name`).textContent = 'Iron Crown';
             break
-
         }
-        // no photos in api for following pokemon
+        case 'iron-boulder': {
+            let pokemonImg = './images/ogartwork/ironboulder.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Iron Boulder';
+            break
+        }
+        case 'iron-boulder': {
+            let pokemonImg = './images/ogartwork/ironboulder.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Iron Boulder';
+            break
+        }
         case 'sinistcha': {
             let pokemonImg = './images/ogartwork/sinistcha.png';
             let imgDiv = document.querySelector(`#${type}-img`)

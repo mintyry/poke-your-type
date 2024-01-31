@@ -18,6 +18,12 @@ function fetchPokemon(name, type) {
       // }
       console.log(pokemonImg);
       console.log(type)
+      
+      // the following would need to make a new function purely for image handling
+      // if (pokemonImg === null) {
+      //   pokemonImg = manualHandle(name, type);
+      // }
+
       //select specific div by dynamic id
       let imgDiv = document.querySelector(`#${type}-img`)
       console.log(imgDiv)
@@ -28,7 +34,7 @@ function fetchPokemon(name, type) {
       //this is done because otherwise, whatever name i set in manual gets overwritten here.
       //so i check if textContent has been changed yet by checking if it still says "Pokemon"
       // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
-      let keepHyphen= [
+      let keepHyphen = [
         'wo-chien',
         'chien-pao',
         'ting-lu',
@@ -73,7 +79,7 @@ function fetchPokemon(name, type) {
 
       if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
-      } else if (spaceOverHyphen.includes(name)){
+      } else if (spaceOverHyphen.includes(name)) {
         document.querySelector(`#${type}-name`).textContent = name.replace('-', ' ');
       } else {
         document.querySelector(`#${type}-name`).textContent = name;
