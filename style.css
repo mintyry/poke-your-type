@@ -96,7 +96,7 @@ p {
 }
 
 .steel {
-    background-color: #8ab5ab;
+    background-color: #98b2ac;
 }
 
 .ice {
@@ -182,11 +182,30 @@ p {
 }
 
 @media (max-width: 768px) {
+
+    #user-card {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
+
+/* @media (max-width: 420px) {
+    .head-text {
+        font-size: 1.5vmin;
+   
+    }
+    .type-icon {
+        width: 1.5vmin;
+
+    }
+} */
+
+/* @media (max-width: 768px) {
     .tenrem {
         width: 4.25rem;
     }
     .head-text {
-        font-size: 0.4rem;
+        font-size: 2vmin;
    
     }
     
@@ -205,3 +224,14 @@ p {
         width: 100%;
     }
 }
+
+@media (max-width: 420px) {
+    .head-text {
+        font-size: 1.5vmin;
+   
+    }
+    .type-icon {
+        width: 1.5vmin;
+
+    }
+} */

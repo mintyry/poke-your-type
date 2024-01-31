@@ -2,11 +2,12 @@
 NEXT TO DO:
 
 
+-i tried to display none the actual full sized card, but html2canvas does take a direct picture of it also hidden
+
+
 - think about making the card automatically download at click instead of appearing underneath
 - style in case of responsiveness on mobile, per diarmuid
 - add make-your-own and url to bottom of user-card div
-- need images of ogerpon variants; look through and delete or add photos for other variants of other pokemon
-- same for new pokemon (eg: hdrapple has no images in pokeapi)
 
 - add icon in input box
 
@@ -15,6 +16,7 @@ NEXT TO DO:
 
 COOL IDEAS TO ADD AT END:
 
+add options for background of card
 
 pokemon cries when you choose that pokemon
 
@@ -22,14 +24,13 @@ pokeball cursor for hovering over pokemon names in dropdown
 
 change background color of dropdown li hover to type color
 
-no east shellos or gastrodon image
-delete extra form names that have no image
 
 
 
 
 
 WHAT DID I LEARN
+html2canvas
 you can use queryselectors on elements
 you can access globally established variables in functions using bracket notation on window, ie: window[variable]
 I thought making the dropdown would be as easy as making a select element and modifying something minor to make a search/filter bar.
