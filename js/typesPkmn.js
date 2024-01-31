@@ -1403,7 +1403,9 @@ let normalPokemon =
         'Squawkabilly-Yellow-Plumage',
         'Squawkabilly-White-Plumage',
         'Ursaluna-Bloodmoon',
-        'Terapagos'
+        'Terapagos',
+        'terapagos-terestal',
+        'terapagos-stellar'
     ];
 
 let poisonPokemon =

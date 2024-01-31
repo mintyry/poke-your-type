@@ -24,6 +24,41 @@ function manualHandle(name, type) {
             document.querySelector(`#${type}-name`).textContent = 'Hydrapple';
             break
         }
+        case 'archaludon': {
+            let pokemonImg = './images/ogartwork/archaludon.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Archaludon';
+            break
+        }
+        case 'terapagos': {
+            let pokemonImg = './images/ogartwork/terapagos.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            break
+        }
+        case 'terapagos-terestal': {
+            let pokemonImg = './images/ogartwork/terestal.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            break
+        }
+        case 'terapagos-stellar': {
+            let pokemonImg = './images/ogartwork/terapagos-stellar.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            break
+        }
+        case 'pecharunt': {
+            let pokemonImg = './images/ogartwork/pecharunt.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Pecharunt';
+            break
+        }
         case 'iron-crown': {
             let pokemonImg = './images/ogartwork/ironcrown.png';
             let imgDiv = document.querySelector(`#${type}-img`)
@@ -38,11 +73,18 @@ function manualHandle(name, type) {
             document.querySelector(`#${type}-name`).textContent = 'Iron Boulder';
             break
         }
-        case 'iron-boulder': {
-            let pokemonImg = './images/ogartwork/ironboulder.png';
+        case 'raging-bolt': {
+            let pokemonImg = './images/ogartwork/ragingbolt.png';
             let imgDiv = document.querySelector(`#${type}-img`)
             imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Iron Boulder';
+            document.querySelector(`#${type}-name`).textContent = 'Raging Bolt';
+            break
+        }
+        case 'gouging-fire': {
+            let pokemonImg = './images/ogartwork/gougingfire.png';
+            let imgDiv = document.querySelector(`#${type}-img`)
+            imgDiv.src = pokemonImg;
+            document.querySelector(`#${type}-name`).textContent = 'Gouging Fire';
             break
         }
         case 'sinistcha': {

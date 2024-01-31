@@ -20,7 +20,6 @@ list of pokemon with no images:
 
 need to add new pokemons' pictures
 
-iron Boulder
 raging Bolt
 gouging Fire
 archaludon
