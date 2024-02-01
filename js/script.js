@@ -198,8 +198,7 @@ button.addEventListener('click', (event) => {
 
   html2canvas(userCard, {
     backgroundColor: "transparent", 
-    allowTaint: true,
-    foreignObjectRendering: true
+  
   }).then(canvas => {
     console.log(canvas)
     // Convert the canvas to a data URL
