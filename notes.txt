@@ -1,6 +1,6 @@
 
 NEXT TO DO:
-
+html2canvas deleting type-icons on safari. maybe cuz svg?
 
 -i tried to display none the actual full sized card, but html2canvas does take a direct picture of it also hidden
 
