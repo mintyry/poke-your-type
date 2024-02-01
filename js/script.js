@@ -186,7 +186,6 @@ button.addEventListener('click', (event) => {
     allowTaint: true,
     useCors: true
   }).then(canvas => {
-    userCard.style.display = 'none';
     const generated = document.querySelector("#generated-space")
     generated.appendChild(canvas)
   });
