@@ -28,6 +28,7 @@ function fetchPokemon(name, type) {
       let imgDiv = document.querySelector(`#${type}-img`)
       console.log(imgDiv)
       imgDiv.src = pokemonImg;
+      // imgDiv.crossOrigin = 'anonymous';
 
       //set name of pokemon in card
       //if name is textcontent's name is set in manual(), then this will not occur
@@ -183,13 +184,52 @@ callDropdowns();
 //   const userCard = document.querySelector("#user-card")
 //   html2canvas(userCard, {
 //     backgroundColor: "transparent", 
-//     allowTaint: true,
-//     useCors: true
+    
 //   }).then(canvas => {
 //     const generated = document.querySelector("#generated-space")
 //     generated.appendChild(canvas)
 //   });
 // });
+
+
+// toBlob
+
+// const button = document.querySelector('button');
+// button.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const userCard = document.querySelector("#user-card");
+
+//   // Wait for all resources to be loaded
+//   window.onload = function() {
+//     html2canvas(userCard, {
+//       backgroundColor: "transparent", 
+//     }).then(canvas => {
+//       // Convert the canvas to a blob
+//       canvas.toBlob(blob => {
+  // convert image to json string**, fetch image, convert to binary object then convery to binary string
+  // look up createObjectURL**
+//         // Create a temporary link element
+//         const downloadLink = document.createElement('a');
+
+//         // Set the href attribute to the blob data
+//         downloadLink.href = URL.createObjectURL(blob);
+
+//         // Set the download attribute with the desired filename
+//         downloadLink.download = 'user_card.png';
+
+//         // Append the link to the document
+//         document.body.appendChild(downloadLink);
+
+//         // Trigger a click on the link to start the download
+//         downloadLink.click();
+
+//         // Remove the link from the document
+//         document.body.removeChild(downloadLink);
+//       }, 'image/png');
+//     });
+//   };
+// });
+
 
 const button = document.querySelector('button');
 button.addEventListener('click', (event) => {
@@ -197,7 +237,10 @@ button.addEventListener('click', (event) => {
   const userCard = document.querySelector("#user-card");
 
   html2canvas(userCard, {
-    backgroundColor: "transparent", 
+    backgroundColor: "transparent",
+    useCors: true,
+    allowTaint: true,
+    foreignObjectRendering: true
   
   }).then(canvas => {
     console.log(canvas)
