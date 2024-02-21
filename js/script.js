@@ -176,6 +176,47 @@ function callDropdowns() {
 
 callDropdowns();
 
+
+
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  const userCard = document.querySelector("#user-card");
+
+  html2canvas(userCard, {
+    backgroundColor: "transparent",
+
+    // comment this back in, and you will generate/download a blank card
+
+    // useCors: true,
+    // allowTaint: true,
+    // foreignObjectRendering: true
+  
+  }).then(canvas => {
+    console.log(canvas)
+    // Convert the canvas to a data URL
+    const imageDataURL = canvas.toDataURL('image/png');
+
+    // Create a temporary link element
+    const downloadLink = document.createElement('a');
+
+    // Set the href attribute to the data URL
+    downloadLink.href = imageDataURL;
+
+    // Set the download attribute with the desired filename
+    downloadLink.download = 'user_card.png';
+
+    // Append the link to the document
+    document.body.appendChild(downloadLink);
+
+    // Trigger a click on the link to start the download
+    downloadLink.click();
+
+    // Remove the link from the document
+    document.body.removeChild(downloadLink);
+  });
+});
+
 //button to take screenshot via canvas
 
 // const button = document.querySelector('button');
@@ -229,40 +270,3 @@ callDropdowns();
 //     });
 //   };
 // });
-
-
-const button = document.querySelector('button');
-button.addEventListener('click', (event) => {
-  event.preventDefault();
-  const userCard = document.querySelector("#user-card");
-
-  html2canvas(userCard, {
-    backgroundColor: "transparent",
-    useCors: true,
-    allowTaint: true,
-    foreignObjectRendering: true
-  
-  }).then(canvas => {
-    console.log(canvas)
-    // Convert the canvas to a data URL
-    const imageDataURL = canvas.toDataURL('image/png');
-
-    // Create a temporary link element
-    const downloadLink = document.createElement('a');
-
-    // Set the href attribute to the data URL
-    downloadLink.href = imageDataURL;
-
-    // Set the download attribute with the desired filename
-    downloadLink.download = 'user_card.png';
-
-    // Append the link to the document
-    document.body.appendChild(downloadLink);
-
-    // Trigger a click on the link to start the download
-    downloadLink.click();
-
-    // Remove the link from the document
-    document.body.removeChild(downloadLink);
-  });
-});
