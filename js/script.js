@@ -18,15 +18,16 @@ function fetchPokemon(name, type) {
       // }
       console.log(pokemonImg);
       console.log(type)
-      
+
       // the following would need to make a new function purely for image handling
       // if (pokemonImg === null) {
       //   pokemonImg = manualHandle(name, type);
       // }
 
       //select specific div by dynamic id
-      let imgDiv = document.querySelector(`#${type}-img`)
-      console.log(imgDiv)
+      let imgDiv = document.querySelector(`#${type}-img`);
+      console.log(imgDiv);
+      // imgDiv.crossOrigin = "anonymous";
       imgDiv.src = pokemonImg;
       // imgDiv.crossOrigin = 'anonymous';
 
@@ -178,59 +179,90 @@ callDropdowns();
 
 
 
-const button = document.querySelector('button');
-button.addEventListener('click', (event) => {
-  event.preventDefault();
-  const userCard = document.querySelector("#user-card");
+// const button = document.querySelector('button');
+// button.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const userCard = document.querySelector("#user-card");
 
-  html2canvas(userCard, {
-    backgroundColor: "transparent",
+//   html2canvas(userCard, {
+//     backgroundColor: "transparent",
 
-    // comment this back in, and you will generate/download a blank card
+//     // comment this back in, and you will generate/download a blank card
 
-    // useCors: true,
-    // allowTaint: true,
-    // foreignObjectRendering: true
-  
-  }).then(canvas => {
-    console.log(canvas)
-    // Convert the canvas to a data URL
-    const imageDataURL = canvas.toDataURL('image/png');
+//     // useCors: true,
+//     // allowTaint: true,
+//     // foreignObjectRendering: true
 
-    // Create a temporary link element
-    const downloadLink = document.createElement('a');
+//   }).then(canvas => {
+//     console.log(canvas)
+//     // Convert the canvas to a data URL
+//     const imageDataURL = canvas.toDataURL('image/png');
 
-    // Set the href attribute to the data URL
-    downloadLink.href = imageDataURL;
+//     // Create a temporary link element
+//     const downloadLink = document.createElement('a');
 
-    // Set the download attribute with the desired filename
-    downloadLink.download = 'user_card.png';
+//     // Set the href attribute to the data URL
+//     downloadLink.href = imageDataURL;
 
-    // Append the link to the document
-    document.body.appendChild(downloadLink);
+//     // Set the download attribute with the desired filename
+//     downloadLink.download = 'user_card.png';
 
-    // Trigger a click on the link to start the download
-    downloadLink.click();
+//     // Append the link to the document
+//     document.body.appendChild(downloadLink);
 
-    // Remove the link from the document
-    document.body.removeChild(downloadLink);
-  });
-});
+//     // Trigger a click on the link to start the download
+//     downloadLink.click();
 
-//button to take screenshot via canvas
+//     // Remove the link from the document
+//     document.body.removeChild(downloadLink);
+//   });
+// });
+
+//button to take screenshot via canvas, shows all images successfully
 
 // const button = document.querySelector('button');
 // button.addEventListener('click', (event) => {
 //   event.preventDefault();
 //   const userCard = document.querySelector("#user-card")
 //   html2canvas(userCard, {
-//     backgroundColor: "transparent", 
-    
+//     backgroundColor: "transparent",
+//     useCors: true,
+//     allowTaint: true,
+//     //   
+
 //   }).then(canvas => {
 //     const generated = document.querySelector("#generated-space")
 //     generated.appendChild(canvas)
 //   });
 // });
+
+
+// testing successful image and convert to image
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  const userCard = document.querySelector("#user-card");
+  
+  html2canvas(userCard, {
+    backgroundColor: "transparent",
+    useCors: true,
+    allowTaint: true,
+    //   
+
+  }).then(canvas => {
+
+    console.log(canvas.toDataURL("image/png", 0.9))
+    
+    const generated = document.querySelector("#generated-space")
+    generated.appendChild(canvas)
+
+    
+
+  });
+});
+
+
+
 
 
 // toBlob
@@ -247,8 +279,8 @@ button.addEventListener('click', (event) => {
 //     }).then(canvas => {
 //       // Convert the canvas to a blob
 //       canvas.toBlob(blob => {
-  // convert image to json string**, fetch image, convert to binary object then convery to binary string
-  // look up createObjectURL**
+// convert image to json string**, fetch image, convert to binary object then convery to binary string
+// look up createObjectURL**
 //         // Create a temporary link element
 //         const downloadLink = document.createElement('a');
 

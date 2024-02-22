@@ -1,5 +1,7 @@
 
 NEXT TO DO:
+
+try to see if you can somehow convert a tainted canvas to image still
 html2canvas deleting type-icons on safari. maybe cuz svg?
 maybe give height to icon
 download works on live server (http) try on https
