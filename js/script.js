@@ -13,23 +13,44 @@ function fetchPokemon(name, type) {
     .then(response => response.json())
     .then(data => {
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
+
       // if (pokemonImg === null) {
       //    manualHandle(name, type);
       // }
       console.log(pokemonImg);
-      console.log(type)
+      console.log(type);
+
+      fetch(pokemonImg)
+        .then(response => response.blob())
+        .then(blob => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const base64data = reader.result.split(',')[1];
+            console.log(base64data);
+
+            //select specific div by dynamic id
+            let imgDiv = document.querySelector(`#${type}-img`);
+            console.log(imgDiv);
+            // imgDiv.crossOrigin = "anonymous";
+            // imgDiv.src = pokemonImg;
+            imgDiv.src = 'data:image/png;base64,' + base64data;
+            // imgDiv.crossOrigin = 'anonymous';
+          };
+          reader.readAsDataURL(blob);
+        })
 
       // the following would need to make a new function purely for image handling
       // if (pokemonImg === null) {
       //   pokemonImg = manualHandle(name, type);
       // }
 
-      //select specific div by dynamic id
-      let imgDiv = document.querySelector(`#${type}-img`);
-      console.log(imgDiv);
-      // imgDiv.crossOrigin = "anonymous";
-      imgDiv.src = pokemonImg;
-      // imgDiv.crossOrigin = 'anonymous';
+      // //select specific div by dynamic id
+      // let imgDiv = document.querySelector(`#${type}-img`);
+      // console.log(imgDiv);
+      // // imgDiv.crossOrigin = "anonymous";
+      // // imgDiv.src = pokemonImg;
+      // imgDiv.src = 'data:image/png;base64,' + base64data;
+      // // imgDiv.crossOrigin = 'anonymous';
 
       //set name of pokemon in card
       //if name is textcontent's name is set in manual(), then this will not occur
@@ -179,46 +200,46 @@ callDropdowns();
 
 
 
-// const button = document.querySelector('button');
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const userCard = document.querySelector("#user-card");
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  const userCard = document.querySelector("#user-card");
 
-//   html2canvas(userCard, {
-//     backgroundColor: "transparent",
+  html2canvas(userCard, {
+    backgroundColor: "transparent",
 
-//     // comment this back in, and you will generate/download a blank card
+    // comment this back in, and you will generate/download a blank card
 
-//     // useCors: true,
-//     // allowTaint: true,
-//     // foreignObjectRendering: true
+    // useCors: true,
+    // allowTaint: true,
+    // foreignObjectRendering: true
 
-//   }).then(canvas => {
-//     console.log(canvas)
-//     // Convert the canvas to a data URL
-//     const imageDataURL = canvas.toDataURL('image/png');
+  }).then(canvas => {
+    console.log(canvas)
+    // Convert the canvas to a data URL
+    const imageDataURL = canvas.toDataURL('image/png');
 
-//     // Create a temporary link element
-//     const downloadLink = document.createElement('a');
+    // Create a temporary link element
+    const downloadLink = document.createElement('a');
 
-//     // Set the href attribute to the data URL
-//     downloadLink.href = imageDataURL;
+    // Set the href attribute to the data URL
+    downloadLink.href = imageDataURL;
 
-//     // Set the download attribute with the desired filename
-//     downloadLink.download = 'user_card.png';
+    // Set the download attribute with the desired filename
+    downloadLink.download = 'user_card.png';
 
-//     // Append the link to the document
-//     document.body.appendChild(downloadLink);
+    // Append the link to the document
+    document.body.appendChild(downloadLink);
 
-//     // Trigger a click on the link to start the download
-//     downloadLink.click();
+    // Trigger a click on the link to start the download
+    downloadLink.click();
 
-//     // Remove the link from the document
-//     document.body.removeChild(downloadLink);
-//   });
-// });
+    // Remove the link from the document
+    document.body.removeChild(downloadLink);
+  });
+});
 
-//button to take screenshot via canvas, shows all images successfully
+// button to take screenshot via canvas, shows all images successfully
 
 // const button = document.querySelector('button');
 // button.addEventListener('click', (event) => {
@@ -238,28 +259,28 @@ callDropdowns();
 
 
 // testing successful image and convert to image
-const button = document.querySelector('button');
-button.addEventListener('click', (event) => {
-  event.preventDefault();
-  const userCard = document.querySelector("#user-card");
-  
-  html2canvas(userCard, {
-    backgroundColor: "transparent",
-    useCors: true,
-    allowTaint: true,
-    //   
+// const button = document.querySelector('button');
+// button.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const userCard = document.querySelector("#user-card");
 
-  }).then(canvas => {
+//   html2canvas(userCard, {
+//     backgroundColor: "transparent",
+//     useCors: true,
+//     // allowTaint: true,
+//     //   
 
-    console.log(canvas.toDataURL("image/png", 0.9))
-    
-    const generated = document.querySelector("#generated-space")
-    generated.appendChild(canvas)
+//   }).then(canvas => {
 
-    
+//     console.log(canvas.toDataURL("image/png", 0.9))
 
-  });
-});
+//     const generated = document.querySelector("#generated-space")
+//     generated.appendChild(canvas)
+
+
+
+//   });
+// });
 
 
 
