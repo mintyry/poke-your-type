@@ -29,12 +29,16 @@ function fetchPokemon(name, type) {
             console.log(base64data);
 
             //select specific div by dynamic id
-            let imgDiv = document.querySelector(`#${type}-img`);
-            console.log(imgDiv);
-            // imgDiv.crossOrigin = "anonymous";
-            // imgDiv.src = pokemonImg;
-            imgDiv.src = 'data:image/png;base64,' + base64data;
-            // imgDiv.crossOrigin = 'anonymous';
+            // let imgDiv = document.querySelector(`#${type}-img`);
+            // console.log(imgDiv);
+            // imgDiv.src = 'data:image/png;base64,' + base64data;
+
+            // updates both user-card and dl-card's img elements
+            let imgDivs = document.querySelectorAll(`.${type}-img`);
+            imgDivs.forEach((imgDiv) => {
+              imgDiv.src = 'data:image/png;base64,' + base64data;
+            });
+
           };
           reader.readAsDataURL(blob);
         })
@@ -204,6 +208,18 @@ const button = document.querySelector('button');
 button.addEventListener('click', (event) => {
   event.preventDefault();
   const dlCard = document.querySelector("#dl-card");
+
+  // Create a temporary container element
+  const tempContainer = document.createElement('div');
+  tempContainer.style.position = 'absolute';
+  tempContainer.style.left = '-9999px';
+  tempContainer.style.top = '-9999px';
+
+  // Append the dlCard to the temporary container
+  tempContainer.appendChild(dlCard);
+  document.body.appendChild(tempContainer);
+
+  // quickly unhides card
   dlCard.style.display = 'block';
 
   html2canvas(dlCard, {
@@ -215,31 +231,36 @@ button.addEventListener('click', (event) => {
     // allowTaint: true,
     // foreignObjectRendering: true
 
-  }).then(canvas => {
-    console.log(canvas)
-    // Convert the canvas to a data URL
-    const imageDataURL = canvas.toDataURL('image/png');
+  })
+    .then(canvas => {
+      // dlCard is originally hidden. In a brief moment when user clicks button, it will show, then be hidden again at end of process, so the card that is downloaded is full sized
+      dlCard.style.display = 'none';
+      // Remove the temporary container from the DOM
+      document.body.removeChild(tempContainer);
 
-    // Create a temporary link element
-    const downloadLink = document.createElement('a');
+      console.log(canvas)
+      // Convert the canvas to a data URL
+      const imageDataURL = canvas.toDataURL('image/png');
 
-    // Set the href attribute to the data URL
-    downloadLink.href = imageDataURL;
+      // Create a temporary link element
+      const downloadLink = document.createElement('a');
 
-    // Set the download attribute with the desired filename
-    downloadLink.download = 'user_card.png';
+      // Set the href attribute to the data URL
+      downloadLink.href = imageDataURL;
 
-    // Append the link to the document
-    document.body.appendChild(downloadLink);
+      // Set the download attribute with the desired filename
+      downloadLink.download = 'user_card.png';
 
-    // Trigger a click on the link to start the download
-    downloadLink.click();
+      // Append the link to the document
+      document.body.appendChild(downloadLink);
 
-    // Remove the link from the document
-    document.body.removeChild(downloadLink);
+      // Trigger a click on the link to start the download
+      downloadLink.click();
 
-    dlCard.style.display = 'none';
-  });
+      // Remove the link from the document
+      document.body.removeChild(downloadLink);
+
+    });
 });
 
 // button to take screenshot via canvas, shows all images successfully
