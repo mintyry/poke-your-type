@@ -223,18 +223,13 @@ button.addEventListener('click', (event) => {
   dlCard.style.display = 'block';
 
   html2canvas(dlCard, {
-    backgroundColor: "transparent",
-
-    // comment this back in, and you will generate/download a blank card
-
-    // useCors: true,
-    // allowTaint: true,
-    // foreignObjectRendering: true
-
+    backgroundColor: "transparent"
   })
     .then(canvas => {
       // dlCard is originally hidden. In a brief moment when user clicks button, it will show, then be hidden again at end of process, so the card that is downloaded is full sized
       dlCard.style.display = 'none';
+      // move dlCard to body again and its hidden and delete the offscreen tempContainer
+      document.body.appendChild(dlCard);
       // Remove the temporary container from the DOM
       document.body.removeChild(tempContainer);
 
@@ -262,88 +257,3 @@ button.addEventListener('click', (event) => {
 
     });
 });
-
-// button to take screenshot via canvas, shows all images successfully
-
-// const button = document.querySelector('button');
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const userCard = document.querySelector("#user-card")
-//   html2canvas(userCard, {
-//     backgroundColor: "transparent",
-//     useCors: true,
-//     allowTaint: true,
-//     //   
-
-//   }).then(canvas => {
-//     const generated = document.querySelector("#generated-space")
-//     generated.appendChild(canvas)
-//   });
-// });
-
-
-// testing successful image and convert to image
-// const button = document.querySelector('button');
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const userCard = document.querySelector("#user-card");
-
-//   html2canvas(userCard, {
-//     backgroundColor: "transparent",
-//     useCors: true,
-//     // allowTaint: true,
-//     //   
-
-//   }).then(canvas => {
-
-//     console.log(canvas.toDataURL("image/png", 0.9))
-
-//     const generated = document.querySelector("#generated-space")
-//     generated.appendChild(canvas)
-
-
-
-//   });
-// });
-
-
-
-
-
-// toBlob
-
-// const button = document.querySelector('button');
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const userCard = document.querySelector("#user-card");
-
-//   // Wait for all resources to be loaded
-//   window.onload = function() {
-//     html2canvas(userCard, {
-//       backgroundColor: "transparent", 
-//     }).then(canvas => {
-//       // Convert the canvas to a blob
-//       canvas.toBlob(blob => {
-// convert image to json string**, fetch image, convert to binary object then convery to binary string
-// look up createObjectURL**
-//         // Create a temporary link element
-//         const downloadLink = document.createElement('a');
-
-//         // Set the href attribute to the blob data
-//         downloadLink.href = URL.createObjectURL(blob);
-
-//         // Set the download attribute with the desired filename
-//         downloadLink.download = 'user_card.png';
-
-//         // Append the link to the document
-//         document.body.appendChild(downloadLink);
-
-//         // Trigger a click on the link to start the download
-//         downloadLink.click();
-
-//         // Remove the link from the document
-//         document.body.removeChild(downloadLink);
-//       }, 'image/png');
-//     });
-//   };
-// });
