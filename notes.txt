@@ -1,8 +1,11 @@
 
 NEXT TO DO:
 
-try to see if you can somehow convert a tainted canvas to image still
-html2canvas deleting type-icons on safari. maybe cuz svg?
+- make names acccessible to change in dlCard too.
+- shiny
+- diff background palettes
+
+
 maybe give height to icon
 download works on live server (http) try on https
 
