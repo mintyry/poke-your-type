@@ -203,9 +203,10 @@ callDropdowns();
 const button = document.querySelector('button');
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  const userCard = document.querySelector("#user-card");
+  const dlCard = document.querySelector("#dl-card");
+  dlCard.style.display = 'block';
 
-  html2canvas(userCard, {
+  html2canvas(dlCard, {
     backgroundColor: "transparent",
 
     // comment this back in, and you will generate/download a blank card
@@ -236,6 +237,8 @@ button.addEventListener('click', (event) => {
 
     // Remove the link from the document
     document.body.removeChild(downloadLink);
+
+    dlCard.style.display = 'none';
   });
 });
 

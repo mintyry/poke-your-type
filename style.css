@@ -38,7 +38,19 @@ p {
     background-color: rgba(113, 199, 189, 0.875);
 }
 
-
+#dl-card {
+    background-image: url("./images/lotus.avif");
+    background-size:initial;
+    background-repeat: no-repeat;
+    /* background-position: bottom 82% left 55%; */
+    background-position-x: 55%;
+    background-position-y: 18%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(113, 199, 189, 0.875);
+    /* display: none; */
+}
 
 
 /* classes */
@@ -201,25 +213,25 @@ p {
 
 @media (max-width: 768px) {
     /* original is width:10rem; */
-    .tenrem {
+    #user-card .tenrem {
         width: 4.25rem;
     }
     /* originally doesnt exist */
-    .head-text {
+    #user-card .head-text {
         font-size: 2vmin;
    
     }
     /* originally  width: 1.5rem;*/
-    .type-icon {
+    #user-card .type-icon {
         width: 0.8rem;
 
     }
-    .row {
+    #user-card .row {
         /* original pre-mquery is --bs-gutter-x: 1.5rem; */
         --bs-gutter-x: 0.5rem;
     }
 
-    .mb-3 {
+    #user-card .mb-3 {
         margin-bottom: 0 !important;
     }
 
@@ -229,17 +241,17 @@ p {
     }
 }
 
-/* @media (max-width: 502px) {
-    .head-text {
+@media (max-width: 502px) {
+    #user-card .head-text {
         font-size: 1.5vmin;
    
     }
-    .type-icon {
+    #user-card .type-icon {
         width: 1.5vmin;
 
     }
-    .type-icon {
+    #user-card .type-icon {
         width: 0.5rem;
 
     }
-} */
+}
