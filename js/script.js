@@ -104,13 +104,20 @@ function fetchPokemon(name, type) {
         'Type-Null'
       ];
 
-      if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
-        document.querySelector(`#${type}-name`).textContent = name.split('-')[0];
-      } else if (spaceOverHyphen.includes(name)) {
-        document.querySelector(`#${type}-name`).textContent = name.replace('-', ' ');
-      } else {
-        document.querySelector(`#${type}-name`).textContent = name;
-      }
+      let pokeNames = document.querySelectorAll(`.${type}-name`);
+      console.log(pokeNames);
+      pokeNames.forEach((pokeName) => {
+        if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
+          console.log(pokeName)
+          pokeName.textContent = name.split('-')[0];
+        } else if (spaceOverHyphen.includes(name)) {
+          console.log(pokeName)
+          pokeName.textContent = name.replace('-', ' ');
+        } else {
+          console.log(pokeName)
+          pokeName.textContent = name;
+        }
+      });
 
     })//ends .thendata
 };//ends fetchPokemon fn
