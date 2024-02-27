@@ -1,7 +1,7 @@
 
 NEXT TO DO:
 
-- make names acccessible to change in dlCard too.
+- make names acccessible to change in dlCard too; fix names in manualhandling
 - shiny
 - diff background palettes
 
