@@ -151,9 +151,16 @@ p {
     margin-right: 3px;
 }
 
-/* .no-margin {
-    margin-bottom: 0;
-} */
+.ad {
+    display: inline-block;
+    font-weight: bolder;
+    background-color: rgba(223, 223, 223, 0.55);
+    border-radius: 5px;
+}
+
+.ad p {
+    margin-bottom: 0 !important;
+}
 
 
 /* dropdown */
@@ -239,6 +246,10 @@ p {
     /* originally width: fit-content; */
     #user-card {
         width: 100%;
+    }
+
+    .ad {
+        font-size: 3vmin;
     }
 }
 
