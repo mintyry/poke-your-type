@@ -227,11 +227,12 @@ p {
 .select-head {
     display:flex;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.select-head p {
+/* .select-head p {
 
-}
+} */
 
 /* @media (max-width: 420px) {
     .head-text {

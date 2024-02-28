@@ -12,12 +12,14 @@ function fetchPokemon(name, type) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      // declaring a variable for the state of img -- will it be shiny or not?
+      let isShiny = false;
 
       // FETCH POKEMON IMAGES
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
       let shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
-      // we do initial fetch upon selection
+      // we do initial image fetch upon selection
       fetch(pokemonImg)
         .then(response => response.blob())
         .then(blob => {
@@ -41,37 +43,38 @@ function fetchPokemon(name, type) {
       console.log(type);
 
       // access shiny buttons
-      let shinyToggle = document.querySelector('.shiny');
-      // declaring a variable for the state of img -- will it be shiny or not?
-      let isShiny = false;
-
-
-      // if user clicks shiny button, we fetch the corresponding image -- shiny or regular
+      let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
       
-      shinyToggle.addEventListener('click', () => {
-        isShiny = !isShiny; //this allow to toggle from false to not false; it we made it specifically true, we could not revert back to false. using ! will allow us to switch between false or not false (true)
-        // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
-        let imgUrl = isShiny ? shinyImg : pokemonImg;
+      // if user clicks shiny button, we fetch the corresponding image -- shiny or regular
+      shinyToggles.forEach((shinyToggle) => {
+        shinyToggle.addEventListener('click', () => {
+          isShiny = !isShiny; //this allow to toggle from false to not false; it we made it specifically true, we could not revert back to false. using ! will allow us to switch between false or not false (true)
+          // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
+          let imgUrl = isShiny ? shinyImg : pokemonImg;
+  
+          fetch(imgUrl)
+            .then(response => response.blob())
+            .then(blob => {
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                const base64data = reader.result.split(',')[1];
+                console.log(base64data);
+  
+  
+                // updates both user-card and dl-card's img elements
+                let imgDivs = document.querySelectorAll(`.${type}-img`);
+                imgDivs.forEach((imgDiv) => {
+                  imgDiv.src = 'data:image/png;base64,' + base64data;
+                });
+  
+              };
+              reader.readAsDataURL(blob);
+            })
+        })
 
-        fetch(imgUrl)
-          .then(response => response.blob())
-          .then(blob => {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-              const base64data = reader.result.split(',')[1];
-              console.log(base64data);
-
-
-              // updates both user-card and dl-card's img elements
-              let imgDivs = document.querySelectorAll(`.${type}-img`);
-              imgDivs.forEach((imgDiv) => {
-                imgDiv.src = 'data:image/png;base64,' + base64data;
-              });
-
-            };
-            reader.readAsDataURL(blob);
-          })
       })
+      
+    
 
 
 
