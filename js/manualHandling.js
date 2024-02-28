@@ -74,7 +74,7 @@ function manualHandle(name, type) {
             break
         }
         case 'raging-bolt': {
-            let pokemonImg = './images/ogartwork/ragingbolt.png';
+            let pokemonImg = './images/ogartwork/raging-bolt.png';
             let imgDiv = document.querySelector(`#${type}-img`)
             imgDiv.src = pokemonImg;
             document.querySelector(`#${type}-name`).textContent = 'Raging Bolt';

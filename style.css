@@ -142,7 +142,7 @@ p {
 
 .tenrem {
     width:10rem;
-    font-weight: bolder;
+    /* font-weight: bold; */
 }
 
 .type-icon {
@@ -153,7 +153,7 @@ p {
 
 .ad {
     display: inline-block;
-    font-weight: bolder;
+    font-weight: bold;
     background-color: rgba(223, 223, 223, 0.55);
     border-radius: 5px;
 }
