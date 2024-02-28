@@ -21,100 +21,72 @@ function manualHandle(name, type) {
          // no photos in api for following pokemon
         case 'hydrapple': {
             let pokemonImg = './images/ogartwork/hydrapple.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Hydrapple';
+            updateInfo(type, 'Hydrapple', pokemonImg);
             break
         }
         case 'archaludon': {
             let pokemonImg = './images/ogartwork/archaludon.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Archaludon';
+            updateInfo(type, 'Archaludon', pokemonImg);
             break
         }
         case 'terapagos': {
             let pokemonImg = './images/ogartwork/terapagos.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            updateInfo(type, 'Terapagos', pokemonImg);
             break
         }
         case 'terapagos-terestal': {
-            let pokemonImg = './images/ogartwork/terestal.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            let pokemonImg = './images/ogartwork/terapagos-terestal.png';
+            updateInfo(type, 'Terapagos', pokemonImg);
             break
         }
         case 'terapagos-stellar': {
             let pokemonImg = './images/ogartwork/terapagos-stellar.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Terapagos';
+            updateInfo(type, 'Terapagos', pokemonImg);
             break
         }
         case 'pecharunt': {
             let pokemonImg = './images/ogartwork/pecharunt.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Pecharunt';
+            updateInfo(type, 'Pecharunt', pokemonImg);
             break
         }
         case 'iron-crown': {
-            let pokemonImg = './images/ogartwork/ironcrown.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Iron Crown';
+            let pokemonImg = './images/ogartwork/iron-crown.png';
+            updateInfo(type, 'Iron Crown', pokemonImg);
             break
         }
         case 'iron-boulder': {
-            let pokemonImg = './images/ogartwork/ironboulder.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Iron Boulder';
+            let pokemonImg = './images/ogartwork/iron-boulder.png';
+            updateInfo(type, 'Iron Boulder', pokemonImg);
             break
         }
         case 'raging-bolt': {
             let pokemonImg = './images/ogartwork/raging-bolt.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Raging Bolt';
+            updateInfo(type, 'Raging Bolt', pokemonImg);
             break
         }
         case 'gouging-fire': {
             let pokemonImg = './images/ogartwork/gougingfire.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Gouging Fire';
+            updateInfo(type, 'Gouging Fire', pokemonImg);
             break
         }
         case 'sinistcha': {
             let pokemonImg = './images/ogartwork/sinistcha.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Sinistcha';
+            updateInfo(type, 'Sinistcha', pokemonImg);
             break
         }
         case 'ogerpon-wellspring': {
-            let pokemonImg = './images/ogartwork/wellspring.webp';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Ogerpon';
+            let pokemonImg = './images/ogartwork/wellspring.png';
+            updateInfo(type, 'Ogerpon', pokemonImg);
             break
         }
         case 'ogerpon-hearthflame': {
-            let pokemonImg = './images/ogartwork/hearthflame.webp';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Ogerpon';
+            let pokemonImg = './images/ogartwork/hearthflame.png';
+            updateInfo(type, 'Ogerpon', pokemonImg);
             break
         }
         case 'ogerpon-cornerstone': {
-            let pokemonImg = './images/ogartwork/cornerstone.webp';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Ogerpon';
+            let pokemonImg = './images/ogartwork/cornerstone.png';
+            updateInfo(type, 'Ogerpon', pokemonImg);
             break
         }
         case 'shellos-east': {
@@ -124,9 +96,7 @@ function manualHandle(name, type) {
         }
         case 'gastrodon-east': {
             let pokemonImg = './images/ogartwork/gastrodon-east.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Gastrodon';
+            updateInfo(type, 'Gastrodon', pokemonImg);
             break
         }
         default:
