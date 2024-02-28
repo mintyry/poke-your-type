@@ -1,6 +1,8 @@
 // manually setting photos/names
 // can remove whenever pokeapi adds original artwork for pokemon
 function manualHandle(name, type) {
+
+
     switch (name) {
         // there is no west in api, made it here
         case 'shellos-west': {
@@ -117,9 +119,7 @@ function manualHandle(name, type) {
         }
         case 'shellos-east': {
             let pokemonImg = './images/ogartwork/shellos-east.png';
-            let imgDiv = document.querySelector(`#${type}-img`)
-            imgDiv.src = pokemonImg;
-            document.querySelector(`#${type}-name`).textContent = 'Shellos';
+            updateInfo(type, 'Shellos', pokemonImg);
             break
         }
         case 'gastrodon-east': {
@@ -134,3 +134,17 @@ function manualHandle(name, type) {
     }
 };
 
+function updateInfo(type, newName, newImg){
+    // query select all elements with these classes
+    let pokeElements = document.querySelectorAll(`.${type}-img, .${type}-name`);
+    // loop through them
+    pokeElements.forEach((element) => {
+        // looping through, if the class we target is the img class, we set the new img.
+        // if the class we target is the name class, we set the new name
+        if (element.classList.contains(`${type}-img`)){
+            element.src = newImg;
+        } else if (element.classList.contains(`${type}-name`)){
+            element.textContent = newName;
+        }
+    })
+};
