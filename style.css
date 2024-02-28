@@ -158,7 +158,7 @@ p {
     border-radius: 5px;
 }
 
-.ad p {
+.ad p, .select-head p {
     margin-bottom: 0 !important;
 }
 
@@ -206,7 +206,32 @@ p {
     background-color: #f0f0f0;
 }
 
+.shiny {
+   
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        margin-right: 5px;
+    
+}
 
+/* i know i can target a shiny in a specific div */
+/* #fire .shiny {
+    background: #3d5953;
+} */
+
+.select-head {
+    display:flex;
+    align-items: center;
+}
+
+.select-head p {
+
+}
 
 /* @media (max-width: 420px) {
     .head-text {

@@ -211,7 +211,7 @@ callDropdowns();
 
 
 
-const button = document.querySelector('button');
+const button = document.querySelector('.generate');
 button.addEventListener('click', (event) => {
   event.preventDefault();
   const dlCard = document.querySelector("#dl-card");
