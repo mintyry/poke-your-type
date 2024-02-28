@@ -12,13 +12,14 @@ function fetchPokemon(name, type) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      // console.log(data)
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
+      let shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
-      // if (pokemonImg === null) {
-      //    manualHandle(name, type);
-      // }
       console.log(pokemonImg);
       console.log(type);
+
+      
 
       fetch(pokemonImg)
         .then(response => response.blob())
@@ -28,10 +29,6 @@ function fetchPokemon(name, type) {
             const base64data = reader.result.split(',')[1];
             console.log(base64data);
 
-            //select specific div by dynamic id
-            // let imgDiv = document.querySelector(`#${type}-img`);
-            // console.log(imgDiv);
-            // imgDiv.src = 'data:image/png;base64,' + base64data;
 
             // updates both user-card and dl-card's img elements
             let imgDivs = document.querySelectorAll(`.${type}-img`);
@@ -43,24 +40,7 @@ function fetchPokemon(name, type) {
           reader.readAsDataURL(blob);
         })
 
-      // the following would need to make a new function purely for image handling
-      // if (pokemonImg === null) {
-      //   pokemonImg = manualHandle(name, type);
-      // }
-
-      // //select specific div by dynamic id
-      // let imgDiv = document.querySelector(`#${type}-img`);
-      // console.log(imgDiv);
-      // // imgDiv.crossOrigin = "anonymous";
-      // // imgDiv.src = pokemonImg;
-      // imgDiv.src = 'data:image/png;base64,' + base64data;
-      // // imgDiv.crossOrigin = 'anonymous';
-
       //set name of pokemon in card
-      //if name is textcontent's name is set in manual(), then this will not occur
-      //this is done because otherwise, whatever name i set in manual gets overwritten here.
-      //so i check if textContent has been changed yet by checking if it still says "Pokemon"
-      // if (document.querySelector(`#${type}-name`).textContent === 'Pokémon') {
       let keepHyphen = [
         'wo-chien',
         'chien-pao',
