@@ -1,7 +1,55 @@
+function shiny(isShiny, pokemonImg, shinyImg, type) {
+  return function () {
+    console.log(shinyImg)
+    console.log(pokemonImg)
+    isShiny = !isShiny; //this allows toggling between false and not false (true)
+    // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
+    let imgUrl = isShiny ? shinyImg : pokemonImg;
+
+    fetch(imgUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64data = reader.result.split(',')[1];
+          // console.log(base64data);
+
+          // updates both user-card and dl-card's img elements
+          let imgDivs = document.querySelectorAll(`.${type}-img`);
+          imgDivs.forEach((imgDiv) => {
+            imgDiv.src = '';
+            imgDiv.src = 'data:image/png;base64,' + base64data;
+          });
+
+        };
+        reader.readAsDataURL(blob);
+      })
+  }
+}
+
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
-  // declaring a variable for the state of img -- will it be shiny or not?
+
+  let pokemonImg = '';
+  let shinyImg = '';
+
   let isShiny = false;
+
+  let imgDivs = document.querySelectorAll(`.${type}-img`);
+  imgDivs.forEach((imgDiv) => {
+    imgDiv.src = '';
+    // imgDiv.src = 'data:image/png;base64,' + base64data;
+  });
+
+  // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
+  let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+  shinyToggles.forEach((shinyToggle) => {
+    shinyToggle.removeEventListener('click', shiny(isShiny, pokemonImg, shinyImg, type));
+    // technically wrong to pass in parameters
+    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
+  });
+
+
 
   name = manualHandle(name, type);
 
@@ -10,22 +58,23 @@ function fetchPokemon(name, type) {
     return;
   };
 
+  // fetch pokemon data
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
     .then(response => response.json())
     .then(data => {
 
-      // FETCH POKEMON IMAGES
-      let pokemonImg = data.sprites.other['official-artwork'].front_default;
-      let shinyImg = data.sprites.other['official-artwork'].front_shiny;
+// return data; <<<<<<<<<<<< and then refactor other functionaliy
 
-      // access shiny buttons
-      let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+      // store paths of pokemon images
+      pokemonImg = data.sprites.other['official-artwork'].front_default;
+      shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
 
+      // add functionality to each button
       shinyToggles.forEach((shinyToggle) => {
-        shinyToggle.removeEventListener('click', shiny);
-        shinyToggle.addEventListener('click', shiny)
+        shinyToggle.addEventListener('click', shiny(isShiny, pokemonImg, shinyImg, type)
+        )
       });
 
 
@@ -36,7 +85,7 @@ function fetchPokemon(name, type) {
           const reader = new FileReader();
           reader.onloadend = () => {
             const base64data = reader.result.split(',')[1];
-            console.log(base64data);
+            // console.log(base64data);
 
 
             // updates both user-card and dl-card's img elements
@@ -48,38 +97,17 @@ function fetchPokemon(name, type) {
 
           };
           reader.readAsDataURL(blob);
-        })
+        });
 
-      console.log(pokemonImg);
-      console.log(type);
-
+      // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
 
 
-      function shiny() {
-        isShiny = !isShiny; //this allow to toggle from false to not false; it we made it specifically true, we could not revert back to false. using ! will allow us to switch between false or not false (true)
-        // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
-        let imgUrl = isShiny ? shinyImg : pokemonImg;
 
-        fetch(imgUrl)
-          .then(response => response.blob())
-          .then(blob => {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-              const base64data = reader.result.split(',')[1];
-              console.log(base64data);
+      console.log(pokemonImg)
+      console.log(shinyImg)
 
 
-              // updates both user-card and dl-card's img elements
-              let imgDivs = document.querySelectorAll(`.${type}-img`);
-              imgDivs.forEach((imgDiv) => {
-                imgDiv.src = '';
-                imgDiv.src = 'data:image/png;base64,' + base64data;
-              });
 
-            };
-            reader.readAsDataURL(blob);
-          })
-      }
 
 
       //set name of pokemon in card
