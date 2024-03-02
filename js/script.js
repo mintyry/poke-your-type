@@ -12,7 +12,6 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
         const reader = new FileReader();
         reader.onloadend = () => {
           const base64data = reader.result.split(',')[1];
-          // console.log(base64data);
 
           // updates both user-card and dl-card's img elements
           let imgDivs = document.querySelectorAll(`.${type}-img`);
@@ -32,11 +31,8 @@ let currentShinyHandler = null;
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
 
- 
-
+      // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
   let isShiny = false;
-
-  
 
   // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
 if (currentShinyHandler) {
@@ -83,7 +79,6 @@ if (currentShinyHandler) {
           const reader = new FileReader();
           reader.onloadend = () => {
             const base64data = reader.result.split(',')[1];
-            // console.log(base64data);
 
 
             // updates both user-card and dl-card's img elements
@@ -96,17 +91,6 @@ if (currentShinyHandler) {
           };
           reader.readAsDataURL(blob);
         });
-
-      // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
-
-
-
-      console.log(pokemonImg)
-      console.log(shinyImg)
-
-
-
-
 
       //set name of pokemon in card
       let keepHyphen = [
@@ -166,7 +150,6 @@ if (currentShinyHandler) {
           pokeName.textContent = name;
         }
       });
-
     })//ends .thendata
 };//ends fetchPokemon fn
 

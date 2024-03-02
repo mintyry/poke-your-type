@@ -1,10 +1,9 @@
 
 NEXT TO DO:
 
-- make names acccessible to change in dlCard too; fix names in manualhandling
-- shiny
+- shiny in manual too
 - diff background palettes
-
+-
 
 maybe give height to icon
 download works on live server (http) try on https
