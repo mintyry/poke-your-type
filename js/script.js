@@ -25,31 +25,28 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
         reader.readAsDataURL(blob);
       })
   }
-}
+};
+
+let currentShinyHandler = null;
 
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
 
-  let pokemonImg = '';
-  let shinyImg = '';
+ 
 
   let isShiny = false;
 
-  let imgDivs = document.querySelectorAll(`.${type}-img`);
-  imgDivs.forEach((imgDiv) => {
-    imgDiv.src = '';
-    // imgDiv.src = 'data:image/png;base64,' + base64data;
-  });
+  
 
   // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
+if (currentShinyHandler) {
   let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
   shinyToggles.forEach((shinyToggle) => {
-    shinyToggle.removeEventListener('click', shiny(isShiny, pokemonImg, shinyImg, type));
+    shinyToggle.removeEventListener('click', currentShinyHandler);
     // technically wrong to pass in parameters
     //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
-  });
-
-
+  })
+}
 
   name = manualHandle(name, type);
 
@@ -67,14 +64,15 @@ function fetchPokemon(name, type) {
 // return data; <<<<<<<<<<<< and then refactor other functionaliy
 
       // store paths of pokemon images
-      pokemonImg = data.sprites.other['official-artwork'].front_default;
-      shinyImg = data.sprites.other['official-artwork'].front_shiny;
+      let pokemonImg = data.sprites.other['official-artwork'].front_default;
+      let shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
+      let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+      currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
 
       // add functionality to each button
       shinyToggles.forEach((shinyToggle) => {
-        shinyToggle.addEventListener('click', shiny(isShiny, pokemonImg, shinyImg, type)
-        )
+        shinyToggle.addEventListener('click', currentShinyHandler);
       });
 
 
