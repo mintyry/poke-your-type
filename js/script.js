@@ -42,9 +42,9 @@ if (currentShinyHandler) {
     // technically wrong to pass in parameters
     //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
   })
-}
+};
 
-  name = manualHandle(name, type);
+  name = manualHandle(name, type, isShiny, currentShinyHandler);
 
   //if manual photo from my files, doesnt fetch
   if (!name) {
