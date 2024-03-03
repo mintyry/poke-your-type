@@ -19,12 +19,39 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
         }
         // no photos in api for following pokemon
         case 'hydrapple': {
+            if (currentShinyHandler) {
+                let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+                shinyToggles.forEach((shinyToggle) => {
+                    shinyToggle.removeEventListener('click', currentShinyHandler);
+                    // technically wrong to pass in parameters
+                    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
+                })
+            };
+            console.log(currentShinyHandler)
             let pokemonImg = './images/ogartwork/hydrapple.png';
             let shinyImg = './images/ogartwork/shiny_hydrapple.png';
-            updateInfo(type, 'Hydrapple', isShiny, pokemonImg, shinyImg, currentShinyHandler);
+
+            let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+
+            // add functionality to each button
+            shinyToggles.forEach((shinyToggle) => {
+                shinyToggle.addEventListener('click', currentShinyHandler);
+            });
+            updateInfo(type, 'Hydrapple', isShiny, pokemonImg, shinyImg);
             break
         }
         case 'archaludon': {
+            if (currentShinyHandler) {
+                let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+                shinyToggles.forEach((shinyToggle) => {
+                    shinyToggle.removeEventListener('click', currentShinyHandler);
+                    // technically wrong to pass in parameters
+                    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
+                })
+                currentShinyHandler = null;
+            };
+            console.log(currentShinyHandler)
             let pokemonImg = './images/ogartwork/archaludon.png';
             let shinyImg = './images/ogartwork/shiny_archaludon.png';
             updateInfo(type, 'Archaludon', isShiny, pokemonImg, shinyImg, currentShinyHandler);
@@ -105,7 +132,16 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
     }
 };
 
-function updateInfo(type, newName, isShiny, pokemonImg, shinyImg, currentShinyHandler) {
+// function removeShinyListeners(type, currentShinyHandler) {
+//     if (currentShinyHandler) {
+//         let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+//         shinyToggles.forEach((shinyToggle) => {
+//             shinyToggle.removeEventListener('click', currentShinyHandler);
+//         });
+//     }
+// }
+
+function updateInfo(type, newName, pokemonImg) {
     // query select all elements with these classes
     let pokeElements = document.querySelectorAll(`.${type}-img, .${type}-name`);
 
@@ -116,17 +152,10 @@ function updateInfo(type, newName, isShiny, pokemonImg, shinyImg, currentShinyHa
         if (element.classList.contains(`${type}-img`)) {
             element.src = pokemonImg;
 
-            let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
-            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
-      
-            // add functionality to each button
-            shinyToggles.forEach((shinyToggle) => {
-              shinyToggle.addEventListener('click', currentShinyHandler);
-            });
-
         } else if (element.classList.contains(`${type}-name`)) {
             element.textContent = newName;
         }
     })
+    return currentShinyHandler;
 };
 
