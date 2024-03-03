@@ -20,13 +20,14 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
         // no photos in api for following pokemon
         case 'hydrapple': {
             let pokemonImg = './images/ogartwork/hydrapple.png';
-            updateInfo(type, 'Hydrapple', pokemonImg);
+            let shinyImg = './images/ogartwork/shiny_hydrapple.png';
+            updateInfo(type, 'Hydrapple', isShiny, pokemonImg, shinyImg, currentShinyHandler);
             break
         }
         case 'archaludon': {
             let pokemonImg = './images/ogartwork/archaludon.png';
             let shinyImg = './images/ogartwork/shiny_archaludon.png';
-            updateInfo(type, 'Archaludon', isShiny, pokemonImg, shinyImg);
+            updateInfo(type, 'Archaludon', isShiny, pokemonImg, shinyImg, currentShinyHandler);
             break
         }
         case 'terapagos': {
@@ -104,9 +105,10 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
     }
 };
 
-function updateInfo(type, newName, isShiny, pokemonImg, shinyImg) {
+function updateInfo(type, newName, isShiny, pokemonImg, shinyImg, currentShinyHandler) {
     // query select all elements with these classes
     let pokeElements = document.querySelectorAll(`.${type}-img, .${type}-name`);
+
     // loop through them
     pokeElements.forEach((element) => {
         // looping through, if the class we target is the img class, we set the new img.
@@ -128,8 +130,3 @@ function updateInfo(type, newName, isShiny, pokemonImg, shinyImg) {
     })
 };
 
-// function addShinyFn() {
-//     shinyToggles.forEach((shinyToggle) => {
-//         shinyToggle.addEventListener('click', currentShinyHandler);
-//     })
-// };
