@@ -17,30 +17,24 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
         case 'mimikyu': {
             return 'mimikyu-disguised'
         }
+        case 'ogerpon-wellspring': {
+            return 'ogerpon-wellspring-mask'
+        }
+        case 'ogerpon-hearthflame': {
+            return 'ogerpon-hearthflame-mask'
+        }
+        case 'ogerpon-cornerstone': {
+            return 'ogerpon-cornerstone-mask'
+        }
         // no photos in api for following pokemon
     
-       
-        case 'terapagos-terestal': {
-            let pokemonImg = './images/ogartwork/terapagos-terestal.png';
-            updateInfo(type, 'Terapagos', pokemonImg);
-            break
-        }
+    //    do shiny case
         case 'terapagos-stellar': {
             let pokemonImg = './images/ogartwork/terapagos-stellar.png';
             updateInfo(type, 'Terapagos', pokemonImg);
             break
         }
-      
-        case 'ogerpon-hearthflame': {
-            let pokemonImg = './images/ogartwork/hearthflame.png';
-            updateInfo(type, 'Ogerpon', pokemonImg);
-            break
-        }
-        case 'ogerpon-cornerstone': {
-            let pokemonImg = './images/ogartwork/cornerstone.png';
-            updateInfo(type, 'Ogerpon', pokemonImg);
-            break
-        }
+
         case 'shellos-east': {
             let pokemonImg = './images/ogartwork/shellos-east.png';
             updateInfo(type, 'Shellos', pokemonImg);

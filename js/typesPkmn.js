@@ -1404,7 +1404,7 @@ let normalPokemon =
         'Squawkabilly-White-Plumage',
         'Ursaluna-Bloodmoon',
         'Terapagos',
-        'terapagos-terestal',
+        'terapagos-terastal',
         'terapagos-stellar'
     ];
 
