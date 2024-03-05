@@ -23,8 +23,6 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
                 let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
                 shinyToggles.forEach((shinyToggle) => {
                     shinyToggle.removeEventListener('click', currentShinyHandler);
-                    // technically wrong to pass in parameters
-                    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
                 })
             };
             console.log(currentShinyHandler)
@@ -38,7 +36,7 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             shinyToggles.forEach((shinyToggle) => {
                 shinyToggle.addEventListener('click', currentShinyHandler);
             });
-            updateInfo(type, 'Hydrapple', isShiny, pokemonImg, shinyImg);
+            updateInfo(type, 'Hydrapple', pokemonImg);
             break
         }
         case 'archaludon': {
@@ -46,15 +44,20 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
                 let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
                 shinyToggles.forEach((shinyToggle) => {
                     shinyToggle.removeEventListener('click', currentShinyHandler);
-                    // technically wrong to pass in parameters
-                    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
                 })
-                currentShinyHandler = null;
             };
             console.log(currentShinyHandler)
             let pokemonImg = './images/ogartwork/archaludon.png';
             let shinyImg = './images/ogartwork/shiny_archaludon.png';
-            updateInfo(type, 'Archaludon', isShiny, pokemonImg, shinyImg, currentShinyHandler);
+            let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+
+            // add functionality to each button
+            shinyToggles.forEach((shinyToggle) => {
+                shinyToggle.addEventListener('click', currentShinyHandler);
+            });
+
+            updateInfo(type, 'Archaludon', pokemonImg);
             break
         }
         case 'terapagos': {
@@ -130,6 +133,7 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
         default:
             return name;
     }
+    return currentShinyHandler;
 };
 
 // function removeShinyListeners(type, currentShinyHandler) {
@@ -156,6 +160,5 @@ function updateInfo(type, newName, pokemonImg) {
             element.textContent = newName;
         }
     })
-    return currentShinyHandler;
 };
 
