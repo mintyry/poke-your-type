@@ -63,6 +63,10 @@ if (currentShinyHandler) {
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
       let shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
+      if (shinyImg === null) {
+        shinyImg = './images/nullpokeball.png';
+      }
+
       let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
       currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
 

@@ -28,12 +28,12 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
         }
         // no photos in api for following pokemon
     
-    //    do shiny case
-        case 'terapagos-stellar': {
-            let pokemonImg = './images/ogartwork/terapagos-stellar.png';
-            updateInfo(type, 'Terapagos', pokemonImg);
-            break
-        }
+    // this is in case i change mind and just have no shinyimg choice for stellar; just hard lock into pokemonimg.
+    //     case 'terapagos-stellar': {
+    //         let pokemonImg = './images/ogartwork/terapagos-stellar.png';
+    //         updateInfo(type, 'Terapagos', pokemonImg);
+    //         break
+    //     }
 
         case 'shellos-east': {
             let pokemonImg = './images/ogartwork/shellos-east.png';
