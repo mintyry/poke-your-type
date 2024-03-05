@@ -1,6 +1,10 @@
+let shinyHandlers = {};
+
 // manually setting photos/names
 // can remove whenever pokeapi adds original artwork for pokemon
 function manualHandle(name, type, isShiny, currentShinyHandler) {
+
+    removeShinyListeners(type);
 
     switch (name) {
         // there is no west in api, made it here
@@ -27,37 +31,56 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             return 'ogerpon-cornerstone-mask'
         }
         // no photos in api for following pokemon
-    
-    // this is in case i change mind and just have no shinyimg choice for stellar; just hard lock into pokemonimg.
-    //     case 'terapagos-stellar': {
-    //         let pokemonImg = './images/ogartwork/terapagos-stellar.png';
-    //         updateInfo(type, 'Terapagos', pokemonImg);
-    //         break
-    //     }
 
         case 'shellos-east': {
+
             let pokemonImg = './images/ogartwork/shellos-east.png';
+            let shinyImg = './images/ogartwork/shellos-east-shiny.png';
+
+            let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+
+             // add functionality to each button
+             shinyToggles.forEach((shinyToggle) => {
+                shinyToggle.addEventListener('click', currentShinyHandler);
+            });
+
             updateInfo(type, 'Shellos', pokemonImg);
             break
         }
         case 'gastrodon-east': {
+  
             let pokemonImg = './images/ogartwork/gastrodon-east.png';
+            let shinyImg= './images/ogartwork/gastrodon-east-shiny.png';
+
+            let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+
+             // add functionality to each button
+             shinyToggles.forEach((shinyToggle) => {
+                shinyToggle.addEventListener('click', currentShinyHandler);
+            });
+
             updateInfo(type, 'Gastrodon', pokemonImg);
             break
         }
         default:
             return name;
     }
+    shinyHandlers[type] = currentShinyHandler;
+    console.log(currentShinyHandler)
 };
 
-// function removeShinyListeners(type, currentShinyHandler) {
-//     if (currentShinyHandler) {
-//         let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
-//         shinyToggles.forEach((shinyToggle) => {
-//             shinyToggle.removeEventListener('click', currentShinyHandler);
-//         });
-//     }
-// }
+function removeShinyListeners(type) {
+    let currentShinyHandler = shinyHandlers[type];
+    console.log(currentShinyHandler);
+    if (currentShinyHandler) {
+        let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+        shinyToggles.forEach((shinyToggle) => {
+            shinyToggle.removeEventListener('click', currentShinyHandler);
+        });
+    }
+}
 
 function updateInfo(type, newName, pokemonImg) {
     // query select all elements with these classes
@@ -74,6 +97,5 @@ function updateInfo(type, newName, pokemonImg) {
             element.textContent = newName;
         }
     })
-    return currentShinyHandler;
 };
 
