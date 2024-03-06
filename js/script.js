@@ -1,4 +1,7 @@
+// SHINY FUNCTION toggles shiny status; displays shiny or regular image
 function shiny(isShiny, pokemonImg, shinyImg, type) {
+  // this creates closure so this function retains the values of the variables from outer function, even after outer (shiny) has finished executing.
+  // needed to do this to pass in the values at all
   return function () {
     console.log(shinyImg)
     console.log(pokemonImg)
@@ -68,6 +71,7 @@ if (currentShinyHandler) {
       }
 
       let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+      // the next line, written as-is, immediately calls the function, return statement in there so it is not immediately called, via an anonymous fn
       currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
 
       // add functionality to each button
