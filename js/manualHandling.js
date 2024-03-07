@@ -41,7 +41,7 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             let shinyImg = './images/ogartwork/shellos-east-shiny.png';
             // access shiny buttons
             let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
-            // declare variable that will be added as event listener
+            // declare variable that will be added as event listener (ie: event listener is put into variable)
             // shiny fn (in script.js) returns anonymous fn so it doesn't immediately execute (done via closure)
             // also put into variable because event listener syntax doesn't take a fn call, or shouldnt at least.
             currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
@@ -75,12 +75,16 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             return name;
     }
     // update shinyHandlers object: added type as key, value is currentShinyHandler
+    // shinyHandlers object is:
+    // { water: shinyHandler for pokemon 1}
+    // when new pokemon is selected, this event handler is removed and new one takes place
     shinyHandlers[type] = currentShinyHandler;
     console.log(shinyHandlers)
 };
 
 function removeShinyListeners(type) {
     // when new manual handled pokemon is selected, currentShinyHandler is not the shiny fn anymore; it is the prior event handler/currentShinyHandler, which we then remove.
+    // the current object (water: shinyHandler for pokemon 1) is stored in variable
     let currentShinyHandler = shinyHandlers[type];
     console.log(currentShinyHandler);
     
