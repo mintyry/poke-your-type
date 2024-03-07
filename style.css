@@ -86,14 +86,6 @@ p {
     margin-left: auto;
     margin-right: auto;
 
-    /* minty */
-    /* background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74); */
-
-    /* galaxy */
-    /* background-image: linear-gradient(to top left, #855726, #9e2775, #28014e, #212121, #212121, #212121); */
-    /* order */
-    /* background-image: linear-gradient(to right, #ffedea, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #ffedea); */
-
 }
 
 #dl-card {
@@ -111,6 +103,21 @@ p {
 .dawn-card {
     /* dawn */
     background-image: linear-gradient(to bottom left, #dddfb7, #eaecc2, #74fce3);
+}
+
+.galaxy-card {
+    /* galaxy */
+    background-image: linear-gradient(to top left, #855726, #9e2775, #28014e, #212121, #212121, #212121);
+}
+
+.minty-card {
+    /* minty */
+    background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74);
+}
+
+.order-card {
+    /* order */
+    background-image: linear-gradient(to bottom right, #ffedea, #fff, #fff, #fff, #e8e8e8, #e8e8e8, #e8e8e8, #ffedea);
 }
 
 .card-header {

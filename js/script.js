@@ -34,18 +34,18 @@ let currentShinyHandler = null;
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
 
-      // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
+  // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
   let isShiny = false;
 
   // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
-if (currentShinyHandler) {
-  let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
-  shinyToggles.forEach((shinyToggle) => {
-    shinyToggle.removeEventListener('click', currentShinyHandler);
-    // technically wrong to pass in parameters
-    //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
-  })
-};
+  if (currentShinyHandler) {
+    let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
+    shinyToggles.forEach((shinyToggle) => {
+      shinyToggle.removeEventListener('click', currentShinyHandler);
+      // technically wrong to pass in parameters
+      //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
+    })
+  };
 
   name = manualHandle(name, type, isShiny, currentShinyHandler);
 
@@ -60,7 +60,7 @@ if (currentShinyHandler) {
     .then(response => response.json())
     .then(data => {
 
-// return data; <<<<<<<<<<<< and then refactor other functionaliy
+      // return data; <<<<<<<<<<<< and then refactor other functionaliy
 
       // store paths of pokemon images
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
@@ -303,3 +303,41 @@ button.addEventListener('click', (event) => {
 
     });
 });
+
+// CHANGE BACKGROUND THEME
+let radioSelectors = document.body.querySelectorAll('input[type="radio"]');
+
+radioSelectors.forEach((radioSelector) => {
+  radioSelector.addEventListener('change', function () {
+
+    if(this.checked){
+      const theme = this.value;
+      switch(theme) {
+        case 'dawn': {
+          // choose theme
+          break;
+        }
+        case 'galaxy': {
+          // choose theme
+          break;
+        }
+        case 'minty': {
+          // choose theme
+          break;
+        }
+        case 'order': {
+          //choose theme
+          break;
+        }
+      }
+
+    }
+
+      let cardBgs = document.querySelectorAll('.change-card');
+    
+     cardBgs.forEach((cardBg)=> {
+        cardBg.classList.remove('dawn-card');
+
+     })
+  })
+})
