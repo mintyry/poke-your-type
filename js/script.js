@@ -323,10 +323,21 @@ radioSelectors.forEach((radioSelector) => {
         case 'dawn': {
           // choose theme
           // if class contains galaxy, minty, or order, remove those and add dawn-card class
+          cardBgs.forEach((cardBg) => {
+            // remove galaxy
+              cardBg.classList.remove('galaxy-card', 'minty-card', 'order-card');
+              cardBg.classList.add('dawn-card');
+          })
           break;
         }
         case 'galaxy': {
           // choose theme
+          cardBgs.forEach((cardBg) => {
+            // remove galaxy
+              cardBg.classList.remove('dawn-card', 'minty-card', 'order-card');
+              cardBg.classList.add('galaxy-card');
+          })
+          break;
           break;
         }
         case 'minty': {
@@ -344,7 +355,4 @@ radioSelectors.forEach((radioSelector) => {
   })
 })
 
-// cardBgs.forEach((cardBg) => {
-//   cardBg.classList.remove('dawn-card');
 
-// })
