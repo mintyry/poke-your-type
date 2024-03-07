@@ -26,7 +26,7 @@ p {
 }
 
 #user-card {
-    background-image: url("./images/lotus.avif");
+    background-image: url("./images/5594016-e1656071131636.webp");
     background-size:initial;
     background-repeat: no-repeat;
     /* background-position: bottom 82% left 55%; */
@@ -50,6 +50,12 @@ p {
     margin-right: auto;
     background-color: rgba(113, 199, 189, 0.875);
     display: none;
+}
+
+.card-header {
+    color: darkmagenta;
+    /* color:#f3a6f3;  */
+    font-weight: bolder;
 }
 
 
