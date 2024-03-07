@@ -310,11 +310,19 @@ let radioSelectors = document.body.querySelectorAll('input[type="radio"]');
 radioSelectors.forEach((radioSelector) => {
   radioSelector.addEventListener('change', function () {
 
-    if(this.checked){
+    // access both user-card and dl-card divs
+    let cardBgs = document.querySelectorAll('.change-card');
+
+    // if any one of the specific radio buttons is checked...
+    if (this.checked) {
+      // store value in variable "theme"
       const theme = this.value;
-      switch(theme) {
+      // pass theme into switch statement
+      switch (theme) {
+        // if theme is dawn
         case 'dawn': {
           // choose theme
+          // if class contains galaxy, minty, or order, remove those and add dawn-card class
           break;
         }
         case 'galaxy': {
@@ -333,11 +341,10 @@ radioSelectors.forEach((radioSelector) => {
 
     }
 
-      let cardBgs = document.querySelectorAll('.change-card');
-    
-     cardBgs.forEach((cardBg)=> {
-        cardBg.classList.remove('dawn-card');
-
-     })
   })
 })
+
+// cardBgs.forEach((cardBg) => {
+//   cardBg.classList.remove('dawn-card');
+
+// })
