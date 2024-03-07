@@ -26,32 +26,51 @@ p {
 }
 
 /* select card bg options */
+.no-width {
+    width: auto;
+}
 
-.default-opt{
-    background-color: #dddfb7;
+.bg-opt {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
     outline: 1px black solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.dawn-opt {
+    background-color: #dddfb7;
+}
+
+.galaxy-opt {
+     background-image: linear-gradient(to top left, #855726, #9e2775, #28014e, #212121, #212121, #212121);
+}
+
+.minty-opt {
+    background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74);
+}
+.order-opt {
+        background-image: linear-gradient(to right, #e8e8e8, #e8e8e8, #ffedea);
 }
 
 /* HIDE RADIO */
-[type=radio] { 
+[type=radio] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* IMAGE STYLES */
-  [type=radio] + .default-opt {
+}
+
+/* IMAGE STYLES */
+[type=radio]+.bg-opt {
     cursor: pointer;
-  }
-  
-  /* CHECKED STYLES */
-  [type=radio]:checked + .default-opt {
-    outline: 2px solid rgb(0, 0, 0);
-  }
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked+.bg-opt {
+    outline: 2px solid rgb(218, 255, 202);
+}
 
 
 /* ids */
@@ -66,7 +85,7 @@ p {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
- 
+
     /* minty */
     /* background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74); */
 
@@ -90,7 +109,7 @@ p {
 }
 
 .dawn-card {
-   /* dawn */
+    /* dawn */
     background-image: linear-gradient(to bottom left, #dddfb7, #eaecc2, #74fce3);
 }
 
