@@ -23,9 +23,10 @@
     </header>
 
     <!--main holds all types where user selects fav pokemon  -->
-    <main id="main-section" class="container text-center rounded p-3 mb-5">
+    <main class="main-section container text-center rounded p-3 mb-2">
         <div class="row">
-            <p>Please pick your favorite pokemon of each type and generate a card of your favorite Pokémon!</p>
+            <p>Please pick your favorite pokemon of each type<br /> and generate a card of your favorite Pokémon below
+                the selection form!</p>
         </div>
         <!-- row one of pokemon types -->
         <div id="row-one" class="row">
@@ -313,6 +314,23 @@
         </div>
     </main>
 
+    <!-- CHOOSE BACKGROUND -->
+    <section class="main-section container text-center rounded p-1 mb-5">
+        <div class="row">
+            <p>Select background theme:</p>
+        </div>
+        <div class="row">
+            <label>
+                <span class="d-flex">
+                    <input type="radio" name="test" value="small" checked>
+                    <div class="default-opt">&nbsp;</div>
+                </span>
+                <!-- <img src="https://via.placeholder.com/40x60/0bf/fff&text=A" alt="Option 1"> -->
+            </label>
+        </div>
+
+    </section>
+
     <!-- generate button -->
     <div class="d-flex justify-content-center mb-5">
         <button class="btn btn-light generate">Generate your Pokécard!</button>
@@ -323,7 +341,7 @@
     <!-- ================================= -->
 
 
-    <div id="user-card" class="text-center rounded flex-nowrap p-3 mb-5">
+    <div id="user-card" class="dawn-card text-center rounded flex-nowrap p-3 mb-5">
         <div class="row">
             <p class="card-header mb-3">My favorite Pokémon by type::</p>
         </div>
@@ -531,7 +549,7 @@
     <!-- ================================= -->
     <!-- DOWNLOAD CARD -->
     <!-- ================================= -->
-    <div id="dl-card" class="text-center rounded flex-nowrap p-3 mb-5">
+    <div id="dl-card" class="dawn-card text-center rounded flex-nowrap p-3 mb-5">
         <div class="row">
             <p class="card-header mb-3">My favorite Pokémon by type::</p>
         </div>

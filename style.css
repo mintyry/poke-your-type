@@ -2,6 +2,7 @@
 * {
     /* outline: 1px red solid; */
 }
+
 body {
     background-image: url("./images/bg.avif");
     background-size: cover;
@@ -20,36 +21,77 @@ p {
     width: 100%;
 }
 
-/* ids */
-#main-section {
+.main-section {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* select card bg options */
+
+.default-opt{
+    background-color: #dddfb7;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    outline: 1px black solid;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + .default-opt {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + .default-opt {
+    outline: 2px solid rgb(0, 0, 0);
+  }
+
+
+/* ids */
+
+
 #user-card {
-    background-image: url("./images/5594016-e1656071131636.webp");
+    /* background-image: url("./images/5594016-e1656071131636.webp");
     background-size:initial;
     background-repeat: no-repeat;
-    /* background-position: bottom 82% left 55%; */
     background-position-x: 55%;
-    background-position-y: 18%;
+    background-position-y: 18%; */
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(113, 199, 189, 0.875);
+ 
+    /* minty */
+    /* background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74); */
+
+    /* galaxy */
+    /* background-image: linear-gradient(to top left, #855726, #9e2775, #28014e, #212121, #212121, #212121); */
+    /* order */
+    /* background-image: linear-gradient(to right, #ffedea, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #e8e8e8, #ffedea); */
+
 }
 
 #dl-card {
-    background-image: url("./images/lotus.avif");
+    /* background-image: url("./images/5594016-e1656071131636.webp");
     background-size:initial;
     background-repeat: no-repeat;
-    /* background-position: bottom 82% left 55%; */
     background-position-x: 55%;
-    background-position-y: 18%;
+    background-position-y: 18%; */
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(113, 199, 189, 0.875);
     display: none;
+}
+
+.dawn-card {
+   /* dawn */
+    background-image: linear-gradient(to bottom left, #dddfb7, #eaecc2, #74fce3);
 }
 
 .card-header {
@@ -137,17 +179,17 @@ p {
 }
 
 .pokemon-image {
-    width:100%; 
+    width: 100%;
     /* height: 10rem;  */
     /* border: solid 1px rgb(218, 255, 202);  */
     border-left: solid 1px rgb(218, 255, 202);
     border-right: solid 1px rgb(218, 255, 202);
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
-   
+
 }
 
 .tenrem {
-    width:10rem;
+    width: 10rem;
     /* font-weight: bold; */
 }
 
@@ -164,7 +206,8 @@ p {
     border-radius: 5px;
 }
 
-.ad p, .select-head p {
+.ad p,
+.select-head p {
     margin-bottom: 0 !important;
 }
 
@@ -213,16 +256,16 @@ p {
 }
 
 .shiny {
-   
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-        margin-right: 5px;
-    
+
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-right: 5px;
+
 }
 
 /* i know i can target a shiny in a specific div */
@@ -231,7 +274,7 @@ p {
 } */
 
 .select-head {
-    display:flex;
+    display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
 }
@@ -252,20 +295,24 @@ p {
 } */
 
 @media (max-width: 768px) {
+
     /* original is width:10rem; */
     #user-card .tenrem {
         width: 4.25rem;
     }
+
     /* originally doesnt exist */
     #user-card .head-text {
         font-size: 2vmin;
-   
+
     }
+
     /* originally  width: 1.5rem;*/
     #user-card .type-icon {
         width: 0.8rem;
 
     }
+
     #user-card .row {
         /* original pre-mquery is --bs-gutter-x: 1.5rem; */
         --bs-gutter-x: 0.5rem;
@@ -288,12 +335,14 @@ p {
 @media (max-width: 502px) {
     #user-card .head-text {
         font-size: 1.5vmin;
-   
+
     }
+
     #user-card .type-icon {
         width: 1.5vmin;
 
     }
+
     #user-card .type-icon {
         width: 0.5rem;
 
