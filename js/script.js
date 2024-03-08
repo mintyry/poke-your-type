@@ -1,3 +1,6 @@
+// let currentShinyHandler = null;
+let defaultShinyHandlers = {};
+
 // SHINY FUNCTION toggles shiny status; displays shiny or regular image
 function shiny(isShiny, pokemonImg, shinyImg, type) {
   // this creates closure so this function retains the values of the variables from outer function, even after outer (shiny) has finished executing.
@@ -29,8 +32,6 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
   }
 };
 
-let currentShinyHandler = null;
-
 //GET NAMES & IMAGES
 function fetchPokemon(name, type) {
 
@@ -38,16 +39,16 @@ function fetchPokemon(name, type) {
   let isShiny = false;
 
   // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
-  if (currentShinyHandler) {
+  if (defaultShinyHandlers[type]) {
     let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
     shinyToggles.forEach((shinyToggle) => {
-      shinyToggle.removeEventListener('click', currentShinyHandler);
+      shinyToggle.removeEventListener('click', defaultShinyHandlers[type]);
       // technically wrong to pass in parameters
       //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
     })
   };
 
-  name = manualHandle(name, type, isShiny, currentShinyHandler);
+  name = manualHandle(name, type, isShiny, defaultShinyHandlers[type]);
 
   //if manual photo from my files, doesnt fetch
   if (!name) {
@@ -72,11 +73,11 @@ function fetchPokemon(name, type) {
 
       let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
       // the next line, written as-is, immediately calls the function, return statement in there so it is not immediately called, via an anonymous fn
-      currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+      defaultShinyHandlers[type]= shiny(isShiny, pokemonImg, shinyImg, type);
 
       // add functionality to each button
       shinyToggles.forEach((shinyToggle) => {
-        shinyToggle.addEventListener('click', currentShinyHandler);
+        shinyToggle.addEventListener('click', defaultShinyHandlers[type]);
       });
 
 
@@ -112,7 +113,7 @@ function fetchPokemon(name, type) {
         'mr-mime',
         'mr-rime',
         'ho-oh',
-        'Porygon-Z',
+        'porygon-z',
       ];
 
       let spaceOverHyphen = [
