@@ -24,12 +24,14 @@
 
     <!--main holds all types where user selects fav pokemon  -->
     <main class="main-section container text-center rounded p-3 mb-2">
-        <div class="row">
-            <p>Please pick your favorite Pokémon of each type,<br /> 
+        <div class="row mb-2">
+            <strong>Please pick your favorite Pokémon of each type,<br /> 
                 and generate a card of your favorite Pokémon below
-                the selection form!<br/>
-                You may click the shiny icon to toggle a Pokémon to be shiny or not.
-            </p>
+                the selection form!<br />
+                You may click the shiny icon to toggle a Pokémon to be shiny or not.<br />
+                <br />
+                To reference what Pokémon look like before choosing, feel free to reference <a href="https://pokemondb.net/pokedex/national">pokemondb.com</a>!
+            </strong>
         </div>
         <!-- row one of pokemon types -->
         <div id="row-one" class="row">
@@ -39,7 +41,7 @@
                 <div id="grass" class="lightbg rounded">
                     <div class="grass rounded-top select-head">
                         <p>Grass</p>
-                        <button class="shiny">✨</button>
+                        <button class="shiny" onclick="this.classList.add('clicked')">✨</button>
                     </div>
 
                     <div class="dropdown">

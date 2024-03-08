@@ -15,6 +15,17 @@ header {
     color: rgb(0, 0, 0);
 }
 
+a, a:visited {
+    color:rgb(26, 131, 128);
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover {
+    font-style: normal;
+}
+
+
 /* overrides bootstrap's 1rem */
 p {
     margin-bottom: 0.5rem;
@@ -305,12 +316,20 @@ p {
     background: none;
     color: inherit;
     border: none;
-    padding: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 2px;
     font: inherit;
     cursor: pointer;
     outline: inherit;
     margin-right: 5px;
+border-radius: 3px;
+box-shadow: 1px 0 1px 1px rgba(0,0,0,0.4), 0 0 1px 0 rgba(0,0,0,0.4);
+}
 
+.shiny:active {
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4), inset 0 1px 1px 0 rgba(0,0,0,0.4);
+    transform: translate(1px, 1px);
 }
 
 /* i know i can target a shiny in a specific div */
