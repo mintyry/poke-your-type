@@ -25,8 +25,11 @@
     <!--main holds all types where user selects fav pokemon  -->
     <main class="main-section container text-center rounded p-3 mb-2">
         <div class="row">
-            <p>Please pick your favorite pokemon of each type<br /> and generate a card of your favorite Pokémon below
-                the selection form!</p>
+            <p>Please pick your favorite Pokémon of each type,<br /> 
+                and generate a card of your favorite Pokémon below
+                the selection form!<br/>
+                You may click the shiny icon to toggle a Pokémon to be shiny or not.
+            </p>
         </div>
         <!-- row one of pokemon types -->
         <div id="row-one" class="row">
@@ -317,7 +320,7 @@
     <!-- CHOOSE BACKGROUND -->
     <section class="main-section container text-center rounded p-2 mb-5">
         <div class="row">
-            <p>Select background theme:</p>
+            <p>Select background theme::</p>
         </div>
         <div class=" d-flex justify-content-center flex-nowrap">
             <!-- dawn radio option -->
@@ -372,7 +375,7 @@
 
     <div id="user-card" class="dawn-card text-center rounded flex-nowrap p-3 mb-5 change-card">
         <div class="row">
-            <p class="card-header mb-3">[[THIS IS A PREVIEW]] <br/> My favorite Pokémon by type::</p>
+            <p class="card-header mb-3 dawn-minty-header">[[THIS IS A PREVIEW]] <br/> My favorite Pokémon by type::</p>
         </div>
         <!-- row one of pokemon types -->
         <div class="row flex-nowrap">
@@ -569,7 +572,7 @@
 
         <!-- advertise message -->
 
-        <div class="ad px-4">
+        <div class="ad px-4 ad-bg-color">
             <p>Poke your type @ <span style="white-space: nowrap;">https://mintyry.github.io/poke-your-type/</span></p>
         </div>
     </div>
@@ -580,7 +583,7 @@
     <!-- ================================= -->
     <div id="dl-card" class="dawn-card text-center rounded flex-nowrap p-3 mb-5 change-card">
         <div class="row">
-            <p class="card-header mb-3">My favorite Pokémon by type::</p>
+            <p class="card-header mb-3 dawn-minty-header">My favorite Pokémon by type::</p>
         </div>
         <!-- row one of pokemon types -->
         <div class="row flex-nowrap">
@@ -776,7 +779,7 @@
         </div>
         <!-- advertise message -->
 
-        <div class="ad px-4">
+        <div class="ad px-4 ad-bg-color">
             <p>
                 <span style="font-weight: bolder;">Poke your type @ </span>
                 <span style="white-space: nowrap;">https://mintyry.github.io/poke-your-type/</span>
@@ -802,6 +805,7 @@
     <script src="./js/typesPkmn.js"></script>
     <script src="./js/manualHandling.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/themeSelection.js"></script>
 
 </body>
 

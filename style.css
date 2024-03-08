@@ -51,7 +51,7 @@ p {
     background-image: linear-gradient(to bottom right, #37d5c6, #a2fc74);
 }
 .order-opt {
-        background-image: linear-gradient(to right, #e8e8e8, #e8e8e8, #ffedea);
+        background-image: linear-gradient(to bottom right, gray, #ffedea);
 }
 
 /* HIDE RADIO */
@@ -117,13 +117,24 @@ p {
 
 .order-card {
     /* order */
-    background-image: linear-gradient(to bottom right, #ffedea, #fff, #fff, #fff, #e8e8e8, #e8e8e8, #e8e8e8, #ffedea);
+    background-image: linear-gradient(to bottom right, #ffedea, gray, #ffedea);
 }
 
+
 .card-header {
-    color: darkmagenta;
-    /* color:#f3a6f3;  */
     font-weight: bolder;
+}
+
+.dawn-minty-header {
+    color:darkmagenta;
+}
+
+.galaxy-header {
+    color: #ff73a6;
+}
+
+.order-header {
+    color: #ffedea;
 }
 
 
@@ -228,8 +239,16 @@ p {
 .ad {
     display: inline-block;
     font-weight: bold;
-    background-color: rgba(223, 223, 223, 0.55);
     border-radius: 5px;
+}
+
+.ad-bg-color {
+    background-color: #dfdfdf8c;
+}
+
+.galaxy-ad-bg-color {
+    background-color: #ff067f8c;
+    color: white;
 }
 
 .ad p,
