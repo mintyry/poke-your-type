@@ -44,7 +44,7 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             // declare variable that will be added as event listener (ie: event listener is put into variable)
             // shiny fn (in script.js) returns anonymous fn so it doesn't immediately execute (done via closure)
             // also put into variable because event listener syntax doesn't take a fn call, or shouldnt at least.
-            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type);
+            currentShinyHandler = shiny(isShiny, pokemonImg, shinyImg, type, name);
 
             // add functionality to each button
             shinyToggles.forEach((shinyToggle) => {
