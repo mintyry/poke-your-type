@@ -34,7 +34,6 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
             return 'ogerpon-cornerstone-mask'
         }
         // no photos in api for following pokemon
-
         case 'shellos-east': {
             // declare images
             let pokemonImg = './images/ogartwork/shellos-east.png';
@@ -79,14 +78,12 @@ function manualHandle(name, type, isShiny, currentShinyHandler) {
     // { water: shinyHandler for pokemon 1}
     // when new pokemon is selected, this event handler is removed and new one takes place
     shinyHandlers[type] = currentShinyHandler;
-    console.log(shinyHandlers)
 };
 
 function removeShinyListeners(type) {
     // when new manual handled pokemon is selected, currentShinyHandler is not the shiny fn anymore; it is the prior event handler/currentShinyHandler, which we then remove.
     // the current object (water: shinyHandler for pokemon 1) is stored in variable
     let currentShinyHandler = shinyHandlers[type];
-    console.log(currentShinyHandler);
     
     if (currentShinyHandler) {
         let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
@@ -94,7 +91,7 @@ function removeShinyListeners(type) {
             shinyToggle.removeEventListener('click', currentShinyHandler);
         });
     }
-}
+};
 
 function updateInfo(type, newName, pokemonImg) {
     // query select all elements with these classes

@@ -1,38 +1,11 @@
-
 NEXT TO DO:
-
-- shiny in manual too
-- diff background palettes
--
-
-maybe give height to icon
-download works on live server (http) try on https
-
--i tried to display none the actual full sized card, but html2canvas does take a direct picture of it also hidden
-
-
-- think about making the card automatically download at click instead of appearing underneath
-- style in case of responsiveness on mobile, per diarmuid
-- add make-your-own and url to bottom of user-card div
-
-- add icon in input box
-
-
-
 
 COOL IDEAS TO ADD AT END:
 
-add options for background of card
 
 pokemon cries when you choose that pokemon
 
-pokeball cursor for hovering over pokemon names in dropdown
-
-change background color of dropdown li hover to type color
-
-
-
-
+add a share to twitter or ig button
 
 
 WHAT DID I LEARN

@@ -1,3 +1,6 @@
+// in case any dev-minded people are want to see more work:
+console.log('I hope you enjoyed Poke-Your-Type!\nFor more of my work, please visit my portfolio:\nhttps://minty-ry-portfolio.netlify.app/');
+
 // let currentShinyHandler = null;
 let defaultShinyHandlers = {};
 
@@ -6,8 +9,10 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
   // this creates closure so this function retains the values of the variables from outer function, even after outer (shiny) has finished executing.
   // needed to do this to pass in the values at all
   return function () {
-    console.log(shinyImg)
-    console.log(pokemonImg)
+    // toggle commenting of following console logs to ensure no old event listeners remain
+    // console.log(shinyImg)
+    // console.log(pokemonImg)
+
     isShiny = !isShiny; //this allows toggling between false and not false (true)
     // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
     let imgUrl = isShiny ? shinyImg : pokemonImg;
@@ -48,13 +53,11 @@ function fetchPokemon(name, type) {
   // declaring a variable for the state of img -- will it be shiny or not? start as false before shiny function runs
   let isShiny = false;
 
-  // Remove event listener for shiny function <<<<<<<< NOT HAPPENING CORRECTLY
+  // Remove event listener for shiny function
   if (defaultShinyHandlers[type]) {
     let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
     shinyToggles.forEach((shinyToggle) => {
       shinyToggle.removeEventListener('click', defaultShinyHandlers[type]);
-      // technically wrong to pass in parameters
-      //can use the data; .bind() to correctly pass without unintentionally triggering shiny function
     })
   };
 
@@ -70,16 +73,14 @@ function fetchPokemon(name, type) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-
-      // return data; <<<<<<<<<<<< and then refactor other functionaliy
-
       // store paths of pokemon images
       let pokemonImg = data.sprites.other['official-artwork'].front_default;
       let shinyImg = data.sprites.other['official-artwork'].front_shiny;
 
+      // if there is not a shiny image, i just render a pokeball
       if (shinyImg === null) {
         shinyImg = './images/nullpokeball.png';
-      }
+      };
 
       let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
       // the next line, written as-is, immediately calls the function, return statement in there so it is not immediately called, via an anonymous fn
@@ -90,7 +91,6 @@ function fetchPokemon(name, type) {
         shinyToggle.addEventListener('click', defaultShinyHandlers[type]);
       });
 
-
       // we do initial image fetch upon selection
       fetch(pokemonImg)
         .then(response => response.blob())
@@ -99,14 +99,12 @@ function fetchPokemon(name, type) {
           reader.onloadend = () => {
             const base64data = reader.result.split(',')[1];
 
-
             // updates both user-card and dl-card's img elements
             let imgDivs = document.querySelectorAll(`.${type}-img`);
             imgDivs.forEach((imgDiv) => {
               imgDiv.src = '';
               imgDiv.src = 'data:image/png;base64,' + base64data;
             });
-
           };
           reader.readAsDataURL(blob);
         });
@@ -156,16 +154,12 @@ function fetchPokemon(name, type) {
       ];
 
       let pokeNames = document.querySelectorAll(`.${type}-name`);
-      console.log(pokeNames);
       pokeNames.forEach((pokeName) => {
         if (name.includes('-') && !keepHyphen.includes(name) && !spaceOverHyphen.includes(name)) {
-          console.log(pokeName)
           pokeName.textContent = name.split('-')[0];
         } else if (spaceOverHyphen.includes(name)) {
-          console.log(pokeName)
           pokeName.textContent = name.replace('-', ' ');
         } else {
-          console.log(pokeName)
           pokeName.textContent = name;
         }
       });
@@ -224,8 +218,6 @@ function pokemonDropdown(typeSection, array, type) {
     option.addEventListener('click', function () {
       dropdownInput.value = option.textContent.toLowerCase();
       dropdownMenu.style.display = 'none';
-      // console.log('this will be the id you are looking for:' + typeId)
-
       //call fetchPokemon using user's selection and including type as template literal to target that img element with corresponding id
       fetchPokemon(dropdownInput.value, type);
     });
@@ -290,7 +282,6 @@ button.addEventListener('click', (event) => {
       // Remove the temporary container from the DOM
       document.body.removeChild(tempContainer);
 
-      console.log(canvas)
       // Convert the canvas to a data URL
       const imageDataURL = canvas.toDataURL('image/png');
 
@@ -301,7 +292,7 @@ button.addEventListener('click', (event) => {
       downloadLink.href = imageDataURL;
 
       // Set the download attribute with the desired filename
-      downloadLink.download = 'user_card.png';
+      downloadLink.download = 'Poke_Your_Type_card.png';
 
       // Append the link to the document
       document.body.appendChild(downloadLink);
@@ -311,7 +302,6 @@ button.addEventListener('click', (event) => {
 
       // Remove the link from the document
       document.body.removeChild(downloadLink);
-
     });
 });
 

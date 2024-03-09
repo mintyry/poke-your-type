@@ -84,8 +84,6 @@ radioSelectors.forEach((radioSelector) => {
           break;
         }
       }
-
     }
-
   })
 })
