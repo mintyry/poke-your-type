@@ -38,6 +38,17 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.dev-link {
+    background-color: rgba(255, 255, 255, 0.265);
+}
+
+.disambiguous-link {
+    text-decoration: none !important;
+    font-style: normal !important;
+    color: black !important;
+    font-weight: 300;
+}
+
 /* select card bg options */
 .no-width {
     width: auto;
