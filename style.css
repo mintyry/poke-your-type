@@ -1,7 +1,7 @@
 /* elements */
 * {
     /* outline: 1px red solid; */
-    font-weight: bolder;
+    /* font-weight: bolder; */
 }
 
 body {
@@ -163,77 +163,114 @@ p {
 }
 
 
+
 /* classes */
 .grass {
     background-color: #00ffc8;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .fire {
     background-color: #ff0099;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .water {
     background-color: #87ffe5;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .normal {
     background-color: #dbf9f3;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .flying {
     background-color: #b9fff0;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .electric {
     background-color: #23ff74;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .psychic {
     background-color: #ffc5f4;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .dark {
     background-color: #6b8781;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .ghost {
     background-color: #3d5953;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .poison {
     background-color: #d04b9b;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .bug {
     background-color: #a1ffc3;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .fighting {
     background-color: #c190ad;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .rock {
     background-color: #936f85;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .ground {
     background-color: #6b5161;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .steel {
     background-color: #98b2ac;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .ice {
     background-color: #8fffe7;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .dragon {
     background-color: #3bdebb;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .fairy {
     background-color: #ff88d0;
+    font-family: 'Bungee';
+    font-style: italic;
 }
 
 .lightbg {
