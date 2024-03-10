@@ -1,6 +1,7 @@
 /* elements */
 * {
     /* outline: 1px red solid; */
+    font-weight: bolder;
 }
 
 body {
@@ -46,7 +47,6 @@ p {
     text-decoration: none !important;
     font-style: normal !important;
     color: black !important;
-    font-weight: 300;
 }
 
 /* select card bg options */
