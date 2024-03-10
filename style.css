@@ -440,6 +440,7 @@ p {
     align-items: center;
     margin-bottom: 0.5rem;
     font-family: 'Bungee Hairline';
+    font-weight: bolder;
 }
 
 /* .select-head p {
