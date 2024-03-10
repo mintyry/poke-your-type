@@ -286,7 +286,7 @@ button.addEventListener('click', (event) => {
       const imageDataURL = canvas.toDataURL('image/png');
 
       // Create a temporary link element
-      const downloadLink = document.createElement('a');
+      const downloadLink = document.getElementById('downloadLink');
 
       // Set the href attribute to the data URL
       downloadLink.href = imageDataURL;
