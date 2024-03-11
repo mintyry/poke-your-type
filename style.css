@@ -168,148 +168,148 @@ p {
 /* classes */
 
 .head-text {
-    /* font-style: italic; */
+    font-style: italic;
 }
 .grass {
     background-color: #00ffc8;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .fire {
     background-color: #ff0099;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .water {
     background-color: #87ffe5;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .normal {
     background-color: #dbf9f3;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
    
 }
 
 .flying {
     background-color: #b9fff0;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
    
 }
 
 .electric {
     background-color: #23ff74;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     
 }
 
 .psychic {
     background-color: #ffc5f4;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     
 }
 
 .dark {
     background-color: #6b8781;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     
 }
 
 .ghost {
     background-color: #3d5953;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
  
 }
 
 .poison {
     background-color: #d04b9b;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .bug {
     background-color: #a1ffc3;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .fighting {
     background-color: #c190ad;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .rock {
     background-color: #936f85;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .ground {
     background-color: #6b5161;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .steel {
     background-color: #98b2ac;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .ice {
     background-color: #8fffe7;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
   
 }
 
 .dragon {
     background-color: #3bdebb;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
 .fairy {
     background-color: #ff88d0;
-    font-family: 'Rajdhani';
+    font-family: 'Bungee';
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 
 }
 
@@ -497,7 +497,7 @@ p {
     }
 
     .ad {
-        font-size: 3vmin;
+        font-size: 2.5vmin;
     }
 }
 

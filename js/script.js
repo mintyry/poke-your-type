@@ -33,13 +33,13 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
 
         };
         reader.readAsDataURL(blob);
-        
+
         // my special nickname for shiny noibat
         let pokeNames = document.querySelectorAll(`.${type}-name`);
         pokeNames.forEach((pokeName) => {
           if (imgUrl === 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/714.png') {
             pokeName.textContent = 'Minty';
-          } else if (imgUrl === 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png'){
+          } else if (imgUrl === 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png') {
             pokeName.textContent = 'Noibat';
           }
         })
@@ -84,7 +84,7 @@ function fetchPokemon(name, type) {
 
       let shinyToggles = document.querySelectorAll(`#${type} .shiny`);
       // the next line, written as-is, immediately calls the function, return statement in there so it is not immediately called, via an anonymous fn
-      defaultShinyHandlers[type]= shiny(isShiny, pokemonImg, shinyImg, type);
+      defaultShinyHandlers[type] = shiny(isShiny, pokemonImg, shinyImg, type);
 
       // add functionality to each button
       shinyToggles.forEach((shinyToggle) => {
@@ -302,6 +302,40 @@ button.addEventListener('click', (event) => {
 
       // Remove the link from the document
       document.body.removeChild(downloadLink);
+
+      // Add a download confirmation message
+      let genDiv = document.querySelector('.gen-div');
+      let confirmMsg = document.createElement('p');
+      // confirmMsg.classList.add('ad-bg-color');
+      confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
+      confirmMsg.style.transition = 'opacity 2s, height 1s';
+      confirmMsg.style.opacity = '1';
+      let confirmText = document.createElement('span');
+      confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
+      confirmMsg.appendChild(confirmText);
+      confirmText.classList.add('ad-bg-color');
+      confirmText.textContent = 'DOWNLOAD COMPLETE!'
+      genDiv.appendChild(confirmMsg);
+
+      // Slide up animation
+
+      confirmMsg.style.overflow = 'hidden';
+      confirmMsg.style.height = '30px'; // Set initial height
+
+
+      // fade animation
+      setTimeout(() => {
+        confirmMsg.style.opacity = '0';
+      }, 1000);
+
+      setTimeout(() => {
+        confirmMsg.style.height = '0';
+      }, 2000);
+
+      // removes message after two sec
+      setTimeout(() => {
+        genDiv.removeChild(confirmMsg);
+      }, 3000);
     });
 });
 
