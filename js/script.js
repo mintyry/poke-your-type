@@ -339,4 +339,13 @@ button.addEventListener('click', (event) => {
     });
 });
 
+document.querySelectorAll('.shiny').forEach(item => {
+  item.addEventListener('touchstart', function() {
+      this.classList.add('active');
+  });
+
+  item.addEventListener('touchend', function() {
+      this.classList.remove('active');
+  });
+});
 
