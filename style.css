@@ -358,6 +358,10 @@ p {
     margin-bottom: 0 !important;
 }
 
+.btn-light {
+    --bs-btn-hover-bg: #f8f9fa !important;
+}
+
 
 /* dropdown */
 .dropdown {
