@@ -373,6 +373,7 @@ p {
     width: 200px;
     padding: 2px;
     text-align: center;
+    font-weight: bolder;
 
 }
 
@@ -394,6 +395,7 @@ p {
     max-height: 200px;
     overflow-y: auto;
     text-align: center;
+    font-weight: bolder;
 }
 
 .dropdown-option {
