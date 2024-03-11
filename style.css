@@ -1,15 +1,17 @@
 /* elements */
 * {
     /* outline: 1px red solid; */
-    /* font-weight: bolder; */
+    text-transform: uppercase;
+    
 }
 
 body {
     background-image: url("./images/bg.avif");
     background-size: cover;
     background-position: right;
-    font-family: 'Bungee Hairline', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
+    font-family: 'Rajdhani', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    /* text-transform: uppercase; */
 }
 
 header {
@@ -37,6 +39,10 @@ p {
 
 .main-section {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.generate {
+    text-transform: uppercase;
 }
 
 .dev-link {
@@ -340,7 +346,7 @@ p {
 
 .ad {
     display: inline-block;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 5px;
 }
 
@@ -373,7 +379,7 @@ p {
     width: 200px;
     padding: 2px;
     text-align: center;
-    font-weight: bolder;
+    font-family: 'Rajdhani';
 
 }
 
