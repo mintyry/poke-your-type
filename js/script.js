@@ -325,16 +325,16 @@ button.addEventListener('click', (event) => {
 
       // fade animation
       setTimeout(() => {
-        confirmMsg.style.opacity = '0';
+        // confirmMsg.style.opacity = '0';
       }, 2000);
 
       setTimeout(() => {
-        confirmMsg.style.height = '0';
+        // confirmMsg.style.height = '0';
       }, 3000);
 
       // removes message after two sec
       setTimeout(() => {
-        genDiv.removeChild(confirmMsg);
+        // genDiv.removeChild(confirmMsg);
       }, 4000);
     });
 });

@@ -344,10 +344,11 @@ p {
     margin-right: 3px;
 }
 
-.ad {
+.ad, .user-ad {
     display: inline-block;
     /* font-weight: bold; */
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .ad-bg-color {
@@ -484,6 +485,8 @@ p {
     }
 } */
 
+
+
 @media (max-width: 900px) {
 
     /* original is width:10rem; */
@@ -517,8 +520,8 @@ p {
         width: 100%;
     }
 
-    .ad {
-        font-size: 2.5vmin;
+    .user-ad {
+        font-size: 3vmin;
     }
 }
 
