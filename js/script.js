@@ -300,56 +300,61 @@ button.addEventListener('click', (event) => {
       // Trigger a click on the link to start the download
       downloadLink.click();
 
-      downloadLink.addEventListener('focus', () => {
-        alert('Your file has been downloaded successfully!');
-      });
-
       // Remove the link from the document
       document.body.removeChild(downloadLink);
 
       // Add a download confirmation message
-      // let genDiv = document.querySelector('.gen-div');
-      // let confirmMsg = document.createElement('p');
-      // // confirmMsg.classList.add('ad-bg-color');
-      // confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
-      // confirmMsg.style.transition = 'opacity 2s, height 1s';
-      // confirmMsg.style.opacity = '1';
-      // let confirmText = document.createElement('span');
-      // confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
-      // confirmMsg.appendChild(confirmText);
-      // confirmText.classList.add('ad-bg-color');
-      // confirmText.textContent = 'DOWNLOAD COMPLETE!'
-      // genDiv.appendChild(confirmMsg);
+      let genDiv = document.querySelector('.gen-div');
+      let confirmMsg = document.createElement('p');
+      // confirmMsg.classList.add('ad-bg-color');
+      confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
+      confirmMsg.style.transition = 'opacity 2s, height 1s';
+      confirmMsg.style.opacity = '1';
+      let confirmText = document.createElement('span');
+      confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
+      confirmMsg.appendChild(confirmText);
+      confirmText.classList.add('ad-bg-color');
+      confirmText.textContent = 'FIND YOUR CARD IN YOUR SPECIFIED DOWNLOADS FOLDER'
+      genDiv.appendChild(confirmMsg);
 
-      // // Slide up animation
+      // Slide up animation
 
-      // confirmMsg.style.overflow = 'hidden';
-      // confirmMsg.style.height = '30px'; // Set initial height
+      confirmMsg.style.overflow = 'hidden';
+      confirmMsg.style.height = '30px'; // Set initial height
 
 
-      // // fade animation
-      // setTimeout(() => {
-      //   confirmMsg.style.opacity = '0';
-      // }, 1000);
+      // fade animation
+      setTimeout(() => {
+        confirmMsg.style.opacity = '0';
+      }, 2000);
 
-      // setTimeout(() => {
-      //   confirmMsg.style.height = '0';
-      // }, 2000);
+      setTimeout(() => {
+        confirmMsg.style.height = '0';
+      }, 3000);
 
-      // // removes message after two sec
-      // setTimeout(() => {
-      //   genDiv.removeChild(confirmMsg);
-      // }, 3000);
+      // removes message after two sec
+      setTimeout(() => {
+        genDiv.removeChild(confirmMsg);
+      }, 4000);
     });
 });
 
 document.querySelectorAll('.shiny').forEach(item => {
-  item.addEventListener('touchstart', function() {
-      this.classList.add('active');
+  item.addEventListener('touchstart', function () {
+    this.classList.add('active');
   });
 
-  item.addEventListener('touchend', function() {
-      this.classList.remove('active');
+  item.addEventListener('touchend', function () {
+    this.classList.remove('active');
   });
 });
+
+document.querySelector('.generate').addEventListener('touchstart', function () {
+  this.classList.add('interact');
+});
+
+document.querySelector('.generate').addEventListener('touchend', function () {
+  this.classList.remove('interact');
+});
+
 

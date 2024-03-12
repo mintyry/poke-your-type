@@ -447,6 +447,10 @@ p {
     transform: translate(1px, 1px);
 }
 
+.generate.interact {
+    --bs-btn-active-bg: #c6c7c8;
+}
+
 
 
 
