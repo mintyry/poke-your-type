@@ -339,6 +339,8 @@ button.addEventListener('click', (event) => {
     });
 });
 
+// visual css for touch screen active properties (for when user clicks shiny or generate button)
+
 document.querySelectorAll('.shiny').forEach(item => {
   item.addEventListener('touchstart', function () {
     this.classList.add('active');

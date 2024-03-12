@@ -11,7 +11,6 @@ body {
     background-position: right;
     font-family: 'Rajdhani', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 300;
-    /* text-transform: uppercase; */
 }
 
 header {
@@ -36,6 +35,43 @@ p {
     margin-bottom: 0.5rem;
     width: 100%;
 }
+
+/* HIDE RADIO */
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio]+.bg-opt {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked+.bg-opt {
+    outline: 2px solid rgb(218, 255, 202);
+}
+
+
+/* ids */
+
+
+#user-card {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dl-card {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+/* classes */
 
 .main-section {
     background-color: rgba(255, 255, 255, 0.5);
@@ -86,52 +122,6 @@ p {
     background-image: linear-gradient(to bottom right, gray, #ffedea);
 }
 
-/* HIDE RADIO */
-[type=radio] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* IMAGE STYLES */
-[type=radio]+.bg-opt {
-    cursor: pointer;
-}
-
-/* CHECKED STYLES */
-[type=radio]:checked+.bg-opt {
-    outline: 2px solid rgb(218, 255, 202);
-}
-
-
-/* ids */
-
-
-#user-card {
-    /* background-image: url("./images/5594016-e1656071131636.webp");
-    background-size:initial;
-    background-repeat: no-repeat;
-    background-position-x: 55%;
-    background-position-y: 18%; */
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-#dl-card {
-    /* background-image: url("./images/5594016-e1656071131636.webp");
-    background-size:initial;
-    background-repeat: no-repeat;
-    background-position-x: 55%;
-    background-position-y: 18%; */
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    display: none;
-}
-
 .dawn-card {
     /* dawn */
     background-image: linear-gradient(to bottom left, #dddfb7, #eaecc2, #74fce3);
@@ -168,10 +158,6 @@ p {
 .order-header {
     color: #ffedea;
 }
-
-
-
-/* classes */
 
 .head-text {
     font-style: italic;
@@ -325,8 +311,6 @@ p {
 
 .pokemon-image {
     width: 100%;
-    /* height: 10rem;  */
-    /* border: solid 1px rgb(218, 255, 202);  */
     border-left: solid 1px rgb(218, 255, 202);
     border-right: solid 1px rgb(218, 255, 202);
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
@@ -335,7 +319,6 @@ p {
 
 .tenrem {
     width: 10rem;
-    /* font-weight: bold; */
 }
 
 .type-icon {
@@ -346,7 +329,6 @@ p {
 
 .ad, .user-ad {
     display: inline-block;
-    /* font-weight: bold; */
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -453,39 +435,14 @@ p {
 }
 
 
-
-
-
-
-/* i know i can target a shiny in a specific div */
-/* #fire .shiny {
-    background: #3d5953;
-} */
-
 .select-head {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
     font-family: 'Rajdhani';
-    /* font-weight: bolder; */
 }
 
-/* .select-head p {
-
-} */
-
-/* @media (max-width: 420px) {
-    .head-text {
-        font-size: 1.5vmin;
-   
-    }
-    .type-icon {
-        width: 1.5vmin;
-
-    }
-} */
-
-
+/* MEDIA QUERIES */
 
 @media (max-width: 900px) {
 
@@ -550,6 +507,5 @@ p {
     .confirm-mobile-font-size {
         font-size: 3.8vmin;
     }
-
   
 }
