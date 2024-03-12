@@ -306,7 +306,7 @@ button.addEventListener('click', (event) => {
       // Add a download confirmation message
       let genDiv = document.querySelector('.gen-div');
       let confirmMsg = document.createElement('p');
-      // confirmMsg.classList.add('ad-bg-color');
+      confirmMsg.classList.add('confirm-mobile-font-size');
       confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
       confirmMsg.style.transition = 'opacity 2s, height 1s';
       confirmMsg.style.opacity = '1';
@@ -325,16 +325,16 @@ button.addEventListener('click', (event) => {
 
       // fade animation
       setTimeout(() => {
-        // confirmMsg.style.opacity = '0';
+        confirmMsg.style.opacity = '0';
       }, 2000);
 
       setTimeout(() => {
-        // confirmMsg.style.height = '0';
+        confirmMsg.style.height = '0';
       }, 3000);
 
       // removes message after two sec
       setTimeout(() => {
-        // genDiv.removeChild(confirmMsg);
+        genDiv.removeChild(confirmMsg);
       }, 4000);
     });
 });

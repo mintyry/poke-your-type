@@ -545,3 +545,11 @@ p {
         display: none;
     }
 }
+
+@media (max-width: 400px) {
+    .confirm-mobile-font-size {
+        font-size: 3.8vmin;
+    }
+
+  
+}
