@@ -300,6 +300,10 @@ button.addEventListener('click', (event) => {
       // Trigger a click on the link to start the download
       downloadLink.click();
 
+      downloadLink.addEventListener('focus', () => {
+        alert('Your file has been downloaded successfully!');
+      });
+
       // Remove the link from the document
       document.body.removeChild(downloadLink);
 
