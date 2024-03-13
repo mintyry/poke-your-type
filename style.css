@@ -478,7 +478,9 @@ p {
     }
 
     .user-ad {
-        font-size: 3vmin;
+        font-size: 2.2vmin;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
     }
 }
 
