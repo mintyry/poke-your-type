@@ -253,93 +253,6 @@ callDropdowns();
 
 
 
-// const button = document.querySelector('.generate');
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const dlCard = document.querySelector("#dl-card");
-
-//   // Create a temporary container element
-//   const tempContainer = document.createElement('div');
-//   tempContainer.style.position = 'absolute';
-//   tempContainer.style.left = '-9999px';
-//   tempContainer.style.top = '-9999px';
-
-//   // Append the dlCard to the temporary container
-//   tempContainer.appendChild(dlCard);
-//   document.body.appendChild(tempContainer);
-
-//   // quickly unhides card
-//   dlCard.style.display = 'block';
-
-//   html2canvas(dlCard, {
-//     backgroundColor: "transparent"
-//   })
-//     .then(canvas => {
-//       // dlCard is originally hidden. In a brief moment when user clicks button, it will show, then be hidden again at end of process, so the card that is downloaded is full sized
-//       dlCard.style.display = 'none';
-//       // move dlCard to body again and its hidden and delete the offscreen tempContainer
-//       document.body.appendChild(dlCard);
-//       // Remove the temporary container from the DOM
-//       document.body.removeChild(tempContainer);
-
-//       // Convert the canvas to a data URL
-//       const imageDataURL = canvas.toDataURL('image/png');
-
-//       // Create a temporary link element
-//       const downloadLink = document.createElement('a');
-
-//       // Set the href attribute to the data URL
-//       downloadLink.href = imageDataURL;
-
-//       // Set the download attribute with the desired filename
-//       downloadLink.download = 'Poke_Your_Type_card.png';
-
-//       // Append the link to the document
-//       document.body.appendChild(downloadLink);
-
-//       // Trigger a click on the link to start the download
-//       downloadLink.click();
-
-//       // Remove the link from the document
-//       document.body.removeChild(downloadLink);
-
-//       // Add a download confirmation message
-//       let genDiv = document.querySelector('.gen-div');
-//       let confirmMsg = document.createElement('p');
-//       confirmMsg.classList.add('confirm-mobile-font-size');
-//       confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
-//       confirmMsg.style.transition = 'opacity 2s, height 1s';
-//       confirmMsg.style.opacity = '1';
-//       let confirmText = document.createElement('span');
-//       confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
-//       confirmMsg.appendChild(confirmText);
-//       confirmText.classList.add('ad-bg-color');
-//       confirmText.textContent = 'FIND YOUR CARD IN YOUR SPECIFIED DOWNLOADS FOLDER'
-//       genDiv.appendChild(confirmMsg);
-
-//       // Slide up animation
-
-//       confirmMsg.style.overflow = 'hidden';
-//       confirmMsg.style.height = '30px'; // Set initial height
-
-
-//       // fade animation
-//       setTimeout(() => {
-//         confirmMsg.style.opacity = '0';
-//       }, 2000);
-
-//       setTimeout(() => {
-//         confirmMsg.style.height = '0';
-//       }, 3000);
-
-//       // removes message after two sec
-//       setTimeout(() => {
-//         genDiv.removeChild(confirmMsg);
-//       }, 4000);
-//     });
-// });
-
-
 const button = document.querySelector('.generate');
 button.addEventListener('click', (event) => {
   event.preventDefault();
@@ -381,53 +294,48 @@ button.addEventListener('click', (event) => {
       // Set the download attribute with the desired filename
       downloadLink.download = 'Poke_Your_Type_card.png';
 
-      // making new button for dl
-      let dlBtn = document.createElement('button');
-      dlBtn.textContent = 'H E L L O';
-      downloadLink.appendChild(dlBtn);
-
       // Append the link to the document
       document.body.appendChild(downloadLink);
 
-      // // Trigger a click on the link to start the download
-      // downloadLink.click();
+      // Trigger a click on the link to start the download
+      downloadLink.click();
 
       // Remove the link from the document
-      // document.body.removeChild(downloadLink);
+      document.body.removeChild(downloadLink);
 
-      // // Add a download confirmation message
-      // let genDiv = document.querySelector('.gen-div');
-      // let confirmMsg = document.createElement('p');
-      // confirmMsg.classList.add('confirm-mobile-font-size');
-      // confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
-      // confirmMsg.style.transition = 'opacity 2s, height 1s';
-      // confirmMsg.style.opacity = '1';
-      // let confirmText = document.createElement('span');
-      // confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
-      // confirmMsg.appendChild(confirmText);
-      // confirmText.classList.add('ad-bg-color');
-      // confirmText.textContent = 'FIND YOUR CARD IN YOUR SPECIFIED DOWNLOADS FOLDER'
-      // genDiv.appendChild(confirmMsg);
+      // Add a download confirmation message
+      let genDiv = document.querySelector('.gen-div');
+      let confirmMsg = document.createElement('p');
+      confirmMsg.classList.add('confirm-mobile-font-size');
+      confirmMsg.setAttribute('style', 'text-align: center; font-family: Rajdhani; margin-bottom: 0 !important');
+      confirmMsg.style.transition = 'opacity 2s, height 1s';
+      confirmMsg.style.opacity = '1';
+      let confirmText = document.createElement('span');
+      confirmText.setAttribute('style', 'padding: 2px 10px 2px 10px; border-radius: 3px');
+      confirmMsg.appendChild(confirmText);
+      confirmText.classList.add('ad-bg-color');
+      confirmText.textContent = 'FIND YOUR CARD IN YOUR SPECIFIED DOWNLOADS FOLDER'
+      genDiv.appendChild(confirmMsg);
 
-      // // Slide up animation
+      // Slide up animation
 
-      // confirmMsg.style.overflow = 'hidden';
-      // confirmMsg.style.height = '30px'; // Set initial height
+      confirmMsg.style.overflow = 'hidden';
+      confirmMsg.style.height = '30px'; // Set initial height
 
 
-      // // fade animation
-      // setTimeout(() => {
-      //   confirmMsg.style.opacity = '0';
-      // }, 2000);
+      // fade animation
+      setTimeout(() => {
+        confirmMsg.style.opacity = '0';
+      }, 2000);
 
-      // setTimeout(() => {
-      //   confirmMsg.style.height = '0';
-      // }, 3000);
+      setTimeout(() => {
+        confirmMsg.style.height = '0';
+      }, 3000);
 
-      // // removes message after two sec
-      // setTimeout(() => {
-      //   genDiv.removeChild(confirmMsg);
-      // }, 4000);
+      // removes message after two sec
+      setTimeout(() => {
+        genDiv.removeChild(confirmMsg);
+      }, 4000);
     });
 });
 
