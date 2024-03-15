@@ -285,23 +285,32 @@ button.addEventListener('click', (event) => {
       // Convert the canvas to a data URL
       const imageDataURL = canvas.toDataURL('image/png');
 
-      // Create a temporary link element
-      const downloadLink = document.createElement('a');
+      // // Create a temporary link element
+      // const downloadLink = document.createElement('a');
 
-      // Set the href attribute to the data URL
-      downloadLink.href = imageDataURL;
+      // // Set the href attribute to the data URL
+      // downloadLink.href = 'https://cdn3.iconfinder.com/data/icons/flat-games-and-toys/16/19_game-toy-pokemon-pokeball-videogame-512.png';
 
-      // Set the download attribute with the desired filename
-      downloadLink.download = 'Poke_Your_Type_card.png';
+      // // Set the download attribute with the desired filename
+      // downloadLink.download = 'Poke_Your_Type_card.png';
 
-      // Append the link to the document
-      document.body.appendChild(downloadLink);
+      // // Append the link to the document
+      // document.body.appendChild(downloadLink);
 
       // Trigger a click on the link to start the download
-      downloadLink.click();
+      // downloadLink.click();
+
+      // Open the data URL in a new tab after a brief delay
+      const newTab = window.open();
+      
+      let finalCard = document.createElement('img');
+      finalCard.src = imageDataURL;
+      finalCard.style = "width: 100%; height: 100vh; object-fit: contain;";
+      newTab.document.body.appendChild(finalCard);
+      
 
       // Remove the link from the document
-      document.body.removeChild(downloadLink);
+      // document.body.removeChild(downloadLink);
 
       // Add a download confirmation message
       let genDiv = document.querySelector('.gen-div');
