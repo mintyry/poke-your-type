@@ -67,3 +67,19 @@ extra button for dl test
 
       // Append the link to the document
       document.body.appendChild(downloadLink);
+
+
+      //TO OPEN IN NEW TAB
+        // Open the data URL in a new tab after a brief delay
+      const newTab = window.open();
+      
+      let finalCard = document.createElement('img');
+      finalCard.src = imageDataURL;
+      finalCard.style = "width: 100%; height: 100vh; object-fit: contain;";
+      newTab.document.body.appendChild(finalCard);
+
+      filesaver
+       canvas.toBlob(function (blob) {
+        // Save the Blob using FileSaver.js
+        saveAs(blob, 'Poke_Your_Type_card.png');
+       })
