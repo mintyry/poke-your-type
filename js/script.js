@@ -360,3 +360,4 @@ document.querySelector('.generate').addEventListener('touchend', function () {
 });
 
 
+console.log('test');
