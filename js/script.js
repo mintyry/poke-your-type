@@ -358,6 +358,3 @@ document.querySelector('.generate').addEventListener('touchstart', function () {
 document.querySelector('.generate').addEventListener('touchend', function () {
   this.classList.remove('interact');
 });
-
-
-console.log('test');
