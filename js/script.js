@@ -13,14 +13,17 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
     // console.log(shinyImg)
     // console.log(pokemonImg)
 
-    isShiny = !isShiny; //this allows toggling between false and not false (true)
+    isShiny = !isShiny; //this allows toggling between false and not false (true); establishes a false boolean by default
     // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
     let imgUrl = isShiny ? shinyImg : pokemonImg;
 
+    // we will fetch the image, convert to a BLOB (binary large object), binary data of media file - it now lives in the memory of the browser; it is now mine
     fetch(imgUrl)
       .then(response => response.blob())
       .then(blob => {
+        // then we use FileReader, a browser tool that reads file-like objects; can convert file into text, binary, or base 64 string
         const reader = new FileReader();
+        // FileReader works asynchronously; i tell it "when you are done reading the file, run the following function"
         reader.onloadend = () => {
           const base64data = reader.result.split(',')[1];
 
