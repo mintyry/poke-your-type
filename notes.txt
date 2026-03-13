@@ -21,3 +21,24 @@ xpert ai dropdown css code
 https://github.com/duiker101 for type icons
 
 opengraph meta data
+
+
+FETCHING IMAGE AVOIDS HOTLINKING
+
+A Blob is a JavaScript object that holds binary file data.
+So now you have:
+Blob {
+  type: "image/png"
+  size: 48372 bytes
+  data: [binary image data]
+}
+
+i split the binary data... i could skip that step in script.js 
+You could simplify to:
+reader.onloadend = () => {
+  let imgDivs = document.querySelectorAll(`.${type}-img`);
+
+  imgDivs.forEach((imgDiv) => {
+    imgDiv.src = reader.result;
+  });
+};

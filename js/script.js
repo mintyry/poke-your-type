@@ -17,7 +17,7 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
     // if isShiny is true, fetch shinyImg, if not, fetch pokemonImg
     let imgUrl = isShiny ? shinyImg : pokemonImg;
 
-    // we will fetch the image, convert to a BLOB (binary large object), binary data of media file - it now lives in the memory of the browser; it is now mine
+    // we will fetch the image, convert to a BLOB (binary large object), binary data of media file - it now lives in the memory of the browser; it is now mine. it lives temporarily only while the page/app is running
     fetch(imgUrl)
       .then(response => response.blob())
       .then(blob => {
@@ -25,11 +25,15 @@ function shiny(isShiny, pokemonImg, shinyImg, type) {
         const reader = new FileReader();
         // FileReader works asynchronously; i tell it "when you are done reading the file, run the following function"
         reader.onloadend = () => {
+          // put data url into the base64 variable; splits it up at the comma and accesses the string portion
+          // eg: data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...
           const base64data = reader.result.split(',')[1];
 
           // updates both user-card and dl-card's img elements
           let imgDivs = document.querySelectorAll(`.${type}-img`);
           imgDivs.forEach((imgDiv) => {
+            // set the image for each type div
+            // this first .src resets the image (because otherwise, once an image was set, it would not always switch if another pokemon is chosen)
             imgDiv.src = '';
             imgDiv.src = 'data:image/png;base64,' + base64data;
           });

@@ -25,6 +25,21 @@ I learned more about how to handle issues that arise from deployment (deployment
 
 I also learned a bit more about adding event listeners, how you can and cannot do so, as well as coming up with logic to remove individually-added event listeners that were created in bulk.
 
+I also learned how blob works:
+Server
+  │
+  │ fetch()
+  ▼
+Browser downloads bytes
+  ▼
+response.blob()
+  ▼
+Blob object in memory
+  ▼
+My JavaScript can use it
+
+You'll want to convert blobs into base64 so is a text/string that can be utilized more lightweight and in a versatile manner (like sending in a JSON), but more importantly, like in this app, to use as a data src for images
+
 While this started out as a personal project to gain more practice, it has definitely evolved into a personal passion project that I am proud of, and I hope you enjoy!
 
 
