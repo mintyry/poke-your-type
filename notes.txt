@@ -42,3 +42,11 @@ reader.onloadend = () => {
     imgDiv.src = reader.result;
   });
 };
+
+
+
+
+====
+
+NEXT TO-DO:
+the new megas do exist. i need to find out how to access them, but not only access them... how to automatically access them when new ones are introduced

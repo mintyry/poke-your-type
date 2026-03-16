@@ -70,7 +70,7 @@ function fetchPokemon(name, type) {
 
   name = manualHandle(name, type, isShiny, defaultShinyHandlers[type]);
 
-  //if manual photo from my files, doesnt fetch
+  //if manual photo from my files, doesnt fetch (ie: if name doesn't exist in api, dont fetch from api, use my manual file)
   if (!name) {
     return;
   };
