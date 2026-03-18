@@ -50,3 +50,8 @@ reader.onloadend = () => {
 
 NEXT TO-DO:
 the new megas do exist. i need to find out how to access them, but not only access them... how to automatically access them when new ones are introduced
+
+one thing is i am making the dropdowns manually. how to automate? need to automatically get names too...
+
+fetch is dependent on name; we fetch by name; it cannot be automatic if i have manual names, cuz then the names wont ever be updated and thus wot exist in the app unless i make it
+test: add mega victreebel

@@ -76,6 +76,7 @@ function fetchPokemon(name, type) {
   };
 
   // fetch pokemon data
+  // fetch from their URL, then we use the artwork
   let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
   fetch(url)
     .then(response => response.json())
