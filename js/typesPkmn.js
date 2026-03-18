@@ -1511,6 +1511,7 @@ let poisonPokemon =
         'sneasel-hisui',
         'wooper-paldea',
         'pecharunt',
+        'victreebel-mega',
     ];
 
 let psychicPokemon = [
