@@ -55,3 +55,8 @@ one thing is i am making the dropdowns manually. how to automate? need to automa
 
 fetch is dependent on name; we fetch by name; it cannot be automatic if i have manual names, cuz then the names wont ever be updated and thus wot exist in the app unless i make it
 test: add mega victreebel
+
+====
+
+notes:
+types endpoint: https://pokeapi.co/api/v2/type/{type}
