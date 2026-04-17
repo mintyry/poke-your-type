@@ -1,11 +1,14 @@
 let typeURL = 'https://pokeapi.co/api/v2/type/ground';
 fetch(typeURL)
-// fetches data then converts to json
+    // fetches data then converts to json
     .then(response => response.json())
     // use data
     .then(data => {
-        console.log(data);
-     })
+        console.log('this is how many pokemon there are of this type: ' + data.pokemon.length)
+        for (let i = 0; i < data.pokemon.length; i++) {
+            console.log(data.pokemon[i].pokemon.name);
+        }
+    });
 
 let bugPokemon =
     [
