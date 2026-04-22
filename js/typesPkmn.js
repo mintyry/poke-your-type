@@ -1,14 +1,4 @@
-let typeURL = 'https://pokeapi.co/api/v2/type/ground';
-fetch(typeURL)
-    // fetches data then converts to json
-    .then(response => response.json())
-    // use data
-    .then(data => {
-        console.log('this is how many pokemon there are of this type: ' + data.pokemon.length)
-        for (let i = 0; i < data.pokemon.length; i++) {
-            console.log(data.pokemon[i].pokemon.name);
-        }
-    });
+
 
 let bugPokemon =
     [
@@ -1094,7 +1084,7 @@ let grassPokemon =
         'hydrapple',
     ];
 
-let groundPokemon =
+let groundPokemon1 =
     [
         'sandshrew',
         'sandslash',
@@ -1189,6 +1179,24 @@ let groundPokemon =
         'wooper-paldea',
         'ursaluna-bloodmoon'
     ];
+// - gastrodon - alt ; need to ensure both gastros still exist
+// + zygarde 10 construct
+// + zygarde 50 construct
+// 3 new megas
+
+let typeURL = 'https://pokeapi.co/api/v2/type/ground';
+let groundPokemon = [];
+fetch(typeURL)
+    // fetches data then converts to json
+    .then(response => response.json())
+    // use data
+    .then(data => {
+        for (let i = 0; i < data.pokemon.length; i++) {
+            groundPokemon.push(data.pokemon[i].pokemon.name);
+        }
+        console.log(groundPokemon);
+        console.log('count ' + groundPokemon.length);
+    });
 
 let icePokemon =
     [
