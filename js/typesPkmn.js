@@ -1084,7 +1084,7 @@ let grassPokemon =
         'hydrapple',
     ];
 
-let groundPokemon1 =
+let groundPokemon =
     [
         'sandshrew',
         'sandslash',
@@ -1184,19 +1184,6 @@ let groundPokemon1 =
 // + zygarde 50 construct
 // 3 new megas
 
-let typeURL = 'https://pokeapi.co/api/v2/type/ground';
-let groundPokemon = [];
-fetch(typeURL)
-    // fetches data then converts to json
-    .then(response => response.json())
-    // use data
-    .then(data => {
-        for (let i = 0; i < data.pokemon.length; i++) {
-            groundPokemon.push(data.pokemon[i].pokemon.name);
-        }
-        console.log(groundPokemon);
-        console.log('count ' + groundPokemon.length);
-    });
 
 let icePokemon =
     [

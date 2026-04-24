@@ -56,6 +56,24 @@ one thing is i am making the dropdowns manually. how to automate? need to automa
 fetch is dependent on name; we fetch by name; it cannot be automatic if i have manual names, cuz then the names wont ever be updated and thus wot exist in the app unless i make it
 test: add mega victreebel
 
+need to fetch all 18 types' arrays and THEN call dropdown
+but before i do this, i want to learn branches again and work on this on a different branch
+
+initial fetch script:
+
+let typeURL = 'https://pokeapi.co/api/v2/type/ground';
+let groundPokemon = [];
+fetch(typeURL)
+    // fetches data then converts to json
+    .then(response => response.json())
+    // use data
+    .then(data => {
+        for (let i = 0; i < data.pokemon.length; i++) {
+            groundPokemon.push(data.pokemon[i].pokemon.name);
+        }
+        console.log(groundPokemon);
+        console.log('count ' + groundPokemon.length);
+    });
 ====
 
 notes:
