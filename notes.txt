@@ -74,6 +74,9 @@ fetch(typeURL)
         console.log(groundPokemon);
         console.log('count ' + groundPokemon.length);
     });
+
+    first, do one, and then adjust to all
+        // dont need totems
 ====
 
 notes:

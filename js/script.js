@@ -242,9 +242,11 @@ function pokemonDropdown(typeSection, array, type) {
 
 
 // To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
+
+// REMOVED BUG BETWEEN POISON AND FIGHTING
 function callDropdowns() {
-  let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
+  let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
+  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
 
 
   for (let i = 0; i < allTypes.length; i++) {

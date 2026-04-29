@@ -1,6 +1,29 @@
 
+let typeURL = 'https://pokeapi.co/api/v2/type/bug';
+let bugPokemon = [];
+fetch(typeURL)
+    // fetches data then converts to json
+    .then(response => response.json())
+    // use data
+    .then(data => {
+        for (let i = 0; i < data.pokemon.length; i++) {
+            bugPokemon.push(data.pokemon[i].pokemon.name);
+        }
+        console.log(bugPokemon);
+        console.log('count ' + bugPokemon.length);
 
-let bugPokemon =
+        function callBugDrop() {
+            let bugType = 'bug';
+            // typeArray replavced by bugPokemon array
+            let bugSection = document.querySelector('#bug');
+            pokemonDropdown(bugSection, bugPokemon, bugType);
+        };
+
+        callBugDrop();
+    });
+// dont need totems
+
+let bugPokemon1 =
     [
         'caterpie',
         'metapod',
