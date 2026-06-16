@@ -1,30 +1,23 @@
 
 let typeURL = 'https://pokeapi.co/api/v2/type/bug';
 let bugPokemon = [];
-// fetch(typeURL)
-//     // fetches data then converts to json
-//     .then(response => response.json())
-//     // use data
-//     .then(data => {
-//         for (let i = 0; i < data.pokemon.length; i++) {
-//             bugPokemon.push(data.pokemon[i].pokemon.name);
-//         }
-//         console.log(bugPokemon);
-//         console.log('count ' + bugPokemon.length);
-
-//         function callBugDrop() {
-//             let bugType = 'bug';
-//             // typeArray replavced by bugPokemon array
-//             let bugSection = document.querySelector('#bug');
-//             pokemonDropdown(bugSection, bugPokemon, bugType);
-//         };
-
-//         callBugDrop();
-//     });
 async function fetchBug() {
+    try {
     const bugRes = await fetch(typeURL);
     const bugData = await bugRes.json();
-}
+    console.log(bugData);
+    for (let i = 0; i < bugData.pokemon.length; i++) {
+            bugPokemon.push(bugData.pokemon[i].pokemon.name);
+        }
+        console.log(bugPokemon);
+        console.log('count ' + bugPokemon.length);
+
+    } catch {
+        console.log('error');
+    }
+};
+
+fetchBug();
 
 
 // dont need totems

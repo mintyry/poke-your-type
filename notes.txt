@@ -77,6 +77,29 @@ fetch(typeURL)
 
     first, do one, and then adjust to all
         // dont need totems
+
+// fetch(typeURL)
+//     // fetches data then converts to json
+//     .then(response => response.json())
+//     // use data
+//     .then(data => {
+//         for (let i = 0; i < data.pokemon.length; i++) {
+//             bugPokemon.push(data.pokemon[i].pokemon.name);
+//         }
+//         console.log(bugPokemon);
+//         console.log('count ' + bugPokemon.length);
+
+//         function callBugDrop() {
+//             let bugType = 'bug';
+//             // typeArray replavced by bugPokemon array
+//             let bugSection = document.querySelector('#bug');
+//             pokemonDropdown(bugSection, bugPokemon, bugType);
+//         };
+
+//         callBugDrop();
+//     });
+
+^fetch with promise/.then()
 ====
 
 notes:
