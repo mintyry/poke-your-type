@@ -259,7 +259,7 @@ function callDropdowns() {
   }
 };
 
-callDropdowns();
+// callDropdowns();
 
 
 

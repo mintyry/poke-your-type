@@ -12,12 +12,15 @@ async function fetchBug() {
         console.log(bugPokemon);
         console.log('count ' + bugPokemon.length);
 
+        callDropdowns();
+
     } catch {
         console.log('error');
     }
 };
 
 fetchBug();
+
 
 
 // dont need totems
