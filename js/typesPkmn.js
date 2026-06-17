@@ -1,4 +1,4 @@
-
+// need to refactor to loop and fetch all types
 let typeURL = 'https://pokeapi.co/api/v2/type/bug';
 let bugPokemon = [];
 async function fetchBug() {
