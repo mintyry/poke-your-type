@@ -247,7 +247,7 @@ function pokemonDropdown(typeSection, array, type) {
 function callDropdowns() {
   console.log('callDrop is working');
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
+  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon, psychicPokemon, darkPokemon, ghostPokemon, poisonPokemon, bugPokemon1, fightingPokemon, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon, fairyPokemon]
 
 
   for (let i = 0; i < allTypes.length; i++) {
@@ -260,7 +260,7 @@ function callDropdowns() {
   }
 };
 
-// callDropdowns();
+callDropdowns();
 
 
 

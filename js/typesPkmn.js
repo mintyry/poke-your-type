@@ -1,16 +1,38 @@
-// need to refactor to loop and fetch all types
-let typeURL = 'https://pokeapi.co/api/v2/type/bug';
-let bugPokemon = [];
-async function fetchBug() {
+// // need to refactor to loop and fetch all types
+// let typeURL = 'https://pokeapi.co/api/v2/type/bug';
+// let bugPokemon = [];
+// async function fetchBug() {
+//     try {
+//     const bugRes = await fetch(typeURL);
+//     const bugData = await bugRes.json();
+//     console.log(bugData);
+//     for (let i = 0; i < bugData.pokemon.length; i++) {
+//             bugPokemon.push(bugData.pokemon[i].pokemon.name);
+//         }
+//         console.log(bugPokemon);
+//         console.log('count ' + bugPokemon.length);
+
+//         callDropdowns();
+
+//     } catch {
+//         console.log('error');
+//     }
+// };
+
+// fetchBug();
+
+let typeURL = 'https://pokeapi.co/api/v2/type/dark';
+let darkPokemon = [];
+async function fetchPkmnByType() {
     try {
-    const bugRes = await fetch(typeURL);
-    const bugData = await bugRes.json();
-    console.log(bugData);
-    for (let i = 0; i < bugData.pokemon.length; i++) {
-            bugPokemon.push(bugData.pokemon[i].pokemon.name);
+    const typeRes = await fetch(typeURL);
+    const typeData = await typeRes.json();
+    console.log(typeData);
+    for (let i = 0; i < typeData.pokemon.length; i++) {
+            darkPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(bugPokemon);
-        console.log('count ' + bugPokemon.length);
+        console.log(darkPokemon);
+        console.log('count ' + darkPokemon.length);
 
         callDropdowns();
 
@@ -19,7 +41,9 @@ async function fetchBug() {
     }
 };
 
-fetchBug();
+fetchPkmnByType();
+
+
 
 
 
@@ -131,8 +155,9 @@ let bugPokemon1 =
     ];
 
     console.log('count of og bug array: ' + bugPokemon1.length)
+    // fetch diff, 5: 3 totems, 2 new megas
 
-let darkPokemon =
+let darkPokemon1 =
     [
         'umbreon',
         'murkrow',
@@ -228,6 +253,8 @@ let darkPokemon =
         'qwilfish-hisui',
         'samurott-hisui'
     ];
+    console.log('count of og dark array: ' + darkPokemon1.length)
+    // fetch diff, 6: 1 totem, 5 new megas
 
 let dragonPokemon =
     [
