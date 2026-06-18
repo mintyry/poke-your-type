@@ -130,6 +130,8 @@ let bugPokemon1 =
         'centiskorch-gmax'
     ];
 
+    console.log('count of og bug array: ' + bugPokemon1.length)
+
 let darkPokemon =
     [
         'umbreon',
