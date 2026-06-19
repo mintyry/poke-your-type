@@ -21,18 +21,19 @@
 
 // fetchBug();
 
-let typeURL = 'https://pokeapi.co/api/v2/type/dark';
-let darkPokemon = [];
+// bug works, dark works,
+let typeURL = 'https://pokeapi.co/api/v2/type/dragon';
+let dragonPokemon = [];
 async function fetchPkmnByType() {
     try {
     const typeRes = await fetch(typeURL);
     const typeData = await typeRes.json();
     console.log(typeData);
     for (let i = 0; i < typeData.pokemon.length; i++) {
-            darkPokemon.push(typeData.pokemon[i].pokemon.name);
+            dragonPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(darkPokemon);
-        console.log('count ' + darkPokemon.length);
+        console.log(dragonPokemon);
+        console.log('count ' + dragonPokemon.length);
 
         callDropdowns();
 
@@ -256,7 +257,7 @@ let darkPokemon1 =
     console.log('count of og dark array: ' + darkPokemon1.length)
     // fetch diff, 6: 1 totem, 5 new megas
 
-let dragonPokemon =
+let dragonPokemon1 =
     [
         'dratini',
         'dragonair',
@@ -355,6 +356,8 @@ let dragonPokemon =
         'gouging-fire',
         'raging-bolt',
     ];
+    console.log('count of og dragon array: ' + dragonPokemon1.length)
+    // diff is 21, need to proof this
 
 let electricPokemon = [
     'pikachu',
