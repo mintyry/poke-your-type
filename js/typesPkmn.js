@@ -26,10 +26,10 @@ let typeURL = 'https://pokeapi.co/api/v2/type/dragon';
 let dragonPokemon = [];
 async function fetchPkmnByType() {
     try {
-    const typeRes = await fetch(typeURL);
-    const typeData = await typeRes.json();
-    console.log(typeData);
-    for (let i = 0; i < typeData.pokemon.length; i++) {
+        const typeRes = await fetch(typeURL);
+        const typeData = await typeRes.json();
+        console.log(typeData);
+        for (let i = 0; i < typeData.pokemon.length; i++) {
             dragonPokemon.push(typeData.pokemon[i].pokemon.name);
         }
         console.log(dragonPokemon);
@@ -155,8 +155,8 @@ let bugPokemon1 =
         'centiskorch-gmax'
     ];
 
-    console.log('count of og bug array: ' + bugPokemon1.length)
-    // fetch diff, 5: 3 totems, 2 new megas
+console.log('count of og bug array: ' + bugPokemon1.length)
+// fetch diff, 5: 3 totems, 2 new megas
 
 let darkPokemon1 =
     [
@@ -254,8 +254,8 @@ let darkPokemon1 =
         'qwilfish-hisui',
         'samurott-hisui'
     ];
-    console.log('count of og dark array: ' + darkPokemon1.length)
-    // fetch diff, 6: 1 totem, 5 new megas
+console.log('count of og dark array: ' + darkPokemon1.length)
+// fetch diff, 6: 1 totem, 5 new megas
 
 let dragonPokemon1 =
     [
@@ -325,6 +325,10 @@ let dragonPokemon1 =
         'miraidon',
         'walking-wake',
         'dipplin',
+        'hydrapple',
+        'archaludon',
+        'gouging-fire',
+        'raging-bolt',
         'giratina-origin',
         'kyurem-black',
         'kyurem-white',
@@ -351,13 +355,11 @@ let dragonPokemon1 =
         'palkia-origin',
         'tatsugiri-droopy',
         'tatsugiri-stretchy',
-        'hydrapple',
-        'archaludon',
-        'gouging-fire',
-        'raging-bolt',
     ];
-    console.log('count of og dragon array: ' + dragonPokemon1.length)
-    // diff is 21, need to proof this
+console.log('count of og dragon array: ' + dragonPokemon1.length)
+// diff is 21, need to proof this
+// excluded zygarde 10 construct, zygarde 50 construct, kommo totem, koraidonlimited build,koraidon sprinting, koraidon swimming, koraidon gliding,miraidon low power, miraidon drive, miraidon aquatic, miraidon glide... 11 + the 10 new megas
+// just missing the alternate legendary forms (ok) + totem + new megas we are good
 
 let electricPokemon = [
     'pikachu',
