@@ -106,3 +106,5 @@ notes:
 types endpoint: https://pokeapi.co/api/v2/type/{type}
 
 callDropdowns() needs to be in the try block of fetch. maybe cannot fetch each type at a time. maybe loop the fetch for all types
+
+after i review each type array, then i will loop for the fetch

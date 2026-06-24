@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/dragon';
-let dragonPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/electric';
+let electricPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            dragonPokemon.push(typeData.pokemon[i].pokemon.name);
+            electricPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(dragonPokemon);
-        console.log('count ' + dragonPokemon.length);
+        console.log(electricPokemon);
+        console.log('count ' + electricPokemon.length);
 
         callDropdowns();
 
@@ -361,7 +361,7 @@ console.log('count of og dragon array: ' + dragonPokemon1.length)
 // excluded zygarde 10 construct, zygarde 50 construct, kommo totem, koraidonlimited build,koraidon sprinting, koraidon swimming, koraidon gliding,miraidon low power, miraidon drive, miraidon aquatic, miraidon glide... 11 + the 10 new megas
 // just missing the alternate legendary forms (ok) + totem + new megas we are good
 
-let electricPokemon = [
+let electricPokemon1 = [
     'pikachu',
     'raichu',
     'magnemite',
@@ -430,6 +430,7 @@ let electricPokemon = [
     'iron-hands',
     'iron-thorns',
     'miraidon',
+    'raging-bolt',
     'rotom-heat',
     'rotom-wash',
     'rotom-frost',
@@ -465,8 +466,8 @@ let electricPokemon = [
     'toxtricity-low-key-gmax',
     'voltorb-hisui',
     'electrode-hisui',
-    'raging-bolt',
 ];
+// exclude 2 totem + 8 new megas
 
 let fairyPokemon =
     [
