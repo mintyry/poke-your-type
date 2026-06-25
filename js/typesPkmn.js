@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/fairy';
-let fairyPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/fighting';
+let fightingPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            fairyPokemon.push(typeData.pokemon[i].pokemon.name);
+            fightingPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(fairyPokemon);
-        console.log('count ' + fairyPokemon.length);
+        console.log(fightingPokemon);
+        console.log('count ' + fightingPokemon.length);
 
         callDropdowns();
 
@@ -552,10 +552,10 @@ let fairyPokemon1 =
         'alcremie-gmax',
         'enamorus-therian'
     ];
-    // diff: 3 mimikyu alts, 1 totem, 5 new megas
+    // diff: 9 - 3 mimikyu alts, 1 totem, 5 new megas
 console.log('count of og fairy array: ' + fairyPokemon1.length)
 
-let fightingPokemon =
+let fightingPokemon1 =
     [
         'mankey',
         'primeape',
@@ -653,6 +653,9 @@ let fightingPokemon =
         'tauros-paldea-blaze-breed',
         'tauros-paldea-aqua-breed',
     ];
+    //diff: 14 -  9 megas, 1 totem, 4 koraidon alts
+console.log('count of og fight array: ' + fightingPokemon1.length)
+
 
 let firePokemon =
     [
