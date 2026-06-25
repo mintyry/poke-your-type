@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/electric';
-let electricPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/fairy';
+let fairyPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            electricPokemon.push(typeData.pokemon[i].pokemon.name);
+            fairyPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(electricPokemon);
-        console.log('count ' + electricPokemon.length);
+        console.log(fairyPokemon);
+        console.log('count ' + fairyPokemon.length);
 
         callDropdowns();
 
@@ -467,9 +467,10 @@ let electricPokemon1 = [
     'voltorb-hisui',
     'electrode-hisui',
 ];
+console.log('count of og elec array: ' + electricPokemon1.length)
 // exclude 2 totem + 8 new megas
 
-let fairyPokemon =
+let fairyPokemon1 =
     [
         'clefairy',
         'clefable',
@@ -551,6 +552,8 @@ let fairyPokemon =
         'alcremie-gmax',
         'enamorus-therian'
     ];
+    // diff: 3 mimikyu alts, 1 totem, 5 new megas
+console.log('count of og fairy array: ' + fairyPokemon1.length)
 
 let fightingPokemon =
     [
