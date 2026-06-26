@@ -657,7 +657,7 @@ let fightingPokemon1 =
 console.log('count of og fight array: ' + fightingPokemon1.length)
 
 
-let firePokemon =
+let firePokemon1 =
     [
         'charmander',
         'charmeleon',
@@ -761,6 +761,8 @@ let firePokemon =
         'ogerpon-hearthflame',
         'gouging-fire',
     ];
+
+console.log('count of og fire array: ' + firePokemon1.length)
 
 let flyingPokemon =
     [
