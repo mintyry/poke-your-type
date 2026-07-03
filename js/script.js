@@ -245,9 +245,10 @@ function pokemonDropdown(typeSection, array, type) {
 
 // REMOVED BUG BETWEEN POISON AND FIGHTING
 function callDropdowns() {
+  // tells which array to use
   console.log('callDrop is working');
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [grassPokemon, firePokemon, waterPokemon, normalPokemon, flyingPokemon, electricPokemon1, psychicPokemon, darkPokemon1, ghostPokemon, poisonPokemon, bugPokemon1, fightingPokemon1, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon1, fairyPokemon1]
+  let allArrays = [grassPokemon, firePokemon1, waterPokemon, normalPokemon, flyingPokemon, electricPokemon1, psychicPokemon, darkPokemon1, ghostPokemon, poisonPokemon, bugPokemon1, fightingPokemon1, rockPokemon, groundPokemon, steelPokemon, icePokemon, dragonPokemon1, fairyPokemon1]
 
 
   for (let i = 0; i < allTypes.length; i++) {

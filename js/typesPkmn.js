@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/fire';
-let firePokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/flying';
+let flyingPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            firePokemon.push(typeData.pokemon[i].pokemon.name);
+            flyingPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(firePokemon);
-        console.log('count ' + firePokemon.length);
+        console.log(flyingPokemon);
+        console.log('count ' + flyingPokemon.length);
 
         callDropdowns();
 
@@ -764,7 +764,7 @@ let firePokemon1 =
 // diff: 8 - 6 megas, salazzle and marowak totems
 console.log('count of og fire array: ' + firePokemon1.length)
 
-let flyingPokemon =
+let flyingPokemon1 =
     [
         'charizard',
         'butterfree',
@@ -916,6 +916,8 @@ let flyingPokemon =
         'squawkabilly-yellow-plumage',
         'squawkabilly-white-plumage'
     ];
+console.log('count of og flying array: ' + flyingPokemon1.length)
+// diff: 5 megas
 
 let ghostPokemon =
     [
