@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/flying';
-let flyingPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/ghost';
+let ghostPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            flyingPokemon.push(typeData.pokemon[i].pokemon.name);
+            ghostPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(flyingPokemon);
-        console.log('count ' + flyingPokemon.length);
+        console.log(ghostPokemon);
+        console.log('count ' + ghostPokemon.length);
 
         callDropdowns();
 
@@ -919,7 +919,7 @@ let flyingPokemon1 =
 console.log('count of og flying array: ' + flyingPokemon1.length)
 // diff: 5 megas
 
-let ghostPokemon =
+let ghostPokemon1 =
     [
         'gastly',
         'haunter',
@@ -985,6 +985,7 @@ let ghostPokemon =
         'gholdengo',
         'poltchageist',
         'sinistcha',
+        'pecharunt',
         'giratina-origin',
         'aegislash-blade',
         'gengar-mega',
@@ -1002,9 +1003,9 @@ let ghostPokemon =
         'zoroark-hisui',
         'basculegion-female',
         'gimmighoul-roaming',
-        'pecharunt',
     ];
-
+console.log('count of og ghost array: ' + ghostPokemon1.length)
+// diff: 14 - 6 gourgeist sizes, 3 mimikyu variants, 1 totem, 4 megas
 let grassPokemon =
     [
         'bulbasaur',
