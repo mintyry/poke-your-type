@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/ghost';
-let ghostPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/grass';
+let grassPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            ghostPokemon.push(typeData.pokemon[i].pokemon.name);
+            grassPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(ghostPokemon);
-        console.log('count ' + ghostPokemon.length);
+        console.log(grassPokemon);
+        console.log('count ' + grassPokemon.length);
 
         callDropdowns();
 
@@ -1006,7 +1006,7 @@ let ghostPokemon1 =
     ];
 console.log('count of og ghost array: ' + ghostPokemon1.length)
 // diff: 14 - 6 gourgeist sizes, 3 mimikyu variants, 1 totem, 4 megas
-let grassPokemon =
+let grassPokemon1 =
     [
         'bulbasaur',
         'ivysaur',
@@ -1154,6 +1154,8 @@ let grassPokemon =
         'ogerpon-cornerstone',
         'hydrapple',
     ];
+console.log('count of og grass array: ' + grassPokemon1.length)
+// diff: 11 - 6 gourgeist sizes, 4 megas, 1 totem
 
 let groundPokemon =
     [
