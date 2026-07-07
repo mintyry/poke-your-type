@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/grass';
-let grassPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/ground';
+let groundPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            grassPokemon.push(typeData.pokemon[i].pokemon.name);
+            groundPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(grassPokemon);
-        console.log('count ' + grassPokemon.length);
+        console.log(groundPokemon);
+        console.log('count ' + groundPokemon.length);
 
         callDropdowns();
 
@@ -1157,7 +1157,7 @@ let grassPokemon1 =
 console.log('count of og grass array: ' + grassPokemon1.length)
 // diff: 11 - 6 gourgeist sizes, 4 megas, 1 totem
 
-let groundPokemon =
+let groundPokemon1 =
     [
         'sandshrew',
         'sandslash',
@@ -1256,7 +1256,8 @@ let groundPokemon =
 // + zygarde 10 construct
 // + zygarde 50 construct
 // 3 new megas
-
+console.log('count of og ground array: ' + groundPokemon1.length)
+// diff: 4 - 3 megas, 2 zygarde constructs = 5, but minus 1 because i added gastrodon alt
 
 let icePokemon =
     [
