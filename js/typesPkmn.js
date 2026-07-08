@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/ground';
-let groundPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/ice';
+let icePokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            groundPokemon.push(typeData.pokemon[i].pokemon.name);
+            icePokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(groundPokemon);
-        console.log('count ' + groundPokemon.length);
+        console.log(icePokemon);
+        console.log('count ' + icePokemon.length);
 
         callDropdowns();
 
@@ -1259,7 +1259,7 @@ let groundPokemon1 =
 console.log('count of og ground array: ' + groundPokemon1.length)
 // diff: 4 - 3 megas, 2 zygarde constructs = 5, but minus 1 because i added gastrodon alt
 
-let icePokemon =
+let icePokemon1 =
     [
         'dewgong',
         'cloyster',
@@ -1328,6 +1328,8 @@ let icePokemon =
         'lapras-gmax',
         'avalugg-hisui'
     ];
+console.log('count of og ice array: ' + icePokemon1.length)
+// diff: 3- 3 megas
 
 let normalPokemon =
     [
