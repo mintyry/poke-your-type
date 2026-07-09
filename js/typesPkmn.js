@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/ice';
-let icePokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/normal';
+let normalPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            icePokemon.push(typeData.pokemon[i].pokemon.name);
+            normalPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(icePokemon);
-        console.log('count ' + icePokemon.length);
+        console.log(normalPokemon);
+        console.log('count ' + normalPokemon.length);
 
         callDropdowns();
 
@@ -1331,7 +1331,7 @@ let icePokemon1 =
 console.log('count of og ice array: ' + icePokemon1.length)
 // diff: 3- 3 megas
 
-let normalPokemon =
+let normalPokemon1 =
     [
         'Pidgey',
         'Pidgeotto',
@@ -1490,6 +1490,8 @@ let normalPokemon =
         'terapagos-terastal',
         'terapagos-stellar'
     ];
+console.log('count of og normal array: ' + normalPokemon1.length)
+// diff: 2 megas 2 totems
 
 let poisonPokemon =
     [
