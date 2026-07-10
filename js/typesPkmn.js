@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/normal';
-let normalPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/poison';
+let poisonPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            normalPokemon.push(typeData.pokemon[i].pokemon.name);
+            poisonPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(normalPokemon);
-        console.log('count ' + normalPokemon.length);
+        console.log(poisonPokemon);
+        console.log('count ' + poisonPokemon.length);
 
         callDropdowns();
 
@@ -1493,7 +1493,7 @@ let normalPokemon1 =
 console.log('count of og normal array: ' + normalPokemon1.length)
 // diff: 2 megas 2 totems
 
-let poisonPokemon =
+let poisonPokemon1 =
     [
         'bulbasaur',
         'ivysaur',
@@ -1598,6 +1598,8 @@ let poisonPokemon =
         'pecharunt',
         'victreebel-mega',
     ];
+console.log('count of og poison array: ' + poisonPokemon1.length)
+// diff: 4 - 3 megas 1 totem
 
 let psychicPokemon = [
     'abra',
