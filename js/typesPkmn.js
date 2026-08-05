@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/psychic';
-let psychicPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/rock';
+let rockPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            psychicPokemon.push(typeData.pokemon[i].pokemon.name);
+            rockPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(psychicPokemon);
-        console.log('count ' + psychicPokemon.length);
+        console.log(rockPokemon);
+        console.log('count ' + rockPokemon.length);
 
         callDropdowns();
 
@@ -1742,7 +1742,7 @@ let psychicPokemon1 = [
 console.log('count of og psychic array: ' + psychicPokemon1.length)
 // diff: 6 - 6 megas
 
-let rockPokemon =
+let rockPokemon1 =
     [
         'geodude',
         'graveler',
@@ -1847,6 +1847,8 @@ let rockPokemon =
         'ogerpon-cornerstone',
         'iron-boulder',
     ];
+console.log('count of og rock array: ' + rockPokemon1.length)
+// diff: 2 - 2 megas
 
 let steelPokemon =
     [
