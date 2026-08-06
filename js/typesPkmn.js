@@ -22,18 +22,18 @@
 // fetchBug();
 
 // bug works, dark works,
-let typeURL = 'https://pokeapi.co/api/v2/type/rock';
-let rockPokemon = [];
+let typeURL = 'https://pokeapi.co/api/v2/type/steel';
+let steelPokemon = [];
 async function fetchPkmnByType() {
     try {
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
         for (let i = 0; i < typeData.pokemon.length; i++) {
-            rockPokemon.push(typeData.pokemon[i].pokemon.name);
+            steelPokemon.push(typeData.pokemon[i].pokemon.name);
         }
-        console.log(rockPokemon);
-        console.log('count ' + rockPokemon.length);
+        console.log(steelPokemon);
+        console.log('count ' + steelPokemon.length);
 
         callDropdowns();
 
