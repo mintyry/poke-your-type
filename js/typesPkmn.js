@@ -2136,3 +2136,5 @@ let waterPokemon =
         'tatsugiri-stretchy',
         'ogerpon-wellspring'
     ];
+console.log('count of og water array: ' + waterPokemon1.length)
+// diff: 

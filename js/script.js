@@ -248,7 +248,7 @@ function callDropdowns() {
   // tells which array to use
   console.log('callDrop is working');
   let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [grassPokemon1, firePokemon1, waterPokemon, normalPokemon1, flyingPokemon1, electricPokemon1, psychicPokemon1, darkPokemon1, ghostPokemon1, poisonPokemon1, bugPokemon1, fightingPokemon1, rockPokemon1, groundPokemon1, steelPokemon1, icePokemon1, dragonPokemon1, fairyPokemon1]
+  let allArrays = [grassPokemon1, firePokemon1, waterPokemon1, normalPokemon1, flyingPokemon1, electricPokemon1, psychicPokemon1, darkPokemon1, ghostPokemon1, poisonPokemon1, bugPokemon1, fightingPokemon1, rockPokemon1, groundPokemon1, steelPokemon1, icePokemon1, dragonPokemon1, fairyPokemon1]
 
 
   for (let i = 0; i < allTypes.length; i++) {
