@@ -1946,7 +1946,7 @@ let steelPokemon1 =
 console.log('count of og steel array: ' + steelPokemon1.length)
 // diff: 9 - 8 megas, 1 totem
 
-let waterPokemon =
+let waterPokemon1 =
     [
         'squirtle',
         'wartortle',
@@ -2137,4 +2137,4 @@ let waterPokemon =
         'ogerpon-wellspring'
     ];
 console.log('count of og water array: ' + waterPokemon1.length)
-// diff: 
+// diff: 5 - +6 megas + 1 totem, - 1 shellos -1 gastrodon
