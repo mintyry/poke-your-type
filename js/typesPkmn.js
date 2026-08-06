@@ -1944,7 +1944,7 @@ let steelPokemon1 =
         'iron-crown',
     ];
 console.log('count of og steel array: ' + steelPokemon1.length)
-// diff: 
+// diff: 9 - 8 megas, 1 totem
 
 let waterPokemon =
     [
