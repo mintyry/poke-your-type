@@ -1850,7 +1850,7 @@ let rockPokemon1 =
 console.log('count of og rock array: ' + rockPokemon1.length)
 // diff: 2 - 2 megas
 
-let steelPokemon =
+let steelPokemon1 =
     [
         'magnemite',
         'magneton',
@@ -1943,6 +1943,8 @@ let steelPokemon =
         'archaludon',
         'iron-crown',
     ];
+console.log('count of og steel array: ' + steelPokemon1.length)
+// diff: 
 
 let waterPokemon =
     [
