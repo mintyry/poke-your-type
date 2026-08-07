@@ -241,14 +241,18 @@ function pokemonDropdown(typeSection, array, type) {
 };
 
 
-// To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown funciton 18 times
+// To dynamically call functions to make each list for each dropdown rather than calling the pokemonDropdown function 18 times
+
+// making variables global so callDropdowns and fetchPkmnByType can use these
+// works for callDropdowns, but not for fetch. moving it into typesPkmn at the start doesnt work either. work on this.
+ let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
+
+  let allArrays = [grassPokemon1, firePokemon1, waterPokemon, normalPokemon1, flyingPokemon1, electricPokemon1, psychicPokemon1, darkPokemon1, ghostPokemon1, poisonPokemon1, bugPokemon1, fightingPokemon1, rockPokemon1, groundPokemon1, steelPokemon1, icePokemon1, dragonPokemon1, fairyPokemon1];
 
 // REMOVED BUG BETWEEN POISON AND FIGHTING
 function callDropdowns() {
   // tells which array to use
   console.log('callDrop is working');
-  let allTypes = ['grass', 'fire', 'water', 'normal', 'flying', 'electric', 'psychic', 'dark', 'ghost', 'poison', 'bug', 'fighting', 'rock', 'ground', 'steel', 'ice', 'dragon', 'fairy'];
-  let allArrays = [grassPokemon1, firePokemon1, waterPokemon1, normalPokemon1, flyingPokemon1, electricPokemon1, psychicPokemon1, darkPokemon1, ghostPokemon1, poisonPokemon1, bugPokemon1, fightingPokemon1, rockPokemon1, groundPokemon1, steelPokemon1, icePokemon1, dragonPokemon1, fairyPokemon1]
 
 
   for (let i = 0; i < allTypes.length; i++) {

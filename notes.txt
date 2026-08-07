@@ -110,3 +110,5 @@ callDropdowns() needs to be in the try block of fetch. maybe cannot fetch each t
 after i review each type array, then i will loop for the fetch
 
 once i fetch, then i need to customize to account for differences and pokemon i dont want
+
+TODO: where to move alltypes and allarrays?

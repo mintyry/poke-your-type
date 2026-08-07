@@ -22,10 +22,17 @@
 // fetchBug();
 
 // bug works, dark works,
+
+
+
+// if i fetch everything here in this loop, callDropdowns will work with the fetched data overall
 let typeURL = 'https://pokeapi.co/api/v2/type/water';
 let waterPokemon = [];
+// console.log('it works' + allTypes);
+
 async function fetchPkmnByType() {
     try {
+
         const typeRes = await fetch(typeURL);
         const typeData = await typeRes.json();
         console.log(typeData);
@@ -2138,3 +2145,4 @@ let waterPokemon1 =
     ];
 console.log('count of og water array: ' + waterPokemon1.length)
 // diff: 5 - +6 megas + 1 totem, - 1 shellos -1 gastrodon
+// note: stretchy tatsu mega is the only one with image
